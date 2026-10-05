@@ -34,4 +34,4 @@ Each entry: what was asked, what was produced, how it was checked. The "Checked"
 - Asked: Claude to do the repo tidy steps (copy notes, ignore .env, token and .env greps, commit) and to write REPORT.md.
 - Produced: commit `dba6012` and a full REPORT.md draft written by Claude from NOTES.md. Claude did not push anything. The Time section was later filled from the git log at Ashwin's instruction.
 - Ashwin did: asked for the work, and will review the report for correctness before sending.
-- Checked: Not yet checked. Ashwin is still reviewing REPORT.md for correctness. The git commit times used in the Time section were confirmed by Ashwin as correct.
+- Checked: Ashwin read the whole of REPORT.md and says it is correct. He confirmed the git commit times in the Time section. He did not re-verify Claude's guessed causes (npm error, `./` fix, the 3 test failures), which the report marks as unverified.

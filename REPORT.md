@@ -2,7 +2,7 @@
 
 Repo: https://github.com/X3PH1RE/supabase-mgmt-sdk (MIT)
 
-> Drafted by Claude (Claude Code) from my NOTES.md log at my request. I am reviewing it for correctness before sending. See AI_USAGE.md for who did what.
+> Drafted by Claude (Claude Code) from my NOTES.md log at my request. I have read it through and checked it for correctness. See AI_USAGE.md for who did what.
 
 ## What I built and why Supabase
 

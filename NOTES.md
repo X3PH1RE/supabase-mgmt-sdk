@@ -212,3 +212,5 @@ Open items:
 - Added the gitignore/CI failure to REPORT.md as item 6 under "What broke" and folded it into DX suggestion 2 (kept the list at 5).
 
 - LICENSE: changed the copyright line from "Voxgig" to "Ashwin Menon" in `LICENSE` and `ts/LICENSE`, plus the templates `.sdk/tm/LICENSE` (said "SupabaseMgmt") and `.sdk/tm/ts/LICENSE` so a regenerate should keep it (not verified). Noted the inconsistent LICENSE templates in REPORT.md under DX suggestion 2.
+
+- Ashwin read REPORT.md and said it is correct. AI_USAGE.md entry 5 "Checked:" and the report header were updated to say so.
