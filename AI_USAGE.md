@@ -32,6 +32,6 @@ Each entry: what was asked, what was produced, how it was checked. The "Checked"
 
 ### 5. Repo tidy and REPORT.md draft
 - Asked: Claude to do the repo tidy steps (copy notes, ignore .env, token and .env greps, commit) and to write REPORT.md.
-- Produced: commit `dba6012` and a full REPORT.md draft written by Claude from NOTES.md. Claude did not push anything. Report contents about time, what Ashwin checked, and the repo link are left as [TBD] because Claude does not know them.
+- Produced: commit `dba6012` and a full REPORT.md draft written by Claude from NOTES.md. Claude did not push anything. The Time section was later filled from the git log at Ashwin's instruction.
 - Ashwin did: asked for the work, and will review the report for correctness before sending.
 - Checked: Not yet checked. Ashwin is still reviewing REPORT.md for correctness. The git commit times used in the Time section were confirmed by Ashwin as correct.
