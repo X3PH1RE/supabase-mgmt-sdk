@@ -200,3 +200,10 @@ Open items:
 - Before pushing: no token prefix in the tracked tree or git history, no `.env` file tracked, no remote existed, repo name was free, `gh` logged in as X3PH1RE.
 - Ran: `gh repo create X3PH1RE/supabase-mgmt-sdk --public --source . --remote origin --push`. Result: https://github.com/X3PH1RE/supabase-mgmt-sdk (public, branch `main`, tracking `origin/main`).
 - Repo link then added to REPORT.md.
+
+### Phase 8: CI failure after publish (found by Ashwin on GitHub Actions, diagnosed and fixed by Claude at his request)
+
+- CI (`ci.yml` from the scaffold) failed on the first push. Error: `ENOENT: no such file or directory, open '.../.sdk/test/entity/log/LogTestData.json'` from `ts/test/entity/log/LogEntity.test.ts:87`. CI result: 658 tests, 653 pass, 4 fail (the 3 known mock failures plus LogEntity).
+- Cause (confirmed with `git check-ignore -v`): the generated `.sdk/.gitignore` line 15 `log/` (meant for generated logs) also matches the `.sdk/test/entity/log/` folder, because the Supabase API has an entity named `log`. The file existed locally so local tests passed, but it was never committed, so a clean clone fails. Generator bug, worth reporting: an entity named `log` collides with the scaffold's gitignore.
+- Fix: changed `log/` to `/log/` in `.sdk/.gitignore` (anchored to `.sdk/log`) and committed `.sdk/test/entity/log/LogTestData.json`. This is a scaffold file, not hand-edited generated SDK code. Not yet verified: whether a regenerate keeps the edit (Ashwin to run it).
+- Only these two files changed; other ignored files under `.sdk/` are `.jostraca/` and `.sdk/dist/` build output.

@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "log": {
+      "LOG00": {
+        "error": "s14",
+        "result": [],
+        "project_id": "PROJECT01"
+      },
+      "LOG01": {
+        "error": "s28",
+        "result": [],
+        "project_id": "PROJECT01"
+      },
+      "LOG02": {
+        "error": "s3c",
+        "result": [],
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "log": {
+      "log_ref01": {
+        "error": "s50",
+        "result": []
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/analytics/endpoints/logs": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}
