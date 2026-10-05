@@ -22,6 +22,7 @@ A TypeScript SDK for the Supabase Management API, generated with the Voxgig SDK 
 3. **`npx voxgig-model test/test.aontu` failed:** `source not found: struct/test.aontu` at `.sdk\test\test.aontu:2:1`. Same kind of error. The final generate still worked.
 4. **`-t ts -f test` did not register the target and feature**, so I added them with `npm run add-target ts` and `npm run add-feature test`. This is my reading of the history, I did not see an error for it.
 5. **3 generated tests fail:** `ApiKeyEntity.test.ts`, `BranchEntity.test.ts` and `FunctionEntity.test.ts`, all at line 79: `assert(!isempty(select(api_key_ref01_list, { id: api_key_ref01_data.id })))`. They run against the mock, not the real API. My reading (not verified): create sends both `project_id` and `ref`, but list only sends `ref`, so the mock does not return the created item. I did not edit the generated tests.
+6. **CI failed on the first push because of a scaffold gitignore rule.** GitHub Actions (the generated `ci.yml`) failed with `ENOENT: no such file or directory, open '.../.sdk/test/entity/log/LogTestData.json'`. Supabase has an entity called `log`, and the generated `.sdk/.gitignore` has `log/` (meant for generated logs), which also matched `.sdk/test/entity/log/`. The file existed on my machine so the local tests passed, but it was never committed. I confirmed it with `git check-ignore -v`, changed `log/` to `/log/` in `.sdk/.gitignore`, and committed the file. CI then dropped from 4 failures to the 3 known ones (still red because of those). I have not checked yet whether a regenerate keeps my `.gitignore` edit.
 
 ## Time
 
@@ -44,7 +45,7 @@ Because I went past the 30 minute mark, I stopped there and am deferring the 3 f
 ## Generator DX suggestions
 
 1. **Fix `spawn npm ENOENT` on Windows** (use `shell: true` or resolve `npm.cmd`), and if the install step fails, print the exact command to run next.
-2. **Ship scaffold include paths that load.** The generated `sdk.aontu` does not build until you add `./` to every include.
+2. **Ship scaffold include paths that load.** The generated `sdk.aontu` does not build until you add `./` to every include. Also, the scaffold's `log/` gitignore rule swallows any entity folder named `log`, so a clean clone fails CI. Anchor it (`/log/`) or generate the ignore rules from the entity list.
 3. **Make `-t ts -f test` actually register the target and feature**, or say clearly that you need `add-target` and `add-feature` afterwards.
 4. **Better entity names.** "List projects" is on `V1ProjectWithDatabaseResponseOutput`, and `Project` only has `create` and `remove`. Organizations are on `V1OrganizationSlugResponseOutput`. A user would look for `Project().list()`. A rename hook or a hint in the README would help.
 5. **README and env var.** The README quick start skips from step 1 to step 3, and the env var is `SUPABASE_MGMT_APIKEY`, made up from the SDK name instead of the API's own `SUPABASE_ACCESS_TOKEN`. Let the model set the env var name, and make the first example something that works without real ids.

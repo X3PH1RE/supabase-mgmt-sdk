@@ -208,3 +208,5 @@ Open items:
 - Fix: changed `log/` to `/log/` in `.sdk/.gitignore` (anchored to `.sdk/log`) and committed `.sdk/test/entity/log/LogTestData.json`. This is a scaffold file, not hand-edited generated SDK code. Not yet verified: whether a regenerate keeps the edit (Ashwin to run it).
 - Only these two files changed; other ignored files under `.sdk/` are `.jostraca/` and `.sdk/dist/` build output.
 - Result after the fix (commit `64e4c10`, pushed): CI now shows 658 tests, 654 pass, 3 fail. The `LogEntity` failure is gone. The 3 remaining failures are the known mock tests (ApiKey, Branch, Function), same as the local run. CI is still red because of those 3 until they are fixed.
+
+- Added the gitignore/CI failure to REPORT.md as item 6 under "What broke" and folded it into DX suggestion 2 (kept the list at 5).
