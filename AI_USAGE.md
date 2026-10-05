@@ -29,3 +29,9 @@ Each entry: what was asked, what was produced, how it was checked. The "Checked"
 - Produced: the one-line `node -e` command (GET /v1/projects via `V1ProjectWithDatabaseResponseOutput().list()`) and the NOTES.md entries. The cause of the 3 failing tests is Claude's reading of the generated test file and is unverified.
 - Ashwin did: set the token in his own shell, ran the command, and got `1 projects [ 'portfolio' ]`. Claude never saw the token.
 - Checked: (Ashwin to fill in)
+
+### 5. Repo tidy and REPORT.md draft
+- Asked: Claude to do the repo tidy steps (copy notes, ignore .env, token and .env greps, commit) and to write REPORT.md.
+- Produced: commit `dba6012` and a full REPORT.md draft written by Claude from NOTES.md. Claude did not push anything. Report contents about time, what Ashwin checked, and the repo link are left as [TBD] because Claude does not know them.
+- Ashwin did: asked for the work, and will review the report for correctness before sending.
+- Checked: (Ashwin to fill in)
