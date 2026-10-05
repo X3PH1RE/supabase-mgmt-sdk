@@ -1,0 +1,67 @@
+{
+  "existing": {
+    "v1_pgbouncer_config_response_output": {
+      "V1_PGBOUNCER_CONFIG_RESPONSE_OUTPUT00": {
+        "connection_string": "s5a",
+        "default_pool_size": 91,
+        "ignore_startup_parameters": "s5c",
+        "max_client_conn": 93,
+        "pool_mode": "s5e",
+        "query_wait_timeout": 95,
+        "reserve_pool_size": 96,
+        "server_idle_timeout": 97,
+        "server_lifetime": 98,
+        "project_id": "PROJECT01",
+        "id": "V1_PGBOUNCER_CONFIG_RESPONSE_OUTPUT00"
+      },
+      "V1_PGBOUNCER_CONFIG_RESPONSE_OUTPUT01": {
+        "connection_string": "sb4",
+        "default_pool_size": 181,
+        "ignore_startup_parameters": "sb6",
+        "max_client_conn": 183,
+        "pool_mode": "sb8",
+        "query_wait_timeout": 185,
+        "reserve_pool_size": 186,
+        "server_idle_timeout": 187,
+        "server_lifetime": 188,
+        "project_id": "PROJECT01",
+        "id": "V1_PGBOUNCER_CONFIG_RESPONSE_OUTPUT01"
+      },
+      "V1_PGBOUNCER_CONFIG_RESPONSE_OUTPUT02": {
+        "connection_string": "s10e",
+        "default_pool_size": 271,
+        "ignore_startup_parameters": "s110",
+        "max_client_conn": 273,
+        "pool_mode": "s112",
+        "query_wait_timeout": 275,
+        "reserve_pool_size": 276,
+        "server_idle_timeout": 277,
+        "server_lifetime": 278,
+        "project_id": "PROJECT01",
+        "id": "V1_PGBOUNCER_CONFIG_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "v1_pgbouncer_config_response_output": {
+      "v1_pgbouncer_config_response_output_ref01": {
+        "connection_string": "s168",
+        "default_pool_size": 361,
+        "ignore_startup_parameters": "s16a",
+        "max_client_conn": 363,
+        "pool_mode": "s16c",
+        "query_wait_timeout": 365,
+        "reserve_pool_size": 366,
+        "server_idle_timeout": 367,
+        "server_lifetime": 368
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/config/database/pgbouncer": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

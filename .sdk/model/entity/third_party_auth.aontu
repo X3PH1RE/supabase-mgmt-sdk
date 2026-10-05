@@ -1,0 +1,345 @@
+# Entity: third_party_auth
+
+main: kit: entity: third_party_auth: {
+
+  alias: field: {}
+
+  fields: {
+    custom_jwks: {
+      h: "Custom Jwks"
+      n: "custom_jwks"
+      r: false
+      t: "`$ANY`"
+    }
+    id: {
+      fo: "uuid"
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    inserted_at: {
+      h: "Inserted At"
+      n: "inserted_at"
+      r: true
+      t: "`$STRING`"
+    }
+    jwks_url: {
+      h: "Jwks Url"
+      n: "jwks_url"
+      r: false
+      t: "`$STRING`"
+    }
+    oidc_issuer_url: {
+      h: "Oidc Issuer Url"
+      n: "oidc_issuer_url"
+      r: false
+      t: "`$STRING`"
+    }
+    resolved_at: {
+      h: "Resolved At"
+      n: "resolved_at"
+      r: false
+      t: "`$STRING`"
+    }
+    resolved_jwks: {
+      h: "Resolved Jwks"
+      n: "resolved_jwks"
+      r: false
+      t: "`$ANY`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: true
+      t: "`$STRING`"
+    }
+    updated_at: {
+      h: "Updated At"
+      n: "updated_at"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "third_party_auth"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/config/auth/third-party-auth"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/config/auth/third-party-auth"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "auth"
+            }
+            {
+              lit: "third-party-auth"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/config/auth/third-party-auth"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/config/auth/third-party-auth"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "auth"
+            }
+            {
+              lit: "third-party-auth"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/config/auth/third-party-auth/{tpa_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "88888888-8888-4888-8888-888888888888"
+                k: "param"
+                n: "id"
+                or: "tpa_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/config/auth/third-party-auth/{tpa_id}"
+          q: {
+            exist: [
+              "id"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+              tpa_id: "id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "auth"
+            }
+            {
+              lit: "third-party-auth"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /v1/projects/{ref}/config/auth/third-party-auth/{tpa_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "88888888-8888-4888-8888-888888888888"
+                k: "param"
+                n: "id"
+                or: "tpa_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/v1/projects/{ref}/config/auth/third-party-auth/{tpa_id}"
+          q: {
+            exist: [
+              "id"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+              tpa_id: "id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "auth"
+            }
+            {
+              lit: "third-party-auth"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

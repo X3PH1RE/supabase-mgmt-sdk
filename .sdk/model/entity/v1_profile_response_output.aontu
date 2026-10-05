@@ -1,0 +1,60 @@
+# Entity: v1_profile_response_output
+
+main: kit: entity: v1_profile_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    gotrue_id: {
+      h: "Gotrue Id"
+      n: "gotrue_id"
+      r: true
+      t: "`$STRING`"
+    }
+    primary_email: {
+      h: "Primary Email"
+      n: "primary_email"
+      r: true
+      t: "`$STRING`"
+    }
+    username: {
+      h: "Username"
+      n: "username"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "v1_profile_response_output"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/profile"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/v1/profile"
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "profile"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

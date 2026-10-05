@@ -1,0 +1,51 @@
+# BasicPgsodiumFlow
+
+main: kit: flow: BasicPgsodiumFlow:
+{
+  entity: "pgsodium",
+  kind: "basic",
+  name: "BasicPgsodiumFlow",
+  step: [
+    {
+      i: {
+        ref: "pgsodium_ref01",
+        srcdatavar: "pgsodium_ref01_data",
+        suffix: "_up0",
+        textfield: "root_key"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-pgsodium_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "pgsodium_ref01",
+        srcdatavar: "pgsodium_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "pgsodium01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-pgsodium_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPgsodiumFlow"
+}

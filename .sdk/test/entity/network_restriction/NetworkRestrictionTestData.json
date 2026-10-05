@@ -1,0 +1,68 @@
+{
+  "existing": {
+    "network_restriction": {
+      "NETWORK_RESTRICTION00": {
+        "add": {},
+        "applied_at": "s51",
+        "config": {},
+        "entitlement": "s53",
+        "old_config": {},
+        "remove": {},
+        "status": "s56",
+        "updated_at": "s57",
+        "ref": "REF01",
+        "id": "NETWORK_RESTRICTION00"
+      },
+      "NETWORK_RESTRICTION01": {
+        "add": {},
+        "applied_at": "sa1",
+        "config": {},
+        "entitlement": "sa3",
+        "old_config": {},
+        "remove": {},
+        "status": "sa6",
+        "updated_at": "sa7",
+        "ref": "REF01",
+        "id": "NETWORK_RESTRICTION01"
+      },
+      "NETWORK_RESTRICTION02": {
+        "add": {},
+        "applied_at": "sf1",
+        "config": {},
+        "entitlement": "sf3",
+        "old_config": {},
+        "remove": {},
+        "status": "sf6",
+        "updated_at": "sf7",
+        "ref": "REF01",
+        "id": "NETWORK_RESTRICTION02"
+      }
+    }
+  },
+  "new": {
+    "network_restriction": {
+      "network_restriction_ref01": {
+        "add": {},
+        "applied_at": "s141",
+        "config": {},
+        "entitlement": "s143",
+        "old_config": {},
+        "remove": {},
+        "status": "s146",
+        "updated_at": "s147"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/network-restrictions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{ref}/network-restrictions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

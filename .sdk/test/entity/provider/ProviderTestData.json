@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "provider": {
+      "PROVIDER00": {
+        "created_at": "s32",
+        "domains": [],
+        "id": "PROVIDER00",
+        "saml": {},
+        "updated_at": "s36",
+        "project_id": "PROJECT01"
+      },
+      "PROVIDER01": {
+        "created_at": "s64",
+        "domains": [],
+        "id": "PROVIDER01",
+        "saml": {},
+        "updated_at": "s68",
+        "project_id": "PROJECT01"
+      },
+      "PROVIDER02": {
+        "created_at": "s96",
+        "domains": [],
+        "id": "PROVIDER02",
+        "saml": {},
+        "updated_at": "s9a",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "provider": {
+      "provider_ref01": {
+        "created_at": "sc8",
+        "domains": [],
+        "saml": {},
+        "updated_at": "scc"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/config/auth/sso/providers/{provider_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{ref}/config/auth/sso/providers/{provider_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

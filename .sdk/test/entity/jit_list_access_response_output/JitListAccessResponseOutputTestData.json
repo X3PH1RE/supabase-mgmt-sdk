@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "jit_list_access_response_output": {
+      "JIT_LIST_ACCESS_RESPONSE_OUTPUT00": {
+        "items": [],
+        "project_id": "PROJECT01"
+      },
+      "JIT_LIST_ACCESS_RESPONSE_OUTPUT01": {
+        "items": [],
+        "project_id": "PROJECT01"
+      },
+      "JIT_LIST_ACCESS_RESPONSE_OUTPUT02": {
+        "items": [],
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "jit_list_access_response_output": {
+      "jit_list_access_response_output_ref01": {
+        "items": []
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/database/jit/list": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

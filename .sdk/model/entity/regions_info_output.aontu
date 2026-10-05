@@ -1,0 +1,91 @@
+# Entity: regions_info_output
+
+main: kit: entity: regions_info_output: {
+
+  alias: field: {}
+
+  fields: {
+    all: {
+      h: "All"
+      n: "all"
+      r: true
+      t: "`$OBJECT`"
+    }
+    recommendations: {
+      h: "Recommendations"
+      n: "recommendations"
+      r: true
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "regions_info_output"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/available-regions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "NA"
+                k: "query"
+                n: "continent"
+                or: "continent"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "desired_instance_size"
+                or: "desired_instance_size"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "tsrqponmlkjihgfedcba"
+                k: "query"
+                n: "organization_slug"
+                or: "organization_slug"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/available-regions"
+          q: {
+            exist: [
+              "continent"
+              "desired_instance_size"
+              "organization_slug"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              lit: "available-regions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

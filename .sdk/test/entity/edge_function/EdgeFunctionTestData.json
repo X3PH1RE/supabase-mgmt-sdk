@@ -1,0 +1,30 @@
+{
+  "existing": {
+    "edge_function": {
+      "EDGE_FUNCTION00": {
+        "id": "EDGE_FUNCTION00",
+        "project_id": "PROJECT01"
+      },
+      "EDGE_FUNCTION01": {
+        "id": "EDGE_FUNCTION01",
+        "project_id": "PROJECT01"
+      },
+      "EDGE_FUNCTION02": {
+        "id": "EDGE_FUNCTION02",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "edge_function": {
+      "edge_function_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /v1/projects/{ref}/functions/{function_slug}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

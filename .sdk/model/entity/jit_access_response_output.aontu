@@ -1,0 +1,108 @@
+# Entity: jit_access_response_output
+
+main: kit: entity: jit_access_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    email: {
+      fo: "email"
+      h: "Email"
+      n: "email"
+      r: true
+      t: "`$STRING`"
+    }
+    token: {
+      h: "Token"
+      n: "token"
+      r: true
+      t: "`$STRING`"
+    }
+    user_id: {
+      fo: "uuid"
+      h: "User Id"
+      n: "user_id"
+      r: false
+      t: "`$STRING`"
+    }
+    user_roles: {
+      h: "User Roles"
+      n: "user_roles"
+      r: true
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "jit_access_response_output"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/database/jit/invite/accept"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/database/jit/invite/accept"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "database"
+            }
+            {
+              lit: "jit"
+            }
+            {
+              lit: "invite"
+            }
+            {
+              lit: "accept"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

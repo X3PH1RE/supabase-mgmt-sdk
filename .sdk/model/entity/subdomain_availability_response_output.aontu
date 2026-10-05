@@ -1,0 +1,82 @@
+# Entity: subdomain_availability_response_output
+
+main: kit: entity: subdomain_availability_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    vanity_subdomain: {
+      h: "Vanity Subdomain"
+      n: "vanity_subdomain"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "subdomain_availability_response_output"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/vanity-subdomain/check-availability"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/vanity-subdomain/check-availability"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "vanity-subdomain"
+            }
+            {
+              lit: "check-availability"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

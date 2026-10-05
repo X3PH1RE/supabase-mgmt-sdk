@@ -1,0 +1,32 @@
+# BasicDiskUtilMetricsResponseOutputFlow
+
+main: kit: flow: BasicDiskUtilMetricsResponseOutputFlow:
+{
+  entity: "disk_util_metrics_response_output",
+  kind: "basic",
+  name: "BasicDiskUtilMetricsResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "disk_util_metrics_response_output_ref01",
+        srcdatavar: "disk_util_metrics_response_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "disk_util_metrics_response_output01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-disk_util_metrics_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDiskUtilMetricsResponseOutputFlow"
+}

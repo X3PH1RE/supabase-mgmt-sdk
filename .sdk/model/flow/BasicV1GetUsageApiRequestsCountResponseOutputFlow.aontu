@@ -1,0 +1,26 @@
+# BasicV1GetUsageApiRequestsCountResponseOutputFlow
+
+main: kit: flow: BasicV1GetUsageApiRequestsCountResponseOutputFlow:
+{
+  entity: "v1_get_usage_api_requests_count_response_output",
+  kind: "basic",
+  name: "BasicV1GetUsageApiRequestsCountResponseOutputFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "v1_get_usage_api_requests_count_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicV1GetUsageApiRequestsCountResponseOutputFlow"
+}

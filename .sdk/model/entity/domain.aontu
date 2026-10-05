@@ -1,0 +1,122 @@
+# Entity: domain
+
+main: kit: entity: domain: {
+
+  alias: field: {}
+
+  name: "domain"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /v1/projects/{ref}/custom-hostname"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                k: "query"
+                n: "remove_addon"
+                or: "remove_addon"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/v1/projects/{ref}/custom-hostname"
+          q: {
+            exist: [
+              "ref"
+              "remove_addon"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "custom-hostname"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "DELETE /v1/projects/{ref}/vanity-subdomain"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/v1/projects/{ref}/vanity-subdomain"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "vanity-subdomain"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

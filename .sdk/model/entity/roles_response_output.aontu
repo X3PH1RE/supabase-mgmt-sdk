@@ -1,0 +1,76 @@
+# Entity: roles_response_output
+
+main: kit: entity: roles_response_output: {
+
+  alias: field: {}
+
+  name: "roles_response_output"
+  op: {
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /v1/projects/{ref}/cli/login-role"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/v1/projects/{ref}/cli/login-role"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "cli"
+            }
+            {
+              lit: "login-role"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

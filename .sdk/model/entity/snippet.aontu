@@ -1,0 +1,214 @@
+# Entity: snippet
+
+main: kit: entity: snippet: {
+
+  alias: field: {}
+
+  fields: {
+    content: {
+      h: "Content"
+      n: "content"
+      r: true
+      t: "`$OBJECT`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: true
+      t: "`$STRING`"
+    }
+    favorite: {
+      h: "Favorite"
+      n: "favorite"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    inserted_at: {
+      h: "Inserted At"
+      n: "inserted_at"
+      r: true
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    owner: {
+      h: "Owner"
+      n: "owner"
+      r: true
+      t: "`$OBJECT`"
+    }
+    project: {
+      h: "Project"
+      n: "project"
+      r: true
+      t: "`$OBJECT`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: true
+      t: "`$STRING`"
+    }
+    updated_at: {
+      h: "Updated At"
+      n: "updated_at"
+      r: true
+      t: "`$STRING`"
+    }
+    updated_by: {
+      h: "Updated By"
+      n: "updated_by"
+      r: true
+      t: "`$OBJECT`"
+    }
+    visibility: {
+      h: "Visibility"
+      n: "visibility"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "snippet"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/snippets"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                k: "query"
+                n: "cursor"
+                or: "cursor"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "query"
+                n: "project_ref"
+                or: "project_ref"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "sort_by"
+                or: "sort_by"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "sort_order"
+                or: "sort_order"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/snippets"
+          q: {
+            exist: [
+              "cursor"
+              "limit"
+              "project_ref"
+              "sort_by"
+              "sort_order"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "snippets"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.data`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/snippets/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "44444444-4444-4444-8444-444444444444"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/snippets/{id}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "snippets"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

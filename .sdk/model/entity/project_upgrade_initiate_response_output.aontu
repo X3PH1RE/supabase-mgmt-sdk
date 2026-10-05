@@ -1,0 +1,80 @@
+# Entity: project_upgrade_initiate_response_output
+
+main: kit: entity: project_upgrade_initiate_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    release_channel: {
+      h: "Release Channel"
+      n: "release_channel"
+      r: false
+      t: "`$STRING`"
+    }
+    target_version: {
+      h: "Target Version"
+      n: "target_version"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "project_upgrade_initiate_response_output"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/upgrade"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/upgrade"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "upgrade"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

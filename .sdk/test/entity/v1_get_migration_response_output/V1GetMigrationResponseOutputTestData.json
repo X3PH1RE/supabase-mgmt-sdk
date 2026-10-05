@@ -1,0 +1,55 @@
+{
+  "existing": {
+    "v1_get_migration_response_output": {
+      "V1_GET_MIGRATION_RESPONSE_OUTPUT00": {
+        "created_by": "s3c",
+        "idempotency_key": "s3d",
+        "name": "s3e",
+        "rollback": [],
+        "statements": [],
+        "version": "s41",
+        "project_id": "PROJECT01",
+        "id": "V1_GET_MIGRATION_RESPONSE_OUTPUT00"
+      },
+      "V1_GET_MIGRATION_RESPONSE_OUTPUT01": {
+        "created_by": "s78",
+        "idempotency_key": "s79",
+        "name": "s7a",
+        "rollback": [],
+        "statements": [],
+        "version": "s7d",
+        "project_id": "PROJECT01",
+        "id": "V1_GET_MIGRATION_RESPONSE_OUTPUT01"
+      },
+      "V1_GET_MIGRATION_RESPONSE_OUTPUT02": {
+        "created_by": "sb4",
+        "idempotency_key": "sb5",
+        "name": "sb6",
+        "rollback": [],
+        "statements": [],
+        "version": "sb9",
+        "project_id": "PROJECT01",
+        "id": "V1_GET_MIGRATION_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "v1_get_migration_response_output": {
+      "v1_get_migration_response_output_ref01": {
+        "created_by": "sf0",
+        "idempotency_key": "sf1",
+        "name": "sf2",
+        "rollback": [],
+        "statements": [],
+        "version": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/database/migrations/{version}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

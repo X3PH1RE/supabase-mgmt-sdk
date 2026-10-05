@@ -1,0 +1,55 @@
+{
+  "existing": {
+    "create_provider_response_output": {
+      "CREATE_PROVIDER_RESPONSE_OUTPUT00": {
+        "attribute_mapping": {},
+        "domains": [],
+        "metadata_url": "s3e",
+        "metadata_xml": "s3f",
+        "name_id_format": "s40",
+        "type": "s41",
+        "project_id": "PROJECT01",
+        "id": "CREATE_PROVIDER_RESPONSE_OUTPUT00"
+      },
+      "CREATE_PROVIDER_RESPONSE_OUTPUT01": {
+        "attribute_mapping": {},
+        "domains": [],
+        "metadata_url": "s7a",
+        "metadata_xml": "s7b",
+        "name_id_format": "s7c",
+        "type": "s7d",
+        "project_id": "PROJECT01",
+        "id": "CREATE_PROVIDER_RESPONSE_OUTPUT01"
+      },
+      "CREATE_PROVIDER_RESPONSE_OUTPUT02": {
+        "attribute_mapping": {},
+        "domains": [],
+        "metadata_url": "sb6",
+        "metadata_xml": "sb7",
+        "name_id_format": "sb8",
+        "type": "sb9",
+        "project_id": "PROJECT01",
+        "id": "CREATE_PROVIDER_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "create_provider_response_output": {
+      "create_provider_response_output_ref01": {
+        "attribute_mapping": {},
+        "domains": [],
+        "metadata_url": "sf2",
+        "metadata_xml": "sf3",
+        "name_id_format": "sf4",
+        "type": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/config/auth/sso/providers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+# BasicReadOnlyStatusResponseOutputFlow
+
+main: kit: flow: BasicReadOnlyStatusResponseOutputFlow:
+{
+  entity: "read_only_status_response_output",
+  kind: "basic",
+  name: "BasicReadOnlyStatusResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "read_only_status_response_output_ref01",
+        srcdatavar: "read_only_status_response_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "read_only_status_response_output01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-read_only_status_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicReadOnlyStatusResponseOutputFlow"
+}

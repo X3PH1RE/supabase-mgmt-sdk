@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "domain": {
+      "DOMAIN00": {
+        "ref": "REF01",
+        "id": "DOMAIN00"
+      },
+      "DOMAIN01": {
+        "ref": "REF01",
+        "id": "DOMAIN01"
+      },
+      "DOMAIN02": {
+        "ref": "REF01",
+        "id": "DOMAIN02"
+      }
+    }
+  },
+  "new": {
+    "domain": {
+      "domain_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /v1/projects/{ref}/custom-hostname": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{ref}/vanity-subdomain": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

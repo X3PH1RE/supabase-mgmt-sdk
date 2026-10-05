@@ -1,0 +1,32 @@
+{
+  "existing": {
+    "v1_get_usage_api_requests_count_response_output": {
+      "V1_GET_USAGE_API_REQUESTS_COUNT_RESPONSE_OUTPUT00": {
+        "count": 10,
+        "project_id": "PROJECT01"
+      },
+      "V1_GET_USAGE_API_REQUESTS_COUNT_RESPONSE_OUTPUT01": {
+        "count": 20,
+        "project_id": "PROJECT01"
+      },
+      "V1_GET_USAGE_API_REQUESTS_COUNT_RESPONSE_OUTPUT02": {
+        "count": 30,
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "v1_get_usage_api_requests_count_response_output": {
+      "v1_get_usage_api_requests_count_response_output_ref01": {
+        "count": 40
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/analytics/endpoints/usage.api-requests-count": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

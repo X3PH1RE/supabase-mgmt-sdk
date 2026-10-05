@@ -1,0 +1,22 @@
+# BasicNetworkRestrictionsResponseOutputFlow
+
+main: kit: flow: BasicNetworkRestrictionsResponseOutputFlow:
+{
+  entity: "network_restrictions_response_output",
+  kind: "basic",
+  name: "BasicNetworkRestrictionsResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "network_restrictions_response_output_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicNetworkRestrictionsResponseOutputFlow"
+}

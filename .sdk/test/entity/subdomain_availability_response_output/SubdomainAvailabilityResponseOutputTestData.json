@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "subdomain_availability_response_output": {
+      "SUBDOMAIN_AVAILABILITY_RESPONSE_OUTPUT00": {
+        "vanity_subdomain": "sa",
+        "project_id": "PROJECT01",
+        "id": "SUBDOMAIN_AVAILABILITY_RESPONSE_OUTPUT00"
+      },
+      "SUBDOMAIN_AVAILABILITY_RESPONSE_OUTPUT01": {
+        "vanity_subdomain": "s14",
+        "project_id": "PROJECT01",
+        "id": "SUBDOMAIN_AVAILABILITY_RESPONSE_OUTPUT01"
+      },
+      "SUBDOMAIN_AVAILABILITY_RESPONSE_OUTPUT02": {
+        "vanity_subdomain": "s1e",
+        "project_id": "PROJECT01",
+        "id": "SUBDOMAIN_AVAILABILITY_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "subdomain_availability_response_output": {
+      "subdomain_availability_response_output_ref01": {
+        "vanity_subdomain": "s28"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/vanity-subdomain/check-availability": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

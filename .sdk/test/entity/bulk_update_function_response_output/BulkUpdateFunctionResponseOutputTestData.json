@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "bulk_update_function_response_output": {
+      "BULK_UPDATE_FUNCTION_RESPONSE_OUTPUT00": {
+        "functions": [],
+        "ref": "REF01",
+        "id": "BULK_UPDATE_FUNCTION_RESPONSE_OUTPUT00"
+      },
+      "BULK_UPDATE_FUNCTION_RESPONSE_OUTPUT01": {
+        "functions": [],
+        "ref": "REF01",
+        "id": "BULK_UPDATE_FUNCTION_RESPONSE_OUTPUT01"
+      },
+      "BULK_UPDATE_FUNCTION_RESPONSE_OUTPUT02": {
+        "functions": [],
+        "ref": "REF01",
+        "id": "BULK_UPDATE_FUNCTION_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "bulk_update_function_response_output": {
+      "bulk_update_function_response_output_ref01": {
+        "functions": []
+      }
+    }
+  },
+  "requests": {
+    "PUT /v1/projects/{ref}/functions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

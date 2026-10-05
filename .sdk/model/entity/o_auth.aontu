@@ -1,0 +1,310 @@
+# Entity: o_auth
+
+main: kit: entity: o_auth: {
+
+  alias: field: {}
+
+  fields: {
+    client_id: {
+      fo: "uuid"
+      h: "Client Id"
+      n: "client_id"
+      r: true
+      t: "`$STRING`"
+    }
+    client_secret: {
+      h: "Client Secret"
+      n: "client_secret"
+      r: true
+      t: "`$STRING`"
+    }
+    refresh_token: {
+      h: "Refresh Token"
+      n: "refresh_token"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "o_auth"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/oauth/revoke"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/oauth/revoke"
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "oauth"
+            }
+            {
+              lit: "revoke"
+            }
+          ]
+          t: {
+            req: {
+              client_id: "`reqdata.client_id`"
+              client_secret: "`reqdata.client_secret`"
+              refresh_token: "`reqdata.refresh_token`"
+            }
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/oauth/authorize"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "66666666-6666-4666-8666-666666666666"
+                k: "query"
+                n: "client_id"
+                or: "client_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "Z_P4EKbGwIkA01e3Y5fp4tMCvn_Ae5nUw7qY7XwkTrQ"
+                k: "query"
+                n: "code_challenge"
+                or: "code_challenge"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "S256"
+                k: "query"
+                n: "code_challenge_method"
+                or: "code_challenge_method"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "tsrqponmlkjihgfedcba"
+                k: "query"
+                n: "organization_slug"
+                or: "organization_slug"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "https://app.acme.com/auth/callback"
+                k: "query"
+                n: "redirect_uri"
+                or: "redirect_uri"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "https://mcp.supabase.com/projects"
+                k: "query"
+                n: "resource"
+                or: "resource"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "query"
+                k: "query"
+                n: "response_mode"
+                or: "response_mode"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "code"
+                k: "query"
+                n: "response_type"
+                or: "response_type"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "projects:read projects:write"
+                k: "query"
+                n: "scope"
+                or: "scope"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "st_9f4d3a206b2e4a7e8c91"
+                k: "query"
+                n: "state"
+                or: "state"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                k: "query"
+                n: "target_flow"
+                or: "target_flow"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/oauth/authorize"
+          q: {
+            exist: [
+              "client_id"
+              "code_challenge"
+              "code_challenge_method"
+              "organization_slug"
+              "redirect_uri"
+              "resource"
+              "response_mode"
+              "response_type"
+              "scope"
+              "state"
+              "target_flow"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "oauth"
+            }
+            {
+              lit: "authorize"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /v1/oauth/authorize/project-claim"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            query: [
+              {
+                ex: "66666666-6666-4666-8666-666666666666"
+                k: "query"
+                n: "client_id"
+                or: "client_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "Z_P4EKbGwIkA01e3Y5fp4tMCvn_Ae5nUw7qY7XwkTrQ"
+                k: "query"
+                n: "code_challenge"
+                or: "code_challenge"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "S256"
+                k: "query"
+                n: "code_challenge_method"
+                or: "code_challenge_method"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "query"
+                n: "project_ref"
+                or: "project_ref"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "https://app.acme.com/auth/callback"
+                k: "query"
+                n: "redirect_uri"
+                or: "redirect_uri"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "query"
+                k: "query"
+                n: "response_mode"
+                or: "response_mode"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "code"
+                k: "query"
+                n: "response_type"
+                or: "response_type"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "st_9f4d3a206b2e4a7e8c91"
+                k: "query"
+                n: "state"
+                or: "state"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/oauth/authorize/project-claim"
+          q: {
+            exist: [
+              "client_id"
+              "code_challenge"
+              "code_challenge_method"
+              "project_ref"
+              "redirect_uri"
+              "response_mode"
+              "response_type"
+              "state"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "oauth"
+            }
+            {
+              lit: "authorize"
+            }
+            {
+              lit: "project-claim"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

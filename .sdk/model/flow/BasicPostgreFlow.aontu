@@ -1,0 +1,51 @@
+# BasicPostgreFlow
+
+main: kit: flow: BasicPostgreFlow:
+{
+  entity: "postgre",
+  kind: "basic",
+  name: "BasicPostgreFlow",
+  step: [
+    {
+      i: {
+        ref: "postgre_ref01",
+        srcdatavar: "postgre_ref01_data",
+        suffix: "_up0",
+        textfield: "checkpoint_timeout"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-postgre_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "postgre_ref01",
+        srcdatavar: "postgre_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "postgre01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-postgre_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPostgreFlow"
+}

@@ -1,0 +1,467 @@
+# Entity: api_key
+
+main: kit: entity: api_key: {
+
+  alias: field: {}
+
+  fields: {
+    api_key: {
+      h: "Api Key"
+      n: "api_key"
+      r: false
+      t: "`$STRING`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: false
+      t: "`$STRING`"
+    }
+    hash: {
+      h: "Hash"
+      n: "hash"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: false
+      t: "`$STRING`"
+    }
+    inserted_at: {
+      fo: "date-time"
+      h: "Inserted At"
+      n: "inserted_at"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    prefix: {
+      h: "Prefix"
+      n: "prefix"
+      r: false
+      t: "`$STRING`"
+    }
+    secret_jwt_template: {
+      h: "Secret Jwt Template"
+      n: "secret_jwt_template"
+      r: false
+      t: "`$OBJECT`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      op: {
+        create: {
+          req: true
+          type: "`$STRING`"
+        }
+      }
+      r: false
+      t: "`$STRING`"
+    }
+    updated_at: {
+      fo: "date-time"
+      h: "Updated At"
+      n: "updated_at"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "api_key"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/api-keys"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "true"
+                k: "query"
+                n: "reveal"
+                or: "reveal"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/api-keys"
+          q: {
+            exist: [
+              "ref"
+              "reveal"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "api-keys"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/api-keys"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "true"
+                k: "query"
+                n: "reveal"
+                or: "reveal"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/api-keys"
+          q: {
+            exist: [
+              "ref"
+              "reveal"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "api-keys"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/api-keys/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "22222222-2222-4222-8222-222222222222"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "true"
+                k: "query"
+                n: "reveal"
+                or: "reveal"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/api-keys/{id}"
+          q: {
+            exist: [
+              "id"
+              "project_id"
+              "reveal"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "api-keys"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /v1/projects/{ref}/api-keys/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "22222222-2222-4222-8222-222222222222"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "rotating_key"
+                k: "query"
+                n: "reason"
+                or: "reason"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: true
+                k: "query"
+                n: "reveal"
+                or: "reveal"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "was_compromised"
+                or: "was_compromised"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/v1/projects/{ref}/api-keys/{id}"
+          q: {
+            exist: [
+              "id"
+              "project_id"
+              "reason"
+              "reveal"
+              "was_compromised"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "api-keys"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /v1/projects/{ref}/api-keys/{id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "22222222-2222-4222-8222-222222222222"
+                k: "param"
+                n: "id"
+                or: "id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "true"
+                k: "query"
+                n: "reveal"
+                or: "reveal"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/v1/projects/{ref}/api-keys/{id}"
+          q: {
+            exist: [
+              "id"
+              "project_id"
+              "reveal"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "api-keys"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

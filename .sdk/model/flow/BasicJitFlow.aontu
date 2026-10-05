@@ -1,0 +1,57 @@
+# BasicJitFlow
+
+main: kit: flow: BasicJitFlow:
+{
+  entity: "jit",
+  kind: "basic",
+  name: "BasicJitFlow",
+  step: [
+    {
+      i: {
+        ref: "jit_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "jit_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "jit_ref01",
+        srcdatavar: "jit_ref01_data",
+        suffix: "_up0",
+        textfield: "act"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-jit_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicJitFlow"
+}

@@ -1,0 +1,116 @@
+# Entity: organization_project_claim_response_output
+
+main: kit: entity: organization_project_claim_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    created_at: {
+      h: "Created At"
+      n: "created_at"
+      r: true
+      t: "`$STRING`"
+    }
+    created_by: {
+      fo: "uuid"
+      h: "Created By"
+      n: "created_by"
+      r: true
+      t: "`$STRING`"
+    }
+    expires_at: {
+      h: "Expires At"
+      n: "expires_at"
+      r: true
+      t: "`$STRING`"
+    }
+    preview: {
+      h: "Preview"
+      n: "preview"
+      r: true
+      t: "`$OBJECT`"
+    }
+    project: {
+      h: "Project"
+      n: "project"
+      r: true
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "organization_project_claim_response_output"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/organizations/{slug}/project-claim/{token}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "tsrqponmlkjihgfedcba"
+                k: "param"
+                n: "organization_id"
+                or: "slug"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "0123456789abcdef0123456789abcdef01234567"
+                k: "param"
+                n: "token"
+                or: "token"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/organizations/{slug}/project-claim/{token}"
+          q: {
+            exist: [
+              "organization_id"
+              "token"
+            ]
+          }
+          r: {
+            param: {
+              slug: "organization_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "organizations"
+            }
+            {
+              var: "organization_id"
+            }
+            {
+              lit: "project-claim"
+            }
+            {
+              var: "token"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.organization")]
+  ]
+
+}

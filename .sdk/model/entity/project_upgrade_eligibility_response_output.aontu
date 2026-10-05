@@ -1,0 +1,94 @@
+# Entity: project_upgrade_eligibility_response_output
+
+main: kit: entity: project_upgrade_eligibility_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    app_version: {
+      h: "App Version"
+      n: "app_version"
+      r: true
+      t: "`$STRING`"
+    }
+    postgres_version: {
+      h: "Postgres Version"
+      n: "postgres_version"
+      r: true
+      t: "`$STRING`"
+    }
+    release_channel: {
+      h: "Release Channel"
+      n: "release_channel"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "project_upgrade_eligibility_response_output"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/upgrade/eligibility"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/upgrade/eligibility"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "upgrade"
+            }
+            {
+              lit: "eligibility"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

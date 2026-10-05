@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "organization": {
+      "ORGANIZATION00": {
+        "organization_id": "ORGANIZATION01",
+        "token": "TOKEN01",
+        "id": "ORGANIZATION00"
+      },
+      "ORGANIZATION01": {
+        "organization_id": "ORGANIZATION01",
+        "token": "TOKEN01",
+        "id": "ORGANIZATION01"
+      },
+      "ORGANIZATION02": {
+        "organization_id": "ORGANIZATION01",
+        "token": "TOKEN01",
+        "id": "ORGANIZATION02"
+      }
+    }
+  },
+  "new": {
+    "organization": {
+      "organization_ref01": {}
+    }
+  },
+  "requests": {
+    "POST /v1/organizations/{slug}/project-claim/{token}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

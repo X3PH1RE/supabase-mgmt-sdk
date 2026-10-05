@@ -1,0 +1,45 @@
+{
+  "existing": {
+    "branch_update_response_output": {
+      "BRANCH_UPDATE_RESPONSE_OUTPUT00": {
+        "migration_version": "sa",
+        "branch_id_or_ref": "BRANCH_ID_OR_REF01",
+        "id": "BRANCH_UPDATE_RESPONSE_OUTPUT00"
+      },
+      "BRANCH_UPDATE_RESPONSE_OUTPUT01": {
+        "migration_version": "s14",
+        "branch_id_or_ref": "BRANCH_ID_OR_REF01",
+        "id": "BRANCH_UPDATE_RESPONSE_OUTPUT01"
+      },
+      "BRANCH_UPDATE_RESPONSE_OUTPUT02": {
+        "migration_version": "s1e",
+        "branch_id_or_ref": "BRANCH_ID_OR_REF01",
+        "id": "BRANCH_UPDATE_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "branch_update_response_output": {
+      "branch_update_response_output_ref01": {
+        "migration_version": "s28"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/branches/{branch_id_or_ref}/merge": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/branches/{branch_id_or_ref}/push": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/branches/{branch_id_or_ref}/reset": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

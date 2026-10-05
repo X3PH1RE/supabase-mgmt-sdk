@@ -1,0 +1,104 @@
+# Entity: v1_organization_member_response_output
+
+main: kit: entity: v1_organization_member_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    avatar_url: {
+      h: "Avatar Url"
+      n: "avatar_url"
+      r: true
+      t: "`$STRING`"
+    }
+    email: {
+      h: "Email"
+      n: "email"
+      r: false
+      t: "`$STRING`"
+    }
+    mfa_enabled: {
+      h: "Mfa Enabled"
+      n: "mfa_enabled"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    role_name: {
+      h: "Role Name"
+      n: "role_name"
+      r: false
+      t: "`$STRING`"
+    }
+    user_id: {
+      h: "User Id"
+      n: "user_id"
+      r: true
+      t: "`$STRING`"
+    }
+    user_name: {
+      h: "User Name"
+      n: "user_name"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "v1_organization_member_response_output"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/organizations/{slug}/members"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "tsrqponmlkjihgfedcba"
+                k: "param"
+                n: "slug"
+                or: "slug"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/organizations/{slug}/members"
+          q: {
+            exist: [
+              "slug"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "organizations"
+            }
+            {
+              var: "slug"
+            }
+            {
+              lit: "members"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.organization")]
+  ]
+
+}

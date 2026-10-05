@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "project_available_restore_versions_response_output": {
+      "PROJECT_AVAILABLE_RESTORE_VERSIONS_RESPONSE_OUTPUT00": {
+        "postgres_engine": "s1e",
+        "release_channel": "s1f",
+        "version": "s20",
+        "ref": "REF01"
+      },
+      "PROJECT_AVAILABLE_RESTORE_VERSIONS_RESPONSE_OUTPUT01": {
+        "postgres_engine": "s3c",
+        "release_channel": "s3d",
+        "version": "s3e",
+        "ref": "REF01"
+      },
+      "PROJECT_AVAILABLE_RESTORE_VERSIONS_RESPONSE_OUTPUT02": {
+        "postgres_engine": "s5a",
+        "release_channel": "s5b",
+        "version": "s5c",
+        "ref": "REF01"
+      }
+    }
+  },
+  "new": {
+    "project_available_restore_versions_response_output": {
+      "project_available_restore_versions_response_output_ref01": {
+        "postgres_engine": "s78",
+        "release_channel": "s79",
+        "version": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/restore": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+# Entity: functionscombined_stat
+
+main: kit: entity: functionscombined_stat: {
+
+  alias: field: {}
+
+  fields: {
+    error: {
+      h: "Error"
+      n: "error"
+      r: false
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    result: {
+      h: "Result"
+      n: "result"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "functionscombined_stat"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/analytics/endpoints/functions.combined-stats"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "3c078cce-ad70-4148-9f37-4da362789053"
+                k: "query"
+                n: "function_id"
+                or: "function_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "1hr"
+                k: "query"
+                n: "interval"
+                or: "interval"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/analytics/endpoints/functions.combined-stats"
+          q: {
+            exist: [
+              "function_id"
+              "interval"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "analytics"
+            }
+            {
+              lit: "endpoints"
+            }
+            {
+              lit: "functions.combined-stats"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "v1_backup_schedule_response_output": {
+      "V1_BACKUP_SCHEDULE_RESPONSE_OUTPUT00": {
+        "schedule_for": "s14",
+        "updated_at": "s15",
+        "project_id": "PROJECT01",
+        "id": "V1_BACKUP_SCHEDULE_RESPONSE_OUTPUT00"
+      },
+      "V1_BACKUP_SCHEDULE_RESPONSE_OUTPUT01": {
+        "schedule_for": "s28",
+        "updated_at": "s29",
+        "project_id": "PROJECT01",
+        "id": "V1_BACKUP_SCHEDULE_RESPONSE_OUTPUT01"
+      },
+      "V1_BACKUP_SCHEDULE_RESPONSE_OUTPUT02": {
+        "schedule_for": "s3c",
+        "updated_at": "s3d",
+        "project_id": "PROJECT01",
+        "id": "V1_BACKUP_SCHEDULE_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "v1_backup_schedule_response_output": {
+      "v1_backup_schedule_response_output_ref01": {
+        "schedule_for": "s50",
+        "updated_at": "s51"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/database/backups/schedule": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{ref}/database/backups/schedule": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

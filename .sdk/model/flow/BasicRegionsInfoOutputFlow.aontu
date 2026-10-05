@@ -1,0 +1,28 @@
+# BasicRegionsInfoOutputFlow
+
+main: kit: flow: BasicRegionsInfoOutputFlow:
+{
+  entity: "regions_info_output",
+  kind: "basic",
+  name: "BasicRegionsInfoOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "regions_info_output_ref01",
+        srcdatavar: "regions_info_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-regions_info_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicRegionsInfoOutputFlow"
+}

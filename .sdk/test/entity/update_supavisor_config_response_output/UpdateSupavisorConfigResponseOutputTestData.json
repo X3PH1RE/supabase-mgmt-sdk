@@ -1,0 +1,39 @@
+{
+  "existing": {
+    "update_supavisor_config_response_output": {
+      "UPDATE_SUPAVISOR_CONFIG_RESPONSE_OUTPUT00": {
+        "default_pool_size": 20,
+        "pool_mode": "s15",
+        "project_id": "PROJECT01",
+        "id": "UPDATE_SUPAVISOR_CONFIG_RESPONSE_OUTPUT00"
+      },
+      "UPDATE_SUPAVISOR_CONFIG_RESPONSE_OUTPUT01": {
+        "default_pool_size": 40,
+        "pool_mode": "s29",
+        "project_id": "PROJECT01",
+        "id": "UPDATE_SUPAVISOR_CONFIG_RESPONSE_OUTPUT01"
+      },
+      "UPDATE_SUPAVISOR_CONFIG_RESPONSE_OUTPUT02": {
+        "default_pool_size": 60,
+        "pool_mode": "s3d",
+        "project_id": "PROJECT01",
+        "id": "UPDATE_SUPAVISOR_CONFIG_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "update_supavisor_config_response_output": {
+      "update_supavisor_config_response_output_ref01": {
+        "default_pool_size": 80,
+        "pool_mode": "s51"
+      }
+    }
+  },
+  "requests": {
+    "PATCH /v1/projects/{ref}/config/database/pooler": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

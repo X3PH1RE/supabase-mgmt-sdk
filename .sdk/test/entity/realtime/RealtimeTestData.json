@@ -1,0 +1,93 @@
+{
+  "existing": {
+    "realtime": {
+      "REALTIME00": {
+        "admin_suspended_at": "s82",
+        "connection_pool": 131,
+        "max_bytes_per_second": 132,
+        "max_channels_per_client": 133,
+        "max_concurrent_users": 134,
+        "max_events_per_second": 135,
+        "max_joins_per_second": 136,
+        "max_payload_size_in_kb": 137,
+        "max_presence_events_per_second": 138,
+        "postgres_changes_pool": 139,
+        "presence_enabled": true,
+        "private_only": false,
+        "suspend": true,
+        "project_id": "PROJECT01",
+        "id": "REALTIME00"
+      },
+      "REALTIME01": {
+        "admin_suspended_at": "s104",
+        "connection_pool": 261,
+        "max_bytes_per_second": 262,
+        "max_channels_per_client": 263,
+        "max_concurrent_users": 264,
+        "max_events_per_second": 265,
+        "max_joins_per_second": 266,
+        "max_payload_size_in_kb": 267,
+        "max_presence_events_per_second": 268,
+        "postgres_changes_pool": 269,
+        "presence_enabled": true,
+        "private_only": false,
+        "suspend": true,
+        "project_id": "PROJECT01",
+        "id": "REALTIME01"
+      },
+      "REALTIME02": {
+        "admin_suspended_at": "s186",
+        "connection_pool": 391,
+        "max_bytes_per_second": 392,
+        "max_channels_per_client": 393,
+        "max_concurrent_users": 394,
+        "max_events_per_second": 395,
+        "max_joins_per_second": 396,
+        "max_payload_size_in_kb": 397,
+        "max_presence_events_per_second": 398,
+        "postgres_changes_pool": 399,
+        "presence_enabled": true,
+        "private_only": false,
+        "suspend": true,
+        "project_id": "PROJECT01",
+        "id": "REALTIME02"
+      }
+    }
+  },
+  "new": {
+    "realtime": {
+      "realtime_ref01": {
+        "admin_suspended_at": "s208",
+        "connection_pool": 521,
+        "max_bytes_per_second": 522,
+        "max_channels_per_client": 523,
+        "max_concurrent_users": 524,
+        "max_events_per_second": 525,
+        "max_joins_per_second": 526,
+        "max_payload_size_in_kb": 527,
+        "max_presence_events_per_second": 528,
+        "postgres_changes_pool": 529,
+        "presence_enabled": true,
+        "private_only": false,
+        "suspend": true
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/config/realtime/shutdown": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/config/realtime": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{ref}/config/realtime": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

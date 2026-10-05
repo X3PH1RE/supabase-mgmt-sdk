@@ -1,0 +1,135 @@
+# Entity: ssl_enforcement
+
+main: kit: entity: ssl_enforcement: {
+
+  alias: field: {}
+
+  fields: {
+    appliedSuccessfully: {
+      h: "Applied Successfully"
+      n: "appliedSuccessfully"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    currentConfig: {
+      h: "Current Config"
+      n: "currentConfig"
+      r: true
+      t: "`$OBJECT`"
+    }
+    requestedConfig: {
+      h: "Requested Config"
+      n: "requestedConfig"
+      r: true
+      t: "`$OBJECT`"
+    }
+  }
+
+  name: "ssl_enforcement"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/ssl-enforcement"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/ssl-enforcement"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "ssl-enforcement"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /v1/projects/{ref}/ssl-enforcement"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/v1/projects/{ref}/ssl-enforcement"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "ssl-enforcement"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

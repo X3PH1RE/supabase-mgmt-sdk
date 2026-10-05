@@ -1,0 +1,33 @@
+# BasicV1GetMigrationResponseOutputFlow
+
+main: kit: flow: BasicV1GetMigrationResponseOutputFlow:
+{
+  entity: "v1_get_migration_response_output",
+  kind: "basic",
+  name: "BasicV1GetMigrationResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "v1_get_migration_response_output_ref01",
+        srcdatavar: "v1_get_migration_response_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "v1_get_migration_response_output01",
+        project_id: "project01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-v1_get_migration_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicV1GetMigrationResponseOutputFlow"
+}

@@ -1,0 +1,32 @@
+# BasicPostgrestFlow
+
+main: kit: flow: BasicPostgrestFlow:
+{
+  entity: "postgrest",
+  kind: "basic",
+  name: "BasicPostgrestFlow",
+  step: [
+    {
+      i: {
+        ref: "postgrest_ref01",
+        srcdatavar: "postgrest_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "postgrest01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-postgrest_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPostgrestFlow"
+}

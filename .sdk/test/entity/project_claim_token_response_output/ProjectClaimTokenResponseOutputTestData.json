@@ -1,0 +1,47 @@
+{
+  "existing": {
+    "project_claim_token_response_output": {
+      "PROJECT_CLAIM_TOKEN_RESPONSE_OUTPUT00": {
+        "created_at": "s28",
+        "created_by": "s29",
+        "expires_at": "s2a",
+        "token_alias": "s2b",
+        "ref": "REF01",
+        "id": "PROJECT_CLAIM_TOKEN_RESPONSE_OUTPUT00"
+      },
+      "PROJECT_CLAIM_TOKEN_RESPONSE_OUTPUT01": {
+        "created_at": "s50",
+        "created_by": "s51",
+        "expires_at": "s52",
+        "token_alias": "s53",
+        "ref": "REF01",
+        "id": "PROJECT_CLAIM_TOKEN_RESPONSE_OUTPUT01"
+      },
+      "PROJECT_CLAIM_TOKEN_RESPONSE_OUTPUT02": {
+        "created_at": "s78",
+        "created_by": "s79",
+        "expires_at": "s7a",
+        "token_alias": "s7b",
+        "ref": "REF01",
+        "id": "PROJECT_CLAIM_TOKEN_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "project_claim_token_response_output": {
+      "project_claim_token_response_output_ref01": {
+        "created_at": "sa0",
+        "created_by": "sa1",
+        "expires_at": "sa2",
+        "token_alias": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/claim-token": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

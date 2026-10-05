@@ -1,0 +1,30 @@
+{
+  "existing": {
+    "network_ban_response_output": {
+      "NETWORK_BAN_RESPONSE_OUTPUT00": {
+        "project_id": "PROJECT01",
+        "id": "NETWORK_BAN_RESPONSE_OUTPUT00"
+      },
+      "NETWORK_BAN_RESPONSE_OUTPUT01": {
+        "project_id": "PROJECT01",
+        "id": "NETWORK_BAN_RESPONSE_OUTPUT01"
+      },
+      "NETWORK_BAN_RESPONSE_OUTPUT02": {
+        "project_id": "PROJECT01",
+        "id": "NETWORK_BAN_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "network_ban_response_output": {
+      "network_ban_response_output_ref01": {}
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/network-bans/retrieve": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

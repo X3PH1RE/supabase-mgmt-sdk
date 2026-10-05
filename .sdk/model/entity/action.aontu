@@ -1,0 +1,210 @@
+# Entity: action
+
+main: kit: entity: action: {
+
+  alias: field: {}
+
+  fields: {
+    branch_id: {
+      h: "Branch Id"
+      n: "branch_id"
+      r: true
+      t: "`$STRING`"
+    }
+    check_run_id: {
+      h: "Check Run Id"
+      n: "check_run_id"
+      r: true
+      t: "`$NUMBER`"
+    }
+    created_at: {
+      h: "Created At"
+      n: "created_at"
+      r: true
+      t: "`$STRING`"
+    }
+    git_config: {
+      h: "Git Config"
+      n: "git_config"
+      r: false
+      t: "`$ANY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    run_steps: {
+      h: "Run Steps"
+      n: "run_steps"
+      r: true
+      t: "`$ARRAY`"
+    }
+    updated_at: {
+      h: "Updated At"
+      n: "updated_at"
+      r: true
+      t: "`$STRING`"
+    }
+    workdir: {
+      h: "Workdir"
+      n: "workdir"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "action"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/actions/{run_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "run_01hq3q9m7y5q7e4a7x2c8m1p4n"
+                k: "param"
+                n: "id"
+                or: "run_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/actions/{run_id}"
+          q: {
+            exist: [
+              "id"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+              run_id: "id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "actions"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /v1/projects/{ref}/actions/{run_id}/status"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "run_01hq3q9m7y5q7e4a7x2c8m1p4n"
+                k: "param"
+                n: "id"
+                or: "run_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/v1/projects/{ref}/actions/{run_id}/status"
+          q: {
+            "$action": "status"
+            exist: [
+              "id"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+              run_id: "id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "actions"
+            }
+            {
+              var: "id"
+            }
+            {
+              lit: "status"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

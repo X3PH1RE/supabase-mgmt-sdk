@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "o_auth_token_response_output": {
+      "O_AUTH_TOKEN_RESPONSE_OUTPUT00": {
+        "access_token": "s28",
+        "expires_in": 41,
+        "refresh_token": "s2a",
+        "token_type": "s2b",
+        "id": "O_AUTH_TOKEN_RESPONSE_OUTPUT00"
+      },
+      "O_AUTH_TOKEN_RESPONSE_OUTPUT01": {
+        "access_token": "s50",
+        "expires_in": 81,
+        "refresh_token": "s52",
+        "token_type": "s53",
+        "id": "O_AUTH_TOKEN_RESPONSE_OUTPUT01"
+      },
+      "O_AUTH_TOKEN_RESPONSE_OUTPUT02": {
+        "access_token": "s78",
+        "expires_in": 121,
+        "refresh_token": "s7a",
+        "token_type": "s7b",
+        "id": "O_AUTH_TOKEN_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "o_auth_token_response_output": {
+      "o_auth_token_response_output_ref01": {
+        "access_token": "sa0",
+        "expires_in": 161,
+        "refresh_token": "sa2",
+        "token_type": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/oauth/token": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,85 @@
+# BasicFunctionFlow
+
+main: kit: flow: BasicFunctionFlow:
+{
+  entity: "function",
+  kind: "basic",
+  name: "BasicFunctionFlow",
+  step: [
+    {
+      i: {
+        ref: "function_ref01"
+      }
+
+      m: {
+        project_id: "project01",
+        ref: "function_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        ref: "ref01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "function_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      d: {
+        project_id: "project01"
+      }
+
+      i: {
+        ref: "function_ref01",
+        srcdatavar: "function_ref01_data",
+        suffix: "_up0",
+        textfield: "body"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-function_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "function_ref01",
+        srcdatavar: "function_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "function01",
+        project_id: "project01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-function_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicFunctionFlow"
+}

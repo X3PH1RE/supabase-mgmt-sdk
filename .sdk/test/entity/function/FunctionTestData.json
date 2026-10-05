@@ -1,0 +1,97 @@
+{
+  "existing": {
+    "function": {
+      "FUNCTION00": {
+        "body": "s82",
+        "created_at": 131,
+        "entrypoint_path": "s84",
+        "ezbr_sha256": "s85",
+        "id": "FUNCTION00",
+        "import_map": false,
+        "import_map_path": "s88",
+        "name": "s89",
+        "slug": "s8a",
+        "status": "s8b",
+        "updated_at": 140,
+        "verify_jwt": false,
+        "version": 142,
+        "ref": "REF01",
+        "project_id": "PROJECT01"
+      },
+      "FUNCTION01": {
+        "body": "s104",
+        "created_at": 261,
+        "entrypoint_path": "s106",
+        "ezbr_sha256": "s107",
+        "id": "FUNCTION01",
+        "import_map": false,
+        "import_map_path": "s10a",
+        "name": "s10b",
+        "slug": "s10c",
+        "status": "s10d",
+        "updated_at": 270,
+        "verify_jwt": false,
+        "version": 272,
+        "ref": "REF01",
+        "project_id": "PROJECT01"
+      },
+      "FUNCTION02": {
+        "body": "s186",
+        "created_at": 391,
+        "entrypoint_path": "s188",
+        "ezbr_sha256": "s189",
+        "id": "FUNCTION02",
+        "import_map": false,
+        "import_map_path": "s18c",
+        "name": "s18d",
+        "slug": "s18e",
+        "status": "s18f",
+        "updated_at": 400,
+        "verify_jwt": false,
+        "version": 402,
+        "ref": "REF01",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "function": {
+      "function_ref01": {
+        "body": "s208",
+        "created_at": 521,
+        "entrypoint_path": "s20a",
+        "ezbr_sha256": "s20b",
+        "import_map": false,
+        "import_map_path": "s20e",
+        "name": "s20f",
+        "slug": "s210",
+        "status": "s211",
+        "updated_at": 530,
+        "verify_jwt": false,
+        "version": 532
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/functions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/functions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/functions/{function_slug}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{ref}/functions/{function_slug}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

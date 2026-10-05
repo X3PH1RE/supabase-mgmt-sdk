@@ -1,0 +1,54 @@
+{
+  "existing": {
+    "organization_project_claim_response_output": {
+      "ORGANIZATION_PROJECT_CLAIM_RESPONSE_OUTPUT00": {
+        "created_at": "s32",
+        "created_by": "s33",
+        "expires_at": "s34",
+        "preview": {},
+        "project": {},
+        "organization_id": "ORGANIZATION01",
+        "token": "TOKEN01",
+        "id": "ORGANIZATION_PROJECT_CLAIM_RESPONSE_OUTPUT00"
+      },
+      "ORGANIZATION_PROJECT_CLAIM_RESPONSE_OUTPUT01": {
+        "created_at": "s64",
+        "created_by": "s65",
+        "expires_at": "s66",
+        "preview": {},
+        "project": {},
+        "organization_id": "ORGANIZATION01",
+        "token": "TOKEN01",
+        "id": "ORGANIZATION_PROJECT_CLAIM_RESPONSE_OUTPUT01"
+      },
+      "ORGANIZATION_PROJECT_CLAIM_RESPONSE_OUTPUT02": {
+        "created_at": "s96",
+        "created_by": "s97",
+        "expires_at": "s98",
+        "preview": {},
+        "project": {},
+        "organization_id": "ORGANIZATION01",
+        "token": "TOKEN01",
+        "id": "ORGANIZATION_PROJECT_CLAIM_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "organization_project_claim_response_output": {
+      "organization_project_claim_response_output_ref01": {
+        "created_at": "sc8",
+        "created_by": "sc9",
+        "expires_at": "sca",
+        "preview": {},
+        "project": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/organizations/{slug}/project-claim/{token}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

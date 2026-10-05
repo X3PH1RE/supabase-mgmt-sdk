@@ -1,0 +1,47 @@
+{
+  "existing": {
+    "jit_access_response_output": {
+      "JIT_ACCESS_RESPONSE_OUTPUT00": {
+        "email": "s28",
+        "token": "s29",
+        "user_id": "USER01",
+        "user_roles": [],
+        "project_id": "PROJECT01",
+        "id": "JIT_ACCESS_RESPONSE_OUTPUT00"
+      },
+      "JIT_ACCESS_RESPONSE_OUTPUT01": {
+        "email": "s50",
+        "token": "s51",
+        "user_id": "USER01",
+        "user_roles": [],
+        "project_id": "PROJECT01",
+        "id": "JIT_ACCESS_RESPONSE_OUTPUT01"
+      },
+      "JIT_ACCESS_RESPONSE_OUTPUT02": {
+        "email": "s78",
+        "token": "s79",
+        "user_id": "USER01",
+        "user_roles": [],
+        "project_id": "PROJECT01",
+        "id": "JIT_ACCESS_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "jit_access_response_output": {
+      "jit_access_response_output_ref01": {
+        "email": "sa0",
+        "token": "sa1",
+        "user_id": "USER01",
+        "user_roles": []
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/database/jit/invite/accept": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

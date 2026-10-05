@@ -1,0 +1,32 @@
+# BasicDiskAutoscaleConfigOutputFlow
+
+main: kit: flow: BasicDiskAutoscaleConfigOutputFlow:
+{
+  entity: "disk_autoscale_config_output",
+  kind: "basic",
+  name: "BasicDiskAutoscaleConfigOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "disk_autoscale_config_output_ref01",
+        srcdatavar: "disk_autoscale_config_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "disk_autoscale_config_output01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-disk_autoscale_config_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDiskAutoscaleConfigOutputFlow"
+}

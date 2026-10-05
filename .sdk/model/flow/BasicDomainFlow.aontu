@@ -1,0 +1,9 @@
+# BasicDomainFlow
+
+main: kit: flow: BasicDomainFlow:
+{
+  entity: "domain",
+  kind: "basic",
+  name: "BasicDomainFlow",
+  "key$": "BasicDomainFlow"
+}

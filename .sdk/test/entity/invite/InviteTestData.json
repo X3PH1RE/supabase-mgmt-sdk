@@ -1,0 +1,47 @@
+{
+  "existing": {
+    "invite": {
+      "INVITE00": {
+        "email": "s28",
+        "invite_id": "INVITE01",
+        "roles": [],
+        "user_roles": [],
+        "project_id": "PROJECT01",
+        "id": "INVITE00"
+      },
+      "INVITE01": {
+        "email": "s50",
+        "invite_id": "INVITE01",
+        "roles": [],
+        "user_roles": [],
+        "project_id": "PROJECT01",
+        "id": "INVITE01"
+      },
+      "INVITE02": {
+        "email": "s78",
+        "invite_id": "INVITE01",
+        "roles": [],
+        "user_roles": [],
+        "project_id": "PROJECT01",
+        "id": "INVITE02"
+      }
+    }
+  },
+  "new": {
+    "invite": {
+      "invite_ref01": {
+        "email": "sa0",
+        "invite_id": "INVITE01",
+        "roles": [],
+        "user_roles": []
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/database/jit/invite": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

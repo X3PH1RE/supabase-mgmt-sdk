@@ -1,0 +1,133 @@
+# Entity: v1_pgbouncer_config_response_output
+
+main: kit: entity: v1_pgbouncer_config_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    connection_string: {
+      h: "Connection String"
+      n: "connection_string"
+      r: false
+      t: "`$STRING`"
+    }
+    default_pool_size: {
+      h: "Default Pool Size"
+      n: "default_pool_size"
+      r: false
+      t: "`$INTEGER`"
+    }
+    ignore_startup_parameters: {
+      h: "Ignore Startup Parameters"
+      n: "ignore_startup_parameters"
+      r: false
+      t: "`$STRING`"
+    }
+    max_client_conn: {
+      h: "Max Client Conn"
+      n: "max_client_conn"
+      r: false
+      t: "`$INTEGER`"
+    }
+    pool_mode: {
+      h: "Pool Mode"
+      n: "pool_mode"
+      r: false
+      t: "`$STRING`"
+    }
+    query_wait_timeout: {
+      h: "Query Wait Timeout"
+      n: "query_wait_timeout"
+      r: false
+      t: "`$INTEGER`"
+    }
+    reserve_pool_size: {
+      h: "Reserve Pool Size"
+      n: "reserve_pool_size"
+      r: false
+      t: "`$INTEGER`"
+    }
+    server_idle_timeout: {
+      h: "Server Idle Timeout"
+      n: "server_idle_timeout"
+      r: false
+      t: "`$INTEGER`"
+    }
+    server_lifetime: {
+      h: "Server Lifetime"
+      n: "server_lifetime"
+      r: false
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "v1_pgbouncer_config_response_output"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/config/database/pgbouncer"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/config/database/pgbouncer"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "database"
+            }
+            {
+              lit: "pgbouncer"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

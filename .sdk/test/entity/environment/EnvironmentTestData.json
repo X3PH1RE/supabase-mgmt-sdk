@@ -1,0 +1,49 @@
+{
+  "existing": {
+    "environment": {
+      "ENVIRONMENT00": {
+        "branch_id_or_ref": "BRANCH_ID_OR_REF01",
+        "action_id": "ACTION01",
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "id": "ENVIRONMENT00"
+      },
+      "ENVIRONMENT01": {
+        "branch_id_or_ref": "BRANCH_ID_OR_REF01",
+        "action_id": "ACTION01",
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "id": "ENVIRONMENT01"
+      },
+      "ENVIRONMENT02": {
+        "branch_id_or_ref": "BRANCH_ID_OR_REF01",
+        "action_id": "ACTION01",
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "id": "ENVIRONMENT02"
+      }
+    }
+  },
+  "new": {
+    "environment": {
+      "environment_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /v1/branches/{branch_id_or_ref}/diff": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/actions/{run_id}/logs": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{ref}/branches": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

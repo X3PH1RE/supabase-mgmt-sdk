@@ -1,0 +1,26 @@
+# BasicV1ListEntitlementsResponseOutputFlow
+
+main: kit: flow: BasicV1ListEntitlementsResponseOutputFlow:
+{
+  entity: "v1_list_entitlements_response_output",
+  kind: "basic",
+  name: "BasicV1ListEntitlementsResponseOutputFlow",
+  step: [
+    {
+      m: {
+        slug: "slug01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "v1_list_entitlements_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicV1ListEntitlementsResponseOutputFlow"
+}

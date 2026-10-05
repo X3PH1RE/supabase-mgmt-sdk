@@ -1,0 +1,26 @@
+# BasicLogFlow
+
+main: kit: flow: BasicLogFlow:
+{
+  entity: "log",
+  kind: "basic",
+  name: "BasicLogFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "log_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicLogFlow"
+}

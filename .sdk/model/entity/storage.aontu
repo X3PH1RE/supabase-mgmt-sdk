@@ -1,0 +1,180 @@
+# Entity: storage
+
+main: kit: entity: storage: {
+
+  alias: field: {}
+
+  fields: {
+    capabilities: {
+      h: "Capabilities"
+      n: "capabilities"
+      r: true
+      t: "`$OBJECT`"
+    }
+    external: {
+      h: "External"
+      n: "external"
+      r: true
+      t: "`$OBJECT`"
+    }
+    features: {
+      h: "Features"
+      n: "features"
+      op: {
+        update: {
+          req: false
+          type: "`$OBJECT`"
+        }
+      }
+      r: true
+      t: "`$OBJECT`"
+    }
+    fileSizeLimit: {
+      fo: "int64"
+      h: "File Size Limit"
+      n: "fileSizeLimit"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    migrationVersion: {
+      h: "Migration Version"
+      n: "migrationVersion"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "storage"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/config/storage"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/config/storage"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "storage"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /v1/projects/{ref}/config/storage"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/v1/projects/{ref}/config/storage"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "storage"
+            }
+          ]
+          t: {
+            req: {
+              external: "`reqdata.external`"
+              features: "`reqdata.feature`"
+              fileSizeLimit: "`reqdata.file_size_limit`"
+            }
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

@@ -1,0 +1,43 @@
+{
+  "existing": {
+    "disk_autoscale_config_output": {
+      "DISK_AUTOSCALE_CONFIG_OUTPUT00": {
+        "growth_percent": 30,
+        "max_size_gb": 31,
+        "min_increment_gb": 32,
+        "project_id": "PROJECT01",
+        "id": "DISK_AUTOSCALE_CONFIG_OUTPUT00"
+      },
+      "DISK_AUTOSCALE_CONFIG_OUTPUT01": {
+        "growth_percent": 60,
+        "max_size_gb": 61,
+        "min_increment_gb": 62,
+        "project_id": "PROJECT01",
+        "id": "DISK_AUTOSCALE_CONFIG_OUTPUT01"
+      },
+      "DISK_AUTOSCALE_CONFIG_OUTPUT02": {
+        "growth_percent": 90,
+        "max_size_gb": 91,
+        "min_increment_gb": 92,
+        "project_id": "PROJECT01",
+        "id": "DISK_AUTOSCALE_CONFIG_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "disk_autoscale_config_output": {
+      "disk_autoscale_config_output_ref01": {
+        "growth_percent": 120,
+        "max_size_gb": 121,
+        "min_increment_gb": 122
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/config/disk/autoscale": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "existing": {
+    "o_auth": {
+      "O_AUTH00": {
+        "client_id": "CLIENT01",
+        "client_secret": "s1f",
+        "refresh_token": "s20",
+        "id": "O_AUTH00"
+      },
+      "O_AUTH01": {
+        "client_id": "CLIENT01",
+        "client_secret": "s3d",
+        "refresh_token": "s3e",
+        "id": "O_AUTH01"
+      },
+      "O_AUTH02": {
+        "client_id": "CLIENT01",
+        "client_secret": "s5b",
+        "refresh_token": "s5c",
+        "id": "O_AUTH02"
+      }
+    }
+  },
+  "new": {
+    "o_auth": {
+      "o_auth_ref01": {
+        "client_id": "CLIENT01",
+        "client_secret": "s79",
+        "refresh_token": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/oauth/revoke": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/oauth/authorize": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/oauth/authorize/project-claim": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

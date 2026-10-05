@@ -1,0 +1,118 @@
+# BasicSigningKeyFlow
+
+main: kit: flow: BasicSigningKeyFlow:
+{
+  entity: "signing_key",
+  kind: "basic",
+  name: "BasicSigningKeyFlow",
+  step: [
+    {
+      i: {
+        ref: "signing_key_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "signing_key_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      d: {
+        project_id: "project01"
+      }
+
+      i: {
+        ref: "signing_key_ref01",
+        srcdatavar: "signing_key_ref01_data",
+        suffix: "_up0",
+        textfield: "algorithm"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-signing_key_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "signing_key_ref01",
+        srcdatavar: "signing_key_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "signing_key01",
+        project_id: "project01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-signing_key_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "signing_key_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "signing_key01",
+        project_id: "project01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "signing_key_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSigningKeyFlow"
+}

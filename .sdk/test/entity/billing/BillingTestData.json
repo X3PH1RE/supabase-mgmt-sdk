@@ -1,0 +1,38 @@
+{
+  "existing": {
+    "billing": {
+      "BILLING00": {
+        "addon_variant": "ADDON_VARIANT01",
+        "project_id": "PROJECT01",
+        "id": "BILLING00"
+      },
+      "BILLING01": {
+        "addon_variant": "ADDON_VARIANT01",
+        "project_id": "PROJECT01",
+        "id": "BILLING01"
+      },
+      "BILLING02": {
+        "addon_variant": "ADDON_VARIANT01",
+        "project_id": "PROJECT01",
+        "id": "BILLING02"
+      }
+    }
+  },
+  "new": {
+    "billing": {
+      "billing_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /v1/projects/{ref}/billing/addons/{addon_variant}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{ref}/billing/addons": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "activate": {
+      "ACTIVATE00": {
+        "vanity_subdomain": "sa",
+        "project_id": "PROJECT01",
+        "id": "ACTIVATE00"
+      },
+      "ACTIVATE01": {
+        "vanity_subdomain": "s14",
+        "project_id": "PROJECT01",
+        "id": "ACTIVATE01"
+      },
+      "ACTIVATE02": {
+        "vanity_subdomain": "s1e",
+        "project_id": "PROJECT01",
+        "id": "ACTIVATE02"
+      }
+    }
+  },
+  "new": {
+    "activate": {
+      "activate_ref01": {
+        "vanity_subdomain": "s28"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/vanity-subdomain/activate": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

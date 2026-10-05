@@ -1,0 +1,35 @@
+# BasicProjectFlow
+
+main: kit: flow: BasicProjectFlow:
+{
+  entity: "project",
+  kind: "basic",
+  name: "BasicProjectFlow",
+  step: [
+    {
+      i: {
+        ref: "project_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "project_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "project01"
+      }
+
+      o: "remove"
+    }
+  ],
+  "key$": "BasicProjectFlow"
+}

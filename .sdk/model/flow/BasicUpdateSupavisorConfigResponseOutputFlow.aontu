@@ -1,0 +1,29 @@
+# BasicUpdateSupavisorConfigResponseOutputFlow
+
+main: kit: flow: BasicUpdateSupavisorConfigResponseOutputFlow:
+{
+  entity: "update_supavisor_config_response_output",
+  kind: "basic",
+  name: "BasicUpdateSupavisorConfigResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "update_supavisor_config_response_output_ref01",
+        srcdatavar: "update_supavisor_config_response_output_ref01_data",
+        suffix: "_up0",
+        textfield: "pool_mode"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-update_supavisor_config_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUpdateSupavisorConfigResponseOutputFlow"
+}

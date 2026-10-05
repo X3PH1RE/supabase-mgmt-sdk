@@ -1,0 +1,51 @@
+# BasicAuthFlow
+
+main: kit: flow: BasicAuthFlow:
+{
+  entity: "auth",
+  kind: "basic",
+  name: "BasicAuthFlow",
+  step: [
+    {
+      i: {
+        ref: "auth_ref01",
+        srcdatavar: "auth_ref01_data",
+        suffix: "_up0",
+        textfield: "db_max_pool_size_unit"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-auth_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "auth_ref01",
+        srcdatavar: "auth_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "auth01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-auth_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicAuthFlow"
+}

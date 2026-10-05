@@ -1,0 +1,22 @@
+# BasicSubdomainAvailabilityResponseOutputFlow
+
+main: kit: flow: BasicSubdomainAvailabilityResponseOutputFlow:
+{
+  entity: "subdomain_availability_response_output",
+  kind: "basic",
+  name: "BasicSubdomainAvailabilityResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "subdomain_availability_response_output_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicSubdomainAvailabilityResponseOutputFlow"
+}

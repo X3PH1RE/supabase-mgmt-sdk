@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "create_role_response_output": {
+      "CREATE_ROLE_RESPONSE_OUTPUT00": {
+        "read_only": true,
+        "project_id": "PROJECT01",
+        "id": "CREATE_ROLE_RESPONSE_OUTPUT00"
+      },
+      "CREATE_ROLE_RESPONSE_OUTPUT01": {
+        "read_only": true,
+        "project_id": "PROJECT01",
+        "id": "CREATE_ROLE_RESPONSE_OUTPUT01"
+      },
+      "CREATE_ROLE_RESPONSE_OUTPUT02": {
+        "read_only": true,
+        "project_id": "PROJECT01",
+        "id": "CREATE_ROLE_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "create_role_response_output": {
+      "create_role_response_output_ref01": {
+        "read_only": true
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/cli/login-role": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+# BasicOrganizationProjectClaimResponseOutputFlow
+
+main: kit: flow: BasicOrganizationProjectClaimResponseOutputFlow:
+{
+  entity: "organization_project_claim_response_output",
+  kind: "basic",
+  name: "BasicOrganizationProjectClaimResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "organization_project_claim_response_output_ref01",
+        srcdatavar: "organization_project_claim_response_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "organization_project_claim_response_output01",
+        organization_id: "organization01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-organization_project_claim_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicOrganizationProjectClaimResponseOutputFlow"
+}

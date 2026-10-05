@@ -1,0 +1,51 @@
+{
+  "existing": {
+    "v1_storage_bucket_response_output": {
+      "V1_STORAGE_BUCKET_RESPONSE_OUTPUT00": {
+        "created_at": "s3c",
+        "id": "V1_STORAGE_BUCKET_RESPONSE_OUTPUT00",
+        "name": "s3e",
+        "owner": "s3f",
+        "public": true,
+        "updated_at": "s41",
+        "project_id": "PROJECT01"
+      },
+      "V1_STORAGE_BUCKET_RESPONSE_OUTPUT01": {
+        "created_at": "s78",
+        "id": "V1_STORAGE_BUCKET_RESPONSE_OUTPUT01",
+        "name": "s7a",
+        "owner": "s7b",
+        "public": true,
+        "updated_at": "s7d",
+        "project_id": "PROJECT01"
+      },
+      "V1_STORAGE_BUCKET_RESPONSE_OUTPUT02": {
+        "created_at": "sb4",
+        "id": "V1_STORAGE_BUCKET_RESPONSE_OUTPUT02",
+        "name": "sb6",
+        "owner": "sb7",
+        "public": true,
+        "updated_at": "sb9",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "v1_storage_bucket_response_output": {
+      "v1_storage_bucket_response_output_ref01": {
+        "created_at": "sf0",
+        "name": "sf2",
+        "owner": "sf3",
+        "public": true,
+        "updated_at": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/storage/buckets": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

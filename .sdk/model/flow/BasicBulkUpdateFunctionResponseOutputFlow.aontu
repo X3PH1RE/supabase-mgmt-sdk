@@ -1,0 +1,28 @@
+# BasicBulkUpdateFunctionResponseOutputFlow
+
+main: kit: flow: BasicBulkUpdateFunctionResponseOutputFlow:
+{
+  entity: "bulk_update_function_response_output",
+  kind: "basic",
+  name: "BasicBulkUpdateFunctionResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "bulk_update_function_response_output_ref01",
+        srcdatavar: "bulk_update_function_response_output_ref01_data",
+        suffix: "_up0"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-bulk_update_function_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicBulkUpdateFunctionResponseOutputFlow"
+}

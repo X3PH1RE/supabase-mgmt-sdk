@@ -1,0 +1,61 @@
+{
+  "existing": {
+    "update_custom_hostname_response_output": {
+      "UPDATE_CUSTOM_HOSTNAME_RESPONSE_OUTPUT00": {
+        "custom_hostname": "s1e",
+        "data": {},
+        "status": "s20",
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "id": "UPDATE_CUSTOM_HOSTNAME_RESPONSE_OUTPUT00"
+      },
+      "UPDATE_CUSTOM_HOSTNAME_RESPONSE_OUTPUT01": {
+        "custom_hostname": "s3c",
+        "data": {},
+        "status": "s3e",
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "id": "UPDATE_CUSTOM_HOSTNAME_RESPONSE_OUTPUT01"
+      },
+      "UPDATE_CUSTOM_HOSTNAME_RESPONSE_OUTPUT02": {
+        "custom_hostname": "s5a",
+        "data": {},
+        "status": "s5c",
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "id": "UPDATE_CUSTOM_HOSTNAME_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "update_custom_hostname_response_output": {
+      "update_custom_hostname_response_output_ref01": {
+        "custom_hostname": "s78",
+        "data": {},
+        "status": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/custom-hostname/activate": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/custom-hostname/initialize": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/custom-hostname/reverify": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/custom-hostname": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

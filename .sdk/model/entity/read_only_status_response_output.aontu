@@ -1,0 +1,86 @@
+# Entity: read_only_status_response_output
+
+main: kit: entity: read_only_status_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    enabled: {
+      h: "Enabled"
+      n: "enabled"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    override_active_until: {
+      h: "Override Active Until"
+      n: "override_active_until"
+      r: true
+      t: "`$STRING`"
+    }
+    override_enabled: {
+      h: "Override Enabled"
+      n: "override_enabled"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "read_only_status_response_output"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/readonly"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/readonly"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "readonly"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

@@ -1,0 +1,563 @@
+# Entity: v1_project_with_database_response_output
+
+main: kit: entity: v1_project_with_database_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    created_at: {
+      h: "Created At"
+      n: "created_at"
+      r: true
+      sh: "Creation timestamp"
+      t: "`$STRING`"
+    }
+    database: {
+      h: "Database"
+      n: "database"
+      r: true
+      t: "`$OBJECT`"
+    }
+    db_pass: {
+      h: "Db Pass"
+      n: "db_pass"
+      r: true
+      sh: "Database password"
+      t: "`$STRING`"
+    }
+    desired_instance_size: {
+      h: "Desired Instance Size"
+      n: "desired_instance_size"
+      r: false
+      sh: "Desired instance size."
+      t: "`$STRING`"
+    }
+    high_availability: {
+      h: "High Availability"
+      n: "high_availability"
+      r: false
+      sh: "[Experimental] Whether to enable high availability for the project."
+      t: "`$BOOLEAN`"
+    }
+    id: {
+      de: true
+      h: "Id"
+      n: "id"
+      r: true
+      sh: "Deprecated: Use `ref` instead."
+      t: "`$STRING`"
+    }
+    kps_enabled: {
+      de: true
+      h: "Kps Enabled"
+      n: "kps_enabled"
+      r: false
+      sh: "This field is deprecated and is ignored in this request"
+      t: "`$BOOLEAN`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      sh: "Name of your project"
+      t: "`$STRING`"
+    }
+    organization_id: {
+      de: true
+      h: "Organization Id"
+      n: "organization_id"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      sh: "Deprecated: Use `organization_slug` instead."
+      t: "`$STRING`"
+    }
+    organization_slug: {
+      h: "Organization Slug"
+      n: "organization_slug"
+      r: true
+      sh: "Organization slug"
+      t: "`$STRING`"
+    }
+    plan: {
+      de: true
+      h: "Plan"
+      n: "plan"
+      r: false
+      sh: "Subscription Plan is now set on organization level and is ignored in this request"
+      t: "`$STRING`"
+    }
+    postgres_engine: {
+      de: true
+      h: "Postgres Engine"
+      n: "postgres_engine"
+      r: false
+      t: "`$NULL`"
+    }
+    ref: {
+      h: "Ref"
+      n: "ref"
+      r: true
+      sh: "Project ref"
+      t: "`$STRING`"
+    }
+    region: {
+      de: true
+      h: "Region"
+      n: "region"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      sh: "Region of your project"
+      t: "`$STRING`"
+    }
+    region_selection: {
+      h: "Region Selection"
+      n: "region_selection"
+      r: false
+      sh: "Region selection."
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    release_channel: {
+      de: true
+      h: "Release Channel"
+      n: "release_channel"
+      r: false
+      t: "`$NULL`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: true
+      t: "`$STRING`"
+    }
+    template_url: {
+      fo: "uri"
+      h: "Template Url"
+      n: "template_url"
+      r: false
+      sh: "Template URL used to create the project from the CLI."
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "v1_project_with_database_response_output"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/claim-token"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/claim-token"
+          q: {
+            "$action": "claim_token"
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "claim-token"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/pause"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/pause"
+          q: {
+            "$action": "pause"
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "pause"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/restart"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/restart"
+          q: {
+            "$action": "restart"
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "restart"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /v1/projects"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/projects"
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+          ]
+          t: {
+            req: {
+              db_pass: "`reqdata.db_pass`"
+              desired_instance_size: "`reqdata.desired_instance_size`"
+              high_availability: "`reqdata.high_availability`"
+              kps_enabled: "`reqdata.kps_enabled`"
+              name: "`reqdata.name`"
+              organization_id: "`reqdata.organization_id`"
+              organization_slug: "`reqdata.organization_slug`"
+              plan: "`reqdata.plan`"
+              postgres_engine: "`reqdata.postgres_engine`"
+              region: "`reqdata.region`"
+              region_selection: "`reqdata.region_selection`"
+              release_channel: "`reqdata.release_channel`"
+              template_url: "`reqdata.template_url`"
+            }
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/v1/projects"
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /v1/projects/{ref}/claim-token"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/v1/projects/{ref}/claim-token"
+          q: {
+            "$action": "claim_token"
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "claim-token"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /v1/projects/{ref}/jit-access"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/v1/projects/{ref}/jit-access"
+          q: {
+            "$action": "jit_access"
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "jit-access"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "PATCH /v1/projects/{ref}/postgrest"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/v1/projects/{ref}/postgrest"
+          q: {
+            "$action": "postgrest"
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "postgrest"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

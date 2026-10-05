@@ -1,0 +1,22 @@
+# BasicNetworkBanResponseOutputFlow
+
+main: kit: flow: BasicNetworkBanResponseOutputFlow:
+{
+  entity: "network_ban_response_output",
+  kind: "basic",
+  name: "BasicNetworkBanResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "network_ban_response_output_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicNetworkBanResponseOutputFlow"
+}

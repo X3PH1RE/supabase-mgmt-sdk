@@ -1,0 +1,82 @@
+# Entity: organization
+
+main: kit: entity: organization: {
+
+  alias: field: {}
+
+  name: "organization"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/organizations/{slug}/project-claim/{token}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "tsrqponmlkjihgfedcba"
+                k: "param"
+                n: "organization_id"
+                or: "slug"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "0123456789abcdef0123456789abcdef01234567"
+                k: "param"
+                n: "token"
+                or: "token"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/organizations/{slug}/project-claim/{token}"
+          q: {
+            exist: [
+              "organization_id"
+              "token"
+            ]
+          }
+          r: {
+            param: {
+              slug: "organization_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "organizations"
+            }
+            {
+              var: "organization_id"
+            }
+            {
+              lit: "project-claim"
+            }
+            {
+              var: "token"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+
+}

@@ -1,0 +1,39 @@
+{
+  "existing": {
+    "disk": {
+      "DISK00": {
+        "attributes": "s14",
+        "last_modified_at": "s15",
+        "project_id": "PROJECT01",
+        "id": "DISK00"
+      },
+      "DISK01": {
+        "attributes": "s28",
+        "last_modified_at": "s29",
+        "project_id": "PROJECT01",
+        "id": "DISK01"
+      },
+      "DISK02": {
+        "attributes": "s3c",
+        "last_modified_at": "s3d",
+        "project_id": "PROJECT01",
+        "id": "DISK02"
+      }
+    }
+  },
+  "new": {
+    "disk": {
+      "disk_ref01": {
+        "attributes": "s50",
+        "last_modified_at": "s51"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/config/disk": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

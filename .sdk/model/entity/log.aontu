@@ -1,0 +1,125 @@
+# Entity: log
+
+main: kit: entity: log: {
+
+  alias: field: {}
+
+  fields: {
+    error: {
+      h: "Error"
+      n: "error"
+      r: false
+      t: "`$ANY`"
+      union: {
+        branches: 2
+        count: 1
+        depth: 0
+      }
+    }
+    result: {
+      h: "Result"
+      n: "result"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "log"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/analytics/endpoints/logs"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "2025-03-01T23:59:59Z"
+                k: "query"
+                n: "iso_timestamp_end"
+                or: "iso_timestamp_end"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "2025-03-01T00:00:00Z"
+                k: "query"
+                n: "iso_timestamp_start"
+                or: "iso_timestamp_start"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "select event_message from edge_logs limit 10"
+                k: "query"
+                n: "sql"
+                or: "sql"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/analytics/endpoints/logs"
+          q: {
+            exist: [
+              "iso_timestamp_end"
+              "iso_timestamp_start"
+              "project_id"
+              "sql"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "analytics"
+            }
+            {
+              lit: "endpoints"
+            }
+            {
+              lit: "logs"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

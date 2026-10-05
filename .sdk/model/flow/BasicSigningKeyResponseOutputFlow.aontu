@@ -1,0 +1,44 @@
+# BasicSigningKeyResponseOutputFlow
+
+main: kit: flow: BasicSigningKeyResponseOutputFlow:
+{
+  entity: "signing_key_response_output",
+  kind: "basic",
+  name: "BasicSigningKeyResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "signing_key_response_output_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "signing_key_response_output_ref01",
+        srcdatavar: "signing_key_response_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "signing_key_response_output01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-signing_key_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSigningKeyResponseOutputFlow"
+}

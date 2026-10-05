@@ -1,0 +1,23 @@
+# BasicOrganizationFlow
+
+main: kit: flow: BasicOrganizationFlow:
+{
+  entity: "organization",
+  kind: "basic",
+  name: "BasicOrganizationFlow",
+  step: [
+    {
+      i: {
+        ref: "organization_ref01"
+      }
+
+      m: {
+        organization_id: "organization01",
+        token: "token01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicOrganizationFlow"
+}

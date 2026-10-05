@@ -1,0 +1,26 @@
+# BasicOrganizationProjectsResponseOutputFlow
+
+main: kit: flow: BasicOrganizationProjectsResponseOutputFlow:
+{
+  entity: "organization_projects_response_output",
+  kind: "basic",
+  name: "BasicOrganizationProjectsResponseOutputFlow",
+  step: [
+    {
+      m: {
+        slug: "slug01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "organization_projects_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicOrganizationProjectsResponseOutputFlow"
+}

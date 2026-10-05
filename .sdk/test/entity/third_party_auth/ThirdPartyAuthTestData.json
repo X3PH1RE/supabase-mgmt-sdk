@@ -1,0 +1,78 @@
+{
+  "existing": {
+    "third_party_auth": {
+      "THIRD_PARTY_AUTH00": {
+        "custom_jwks": "s5a",
+        "id": "THIRD_PARTY_AUTH00",
+        "inserted_at": "s5c",
+        "jwks_url": "s5d",
+        "oidc_issuer_url": "s5e",
+        "resolved_at": "s5f",
+        "resolved_jwks": "s60",
+        "type": "s61",
+        "updated_at": "s62",
+        "project_id": "PROJECT01"
+      },
+      "THIRD_PARTY_AUTH01": {
+        "custom_jwks": "sb4",
+        "id": "THIRD_PARTY_AUTH01",
+        "inserted_at": "sb6",
+        "jwks_url": "sb7",
+        "oidc_issuer_url": "sb8",
+        "resolved_at": "sb9",
+        "resolved_jwks": "sba",
+        "type": "sbb",
+        "updated_at": "sbc",
+        "project_id": "PROJECT01"
+      },
+      "THIRD_PARTY_AUTH02": {
+        "custom_jwks": "s10e",
+        "id": "THIRD_PARTY_AUTH02",
+        "inserted_at": "s110",
+        "jwks_url": "s111",
+        "oidc_issuer_url": "s112",
+        "resolved_at": "s113",
+        "resolved_jwks": "s114",
+        "type": "s115",
+        "updated_at": "s116",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "third_party_auth": {
+      "third_party_auth_ref01": {
+        "custom_jwks": "s168",
+        "inserted_at": "s16a",
+        "jwks_url": "s16b",
+        "oidc_issuer_url": "s16c",
+        "resolved_at": "s16d",
+        "resolved_jwks": "s16e",
+        "type": "s16f",
+        "updated_at": "s170"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/config/auth/third-party-auth": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/config/auth/third-party-auth": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/config/auth/third-party-auth/{tpa_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{ref}/config/auth/third-party-auth/{tpa_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

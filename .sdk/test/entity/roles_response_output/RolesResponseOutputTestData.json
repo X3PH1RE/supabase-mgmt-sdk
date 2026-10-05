@@ -1,0 +1,30 @@
+{
+  "existing": {
+    "roles_response_output": {
+      "ROLES_RESPONSE_OUTPUT00": {
+        "project_id": "PROJECT01",
+        "id": "ROLES_RESPONSE_OUTPUT00"
+      },
+      "ROLES_RESPONSE_OUTPUT01": {
+        "project_id": "PROJECT01",
+        "id": "ROLES_RESPONSE_OUTPUT01"
+      },
+      "ROLES_RESPONSE_OUTPUT02": {
+        "project_id": "PROJECT01",
+        "id": "ROLES_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "roles_response_output": {
+      "roles_response_output_ref01": {}
+    }
+  },
+  "requests": {
+    "DELETE /v1/projects/{ref}/cli/login-role": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

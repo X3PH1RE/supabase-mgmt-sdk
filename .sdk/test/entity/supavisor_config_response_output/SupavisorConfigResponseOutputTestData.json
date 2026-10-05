@@ -1,0 +1,76 @@
+{
+  "existing": {
+    "supavisor_config_response_output": {
+      "SUPAVISOR_CONFIG_RESPONSE_OUTPUT00": {
+        "connectionString": "s78",
+        "connection_string": "s79",
+        "database_type": "s7a",
+        "db_host": "s7b",
+        "db_name": "s7c",
+        "db_port": 125,
+        "db_user": "s7e",
+        "default_pool_size": 127,
+        "identifier": "s80",
+        "is_using_scram_auth": false,
+        "max_client_conn": 130,
+        "pool_mode": "s83",
+        "project_id": "PROJECT01"
+      },
+      "SUPAVISOR_CONFIG_RESPONSE_OUTPUT01": {
+        "connectionString": "sf0",
+        "connection_string": "sf1",
+        "database_type": "sf2",
+        "db_host": "sf3",
+        "db_name": "sf4",
+        "db_port": 245,
+        "db_user": "sf6",
+        "default_pool_size": 247,
+        "identifier": "sf8",
+        "is_using_scram_auth": false,
+        "max_client_conn": 250,
+        "pool_mode": "sfb",
+        "project_id": "PROJECT01"
+      },
+      "SUPAVISOR_CONFIG_RESPONSE_OUTPUT02": {
+        "connectionString": "s168",
+        "connection_string": "s169",
+        "database_type": "s16a",
+        "db_host": "s16b",
+        "db_name": "s16c",
+        "db_port": 365,
+        "db_user": "s16e",
+        "default_pool_size": 367,
+        "identifier": "s170",
+        "is_using_scram_auth": false,
+        "max_client_conn": 370,
+        "pool_mode": "s173",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "supavisor_config_response_output": {
+      "supavisor_config_response_output_ref01": {
+        "connectionString": "s1e0",
+        "connection_string": "s1e1",
+        "database_type": "s1e2",
+        "db_host": "s1e3",
+        "db_name": "s1e4",
+        "db_port": 485,
+        "db_user": "s1e6",
+        "default_pool_size": 487,
+        "identifier": "s1e8",
+        "is_using_scram_auth": false,
+        "max_client_conn": 490,
+        "pool_mode": "s1eb"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/config/database/pooler": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

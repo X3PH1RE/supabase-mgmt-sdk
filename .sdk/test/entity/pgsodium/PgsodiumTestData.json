@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "pgsodium": {
+      "PGSODIUM00": {
+        "root_key": "sa",
+        "ref": "REF01",
+        "id": "PGSODIUM00"
+      },
+      "PGSODIUM01": {
+        "root_key": "s14",
+        "ref": "REF01",
+        "id": "PGSODIUM01"
+      },
+      "PGSODIUM02": {
+        "root_key": "s1e",
+        "ref": "REF01",
+        "id": "PGSODIUM02"
+      }
+    }
+  },
+  "new": {
+    "pgsodium": {
+      "pgsodium_ref01": {
+        "root_key": "s28"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/pgsodium": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /v1/projects/{ref}/pgsodium": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

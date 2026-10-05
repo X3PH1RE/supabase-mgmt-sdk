@@ -1,0 +1,22 @@
+# BasicCreateProviderResponseOutputFlow
+
+main: kit: flow: BasicCreateProviderResponseOutputFlow:
+{
+  entity: "create_provider_response_output",
+  kind: "basic",
+  name: "BasicCreateProviderResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "create_provider_response_output_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicCreateProviderResponseOutputFlow"
+}

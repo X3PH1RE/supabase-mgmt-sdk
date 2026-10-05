@@ -1,0 +1,95 @@
+# BasicThirdPartyAuthFlow
+
+main: kit: flow: BasicThirdPartyAuthFlow:
+{
+  entity: "third_party_auth",
+  kind: "basic",
+  name: "BasicThirdPartyAuthFlow",
+  step: [
+    {
+      i: {
+        ref: "third_party_auth_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "third_party_auth_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "third_party_auth_ref01",
+        srcdatavar: "third_party_auth_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "third_party_auth01",
+        project_id: "project01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-third_party_auth_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "third_party_auth_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "third_party_auth01",
+        project_id: "project01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "third_party_auth_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicThirdPartyAuthFlow"
+}

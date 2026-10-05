@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "functionscombined_stat": {
+      "FUNCTIONSCOMBINED_STAT00": {
+        "error": "s14",
+        "result": [],
+        "project_id": "PROJECT01"
+      },
+      "FUNCTIONSCOMBINED_STAT01": {
+        "error": "s28",
+        "result": [],
+        "project_id": "PROJECT01"
+      },
+      "FUNCTIONSCOMBINED_STAT02": {
+        "error": "s3c",
+        "result": [],
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "functionscombined_stat": {
+      "functionscombined_stat_ref01": {
+        "error": "s50",
+        "result": []
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/analytics/endpoints/functions.combined-stats": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

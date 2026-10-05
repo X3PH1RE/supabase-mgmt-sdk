@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "legacy": {
+      "LEGACY00": {
+        "enabled": true,
+        "project_id": "PROJECT01",
+        "id": "LEGACY00"
+      },
+      "LEGACY01": {
+        "enabled": true,
+        "project_id": "PROJECT01",
+        "id": "LEGACY01"
+      },
+      "LEGACY02": {
+        "enabled": true,
+        "project_id": "PROJECT01",
+        "id": "LEGACY02"
+      }
+    }
+  },
+  "new": {
+    "legacy": {
+      "legacy_ref01": {
+        "enabled": true
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/api-keys/legacy": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /v1/projects/{ref}/api-keys/legacy": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

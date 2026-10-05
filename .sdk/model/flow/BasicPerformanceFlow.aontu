@@ -1,0 +1,26 @@
+# BasicPerformanceFlow
+
+main: kit: flow: BasicPerformanceFlow:
+{
+  entity: "performance",
+  kind: "basic",
+  name: "BasicPerformanceFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "performance_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicPerformanceFlow"
+}

@@ -1,0 +1,105 @@
+# Entity: invite
+
+main: kit: entity: invite: {
+
+  alias: field: {}
+
+  fields: {
+    email: {
+      fo: "email"
+      h: "Email"
+      n: "email"
+      r: true
+      t: "`$STRING`"
+    }
+    invite_id: {
+      fo: "uuid"
+      h: "Invite Id"
+      n: "invite_id"
+      r: true
+      t: "`$STRING`"
+    }
+    roles: {
+      h: "Roles"
+      n: "roles"
+      r: true
+      t: "`$ARRAY`"
+    }
+    user_roles: {
+      h: "User Roles"
+      n: "user_roles"
+      r: true
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "invite"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/database/jit/invite"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/database/jit/invite"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "database"
+            }
+            {
+              lit: "jit"
+            }
+            {
+              lit: "invite"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

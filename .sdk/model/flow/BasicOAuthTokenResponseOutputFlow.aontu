@@ -1,0 +1,18 @@
+# BasicOAuthTokenResponseOutputFlow
+
+main: kit: flow: BasicOAuthTokenResponseOutputFlow:
+{
+  entity: "o_auth_token_response_output",
+  kind: "basic",
+  name: "BasicOAuthTokenResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "o_auth_token_response_output_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicOAuthTokenResponseOutputFlow"
+}

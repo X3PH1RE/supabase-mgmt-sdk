@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "regions_info_output": {
+      "REGIONS_INFO_OUTPUT00": {
+        "all": {},
+        "recommendations": {},
+        "id": "REGIONS_INFO_OUTPUT00"
+      },
+      "REGIONS_INFO_OUTPUT01": {
+        "all": {},
+        "recommendations": {},
+        "id": "REGIONS_INFO_OUTPUT01"
+      },
+      "REGIONS_INFO_OUTPUT02": {
+        "all": {},
+        "recommendations": {},
+        "id": "REGIONS_INFO_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "regions_info_output": {
+      "regions_info_output_ref01": {
+        "all": {},
+        "recommendations": {}
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/available-regions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

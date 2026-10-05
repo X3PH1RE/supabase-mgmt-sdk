@@ -1,0 +1,9 @@
+# BasicRolesResponseOutputFlow
+
+main: kit: flow: BasicRolesResponseOutputFlow:
+{
+  entity: "roles_response_output",
+  kind: "basic",
+  name: "BasicRolesResponseOutputFlow",
+  "key$": "BasicRolesResponseOutputFlow"
+}

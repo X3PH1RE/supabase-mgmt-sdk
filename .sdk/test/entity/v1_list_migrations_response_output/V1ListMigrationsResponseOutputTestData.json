@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "v1_list_migrations_response_output": {
+      "V1_LIST_MIGRATIONS_RESPONSE_OUTPUT00": {
+        "name": "s14",
+        "version": "s15",
+        "project_id": "PROJECT01"
+      },
+      "V1_LIST_MIGRATIONS_RESPONSE_OUTPUT01": {
+        "name": "s28",
+        "version": "s29",
+        "project_id": "PROJECT01"
+      },
+      "V1_LIST_MIGRATIONS_RESPONSE_OUTPUT02": {
+        "name": "s3c",
+        "version": "s3d",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "v1_list_migrations_response_output": {
+      "v1_list_migrations_response_output_ref01": {
+        "name": "s50",
+        "version": "s51"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/database/migrations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

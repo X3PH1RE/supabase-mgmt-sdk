@@ -1,0 +1,647 @@
+# Entity: branch
+
+main: kit: entity: branch: {
+
+  alias: field: {}
+
+  fields: {
+    branch_name: {
+      h: "Branch Name"
+      n: "branch_name"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    created_at: {
+      fo: "date-time"
+      h: "Created At"
+      n: "created_at"
+      r: true
+      t: "`$STRING`"
+    }
+    db_host: {
+      h: "Db Host"
+      n: "db_host"
+      r: true
+      t: "`$STRING`"
+    }
+    db_pass: {
+      h: "Db Pass"
+      n: "db_pass"
+      r: false
+      t: "`$STRING`"
+    }
+    db_port: {
+      h: "Db Port"
+      n: "db_port"
+      r: true
+      t: "`$INTEGER`"
+    }
+    db_user: {
+      h: "Db User"
+      n: "db_user"
+      r: false
+      t: "`$STRING`"
+    }
+    deletion_scheduled_at: {
+      fo: "date-time"
+      h: "Deletion Scheduled At"
+      n: "deletion_scheduled_at"
+      r: false
+      t: "`$STRING`"
+    }
+    desired_instance_size: {
+      h: "Desired Instance Size"
+      n: "desired_instance_size"
+      r: false
+      t: "`$STRING`"
+    }
+    git_branch: {
+      h: "Git Branch"
+      n: "git_branch"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      fo: "uuid"
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    is_default: {
+      h: "Is Default"
+      n: "is_default"
+      op: {
+        create: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    jwt_secret: {
+      h: "Jwt Secret"
+      n: "jwt_secret"
+      r: false
+      t: "`$STRING`"
+    }
+    latest_check_run_id: {
+      de: true
+      h: "Latest Check Run Id"
+      n: "latest_check_run_id"
+      r: false
+      sh: "This field is deprecated and will not be populated."
+      t: "`$NUMBER`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    notify_url: {
+      fo: "uri"
+      h: "Notify Url"
+      n: "notify_url"
+      r: false
+      sh: "HTTP endpoint to receive branch status updates."
+      t: "`$STRING`"
+    }
+    parent_project_ref: {
+      h: "Parent Project Ref"
+      n: "parent_project_ref"
+      r: true
+      t: "`$STRING`"
+    }
+    persistent: {
+      h: "Persistent"
+      n: "persistent"
+      op: {
+        create: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    postgres_engine: {
+      h: "Postgres Engine"
+      n: "postgres_engine"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      sh: "Postgres engine version."
+      t: "`$STRING`"
+    }
+    postgres_version: {
+      h: "Postgres Version"
+      n: "postgres_version"
+      r: true
+      t: "`$STRING`"
+    }
+    pr_number: {
+      fo: "int32"
+      h: "Pr Number"
+      n: "pr_number"
+      r: false
+      t: "`$INTEGER`"
+    }
+    preview_project_status: {
+      h: "Preview Project Status"
+      n: "preview_project_status"
+      r: false
+      t: "`$STRING`"
+    }
+    project_ref: {
+      h: "Project Ref"
+      n: "project_ref"
+      r: true
+      t: "`$STRING`"
+    }
+    ref: {
+      h: "Ref"
+      n: "ref"
+      r: true
+      t: "`$STRING`"
+    }
+    region: {
+      h: "Region"
+      n: "region"
+      r: false
+      t: "`$STRING`"
+    }
+    release_channel: {
+      h: "Release Channel"
+      n: "release_channel"
+      op: {
+        create: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      sh: "Release channel."
+      t: "`$STRING`"
+    }
+    request_review: {
+      h: "Request Review"
+      n: "request_review"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    reset_on_push: {
+      de: true
+      h: "Reset On Push"
+      n: "reset_on_push"
+      r: false
+      sh: "This field is deprecated and will be ignored."
+      t: "`$BOOLEAN`"
+    }
+    review_requested_at: {
+      fo: "date-time"
+      h: "Review Requested At"
+      n: "review_requested_at"
+      r: false
+      t: "`$STRING`"
+    }
+    secrets: {
+      h: "Secrets"
+      n: "secrets"
+      r: false
+      t: "`$OBJECT`"
+    }
+    status: {
+      de: true
+      h: "Status"
+      n: "status"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      sh: "This field is deprecated."
+      t: "`$STRING`"
+    }
+    updated_at: {
+      fo: "date-time"
+      h: "Updated At"
+      n: "updated_at"
+      r: true
+      t: "`$STRING`"
+    }
+    with_data: {
+      h: "With Data"
+      n: "with_data"
+      op: {
+        create: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "branch"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/branches/{branch_id_or_ref}/restore"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "branch_id_or_ref"
+                or: "branch_id_or_ref"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/branches/{branch_id_or_ref}/restore"
+          q: {
+            "$action": "restore"
+            exist: [
+              "branch_id_or_ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "branches"
+            }
+            {
+              var: "branch_id_or_ref"
+            }
+            {
+              lit: "restore"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/branches"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/branches"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "branches"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/branches"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/branches"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "branches"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/branches/{name}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "preview-login-page"
+                k: "param"
+                n: "id"
+                or: "name"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/branches/{name}"
+          q: {
+            exist: [
+              "id"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              name: "id"
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "branches"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /v1/branches/{branch_id_or_ref}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "id"
+                or: "branch_id_or_ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/branches/{branch_id_or_ref}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              branch_id_or_ref: "id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "branches"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /v1/branches/{branch_id_or_ref}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "id"
+                or: "branch_id_or_ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: false
+                k: "query"
+                n: "force"
+                or: "force"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/v1/branches/{branch_id_or_ref}"
+          q: {
+            exist: [
+              "force"
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              branch_id_or_ref: "id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "branches"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /v1/branches/{branch_id_or_ref}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "id"
+                or: "branch_id_or_ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/v1/branches/{branch_id_or_ref}"
+          q: {
+            exist: [
+              "id"
+            ]
+          }
+          r: {
+            param: {
+              branch_id_or_ref: "id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "branches"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

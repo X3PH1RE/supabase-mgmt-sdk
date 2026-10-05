@@ -1,0 +1,128 @@
+# Entity: v1_service_health_response_output
+
+main: kit: entity: v1_service_health_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    error: {
+      h: "Error"
+      n: "error"
+      r: false
+      t: "`$STRING`"
+    }
+    healthy: {
+      de: true
+      h: "Healthy"
+      n: "healthy"
+      r: true
+      sh: "Deprecated."
+      t: "`$BOOLEAN`"
+    }
+    info: {
+      h: "Info"
+      n: "info"
+      r: false
+      t: "`$ANY`"
+      union: {
+        branches: 3
+        count: 1
+        depth: 0
+      }
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "v1_service_health_response_output"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/health"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: [
+                  "auth,db"
+                  "auth"
+                ]
+                k: "query"
+                n: "service"
+                or: "services"
+                r: true
+                t: "`$ANY`"
+              }
+              {
+                ex: 2000
+                k: "query"
+                n: "timeout_m"
+                or: "timeout_ms"
+                r: false
+                t: "`$INTEGER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/health"
+          q: {
+            exist: [
+              "ref"
+              "service"
+              "timeout_m"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "health"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

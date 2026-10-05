@@ -1,0 +1,88 @@
+# Entity: network_restrictions_response_output
+
+main: kit: entity: network_restrictions_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    dbAllowedCidrs: {
+      h: "Db Allowed Cidrs"
+      n: "dbAllowedCidrs"
+      r: false
+      t: "`$ARRAY`"
+    }
+    dbAllowedCidrsV6: {
+      h: "Db Allowed Cidrs V6"
+      n: "dbAllowedCidrsV6"
+      r: false
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "network_restrictions_response_output"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/network-restrictions/apply"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/network-restrictions/apply"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "network-restrictions"
+            }
+            {
+              lit: "apply"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

@@ -1,0 +1,22 @@
+# BasicDeployFlow
+
+main: kit: flow: BasicDeployFlow:
+{
+  entity: "deploy",
+  kind: "basic",
+  name: "BasicDeployFlow",
+  step: [
+    {
+      i: {
+        ref: "deploy_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicDeployFlow"
+}

@@ -1,0 +1,33 @@
+{
+  "existing": {
+    "streamable_file": {
+      "STREAMABLE_FILE00": {
+        "function_slug": "FUNCTION_SLUG01",
+        "project_id": "PROJECT01",
+        "id": "STREAMABLE_FILE00"
+      },
+      "STREAMABLE_FILE01": {
+        "function_slug": "FUNCTION_SLUG01",
+        "project_id": "PROJECT01",
+        "id": "STREAMABLE_FILE01"
+      },
+      "STREAMABLE_FILE02": {
+        "function_slug": "FUNCTION_SLUG01",
+        "project_id": "PROJECT01",
+        "id": "STREAMABLE_FILE02"
+      }
+    }
+  },
+  "new": {
+    "streamable_file": {
+      "streamable_file_ref01": {}
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/functions/{function_slug}/body": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

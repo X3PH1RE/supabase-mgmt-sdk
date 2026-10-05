@@ -1,0 +1,55 @@
+{
+  "existing": {
+    "postgrest": {
+      "POSTGREST00": {
+        "db_extra_search_path": "s3c",
+        "db_pool": 61,
+        "db_pool_acquisition_timeout": 62,
+        "db_schema": "s3f",
+        "jwt_secret": "s40",
+        "max_rows": 65,
+        "ref": "REF01",
+        "id": "POSTGREST00"
+      },
+      "POSTGREST01": {
+        "db_extra_search_path": "s78",
+        "db_pool": 121,
+        "db_pool_acquisition_timeout": 122,
+        "db_schema": "s7b",
+        "jwt_secret": "s7c",
+        "max_rows": 125,
+        "ref": "REF01",
+        "id": "POSTGREST01"
+      },
+      "POSTGREST02": {
+        "db_extra_search_path": "sb4",
+        "db_pool": 181,
+        "db_pool_acquisition_timeout": 182,
+        "db_schema": "sb7",
+        "jwt_secret": "sb8",
+        "max_rows": 185,
+        "ref": "REF01",
+        "id": "POSTGREST02"
+      }
+    }
+  },
+  "new": {
+    "postgrest": {
+      "postgrest_ref01": {
+        "db_extra_search_path": "sf0",
+        "db_pool": 241,
+        "db_pool_acquisition_timeout": 242,
+        "db_schema": "sf3",
+        "jwt_secret": "sf4",
+        "max_rows": 245
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/postgrest": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

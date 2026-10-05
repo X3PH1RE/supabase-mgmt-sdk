@@ -1,0 +1,204 @@
+# Entity: environment
+
+main: kit: entity: environment: {
+
+  alias: field: {}
+
+  name: "environment"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/branches/{branch_id_or_ref}/diff"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "branch_id_or_ref"
+                or: "branch_id_or_ref"
+                r: true
+                t: "`$ANY`"
+              }
+            ]
+            query: [
+              {
+                ex: "public,auth"
+                k: "query"
+                n: "included_schema"
+                or: "included_schemas"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "true"
+                k: "query"
+                n: "pgdelta"
+                or: "pgdelta"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/branches/{branch_id_or_ref}/diff"
+          q: {
+            exist: [
+              "branch_id_or_ref"
+              "included_schema"
+              "pgdelta"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "branches"
+            }
+            {
+              var: "branch_id_or_ref"
+            }
+            {
+              lit: "diff"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/actions/{run_id}/logs"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "run_01hq3q9m7y5q7e4a7x2c8m1p4n"
+                k: "param"
+                n: "action_id"
+                or: "run_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/actions/{run_id}/logs"
+          q: {
+            exist: [
+              "action_id"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+              run_id: "action_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "actions"
+            }
+            {
+              var: "action_id"
+            }
+            {
+              lit: "logs"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /v1/projects/{ref}/branches"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/v1/projects/{ref}/branches"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "branches"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+  fields: {
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.branch")]
+    [path("$.main.kit.entity.project")]
+    [path("$.main.kit.entity.project") path("$.main.kit.entity.action")]
+  ]
+
+}

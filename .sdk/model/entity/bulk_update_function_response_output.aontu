@@ -1,0 +1,74 @@
+# Entity: bulk_update_function_response_output
+
+main: kit: entity: bulk_update_function_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    functions: {
+      h: "Functions"
+      n: "functions"
+      r: true
+      t: "`$ARRAY`"
+    }
+  }
+
+  name: "bulk_update_function_response_output"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /v1/projects/{ref}/functions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/v1/projects/{ref}/functions"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "functions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

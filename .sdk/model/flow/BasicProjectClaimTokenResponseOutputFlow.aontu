@@ -1,0 +1,32 @@
+# BasicProjectClaimTokenResponseOutputFlow
+
+main: kit: flow: BasicProjectClaimTokenResponseOutputFlow:
+{
+  entity: "project_claim_token_response_output",
+  kind: "basic",
+  name: "BasicProjectClaimTokenResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "project_claim_token_response_output_ref01",
+        srcdatavar: "project_claim_token_response_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "project_claim_token_response_output01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-project_claim_token_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicProjectClaimTokenResponseOutputFlow"
+}

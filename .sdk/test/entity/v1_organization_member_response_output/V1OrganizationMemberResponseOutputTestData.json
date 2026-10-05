@@ -1,0 +1,52 @@
+{
+  "existing": {
+    "v1_organization_member_response_output": {
+      "V1_ORGANIZATION_MEMBER_RESPONSE_OUTPUT00": {
+        "avatar_url": "s3c",
+        "email": "s3d",
+        "mfa_enabled": true,
+        "role_name": "s3f",
+        "user_id": "USER01",
+        "user_name": "s41",
+        "slug": "SLUG01"
+      },
+      "V1_ORGANIZATION_MEMBER_RESPONSE_OUTPUT01": {
+        "avatar_url": "s78",
+        "email": "s79",
+        "mfa_enabled": true,
+        "role_name": "s7b",
+        "user_id": "USER01",
+        "user_name": "s7d",
+        "slug": "SLUG01"
+      },
+      "V1_ORGANIZATION_MEMBER_RESPONSE_OUTPUT02": {
+        "avatar_url": "sb4",
+        "email": "sb5",
+        "mfa_enabled": true,
+        "role_name": "sb7",
+        "user_id": "USER01",
+        "user_name": "sb9",
+        "slug": "SLUG01"
+      }
+    }
+  },
+  "new": {
+    "v1_organization_member_response_output": {
+      "v1_organization_member_response_output_ref01": {
+        "avatar_url": "sf0",
+        "email": "sf1",
+        "mfa_enabled": true,
+        "role_name": "sf3",
+        "user_id": "USER01",
+        "user_name": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/organizations/{slug}/members": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

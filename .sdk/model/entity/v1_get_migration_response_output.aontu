@@ -1,0 +1,124 @@
+# Entity: v1_get_migration_response_output
+
+main: kit: entity: v1_get_migration_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    created_by: {
+      h: "Created By"
+      n: "created_by"
+      r: false
+      t: "`$STRING`"
+    }
+    idempotency_key: {
+      h: "Idempotency Key"
+      n: "idempotency_key"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: false
+      t: "`$STRING`"
+    }
+    rollback: {
+      h: "Rollback"
+      n: "rollback"
+      r: false
+      t: "`$ARRAY`"
+    }
+    statements: {
+      h: "Statements"
+      n: "statements"
+      r: false
+      t: "`$ARRAY`"
+    }
+    version: {
+      h: "Version"
+      n: "version"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "v1_get_migration_response_output"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/database/migrations/{version}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "20250312000000"
+                k: "param"
+                n: "version"
+                or: "version"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/database/migrations/{version}"
+          q: {
+            exist: [
+              "project_id"
+              "version"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "database"
+            }
+            {
+              lit: "migrations"
+            }
+            {
+              var: "version"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

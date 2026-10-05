@@ -1,0 +1,36 @@
+{
+  "existing": {
+    "list_project_addons_response_output": {
+      "LIST_PROJECT_ADDONS_RESPONSE_OUTPUT00": {
+        "available_addons": [],
+        "selected_addons": [],
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_ADDONS_RESPONSE_OUTPUT01": {
+        "available_addons": [],
+        "selected_addons": [],
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROJECT_ADDONS_RESPONSE_OUTPUT02": {
+        "available_addons": [],
+        "selected_addons": [],
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "list_project_addons_response_output": {
+      "list_project_addons_response_output_ref01": {
+        "available_addons": [],
+        "selected_addons": []
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/billing/addons": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

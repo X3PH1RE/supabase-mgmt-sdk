@@ -1,0 +1,55 @@
+{
+  "existing": {
+    "database_upgrade_status_response_output": {
+      "DATABASE_UPGRADE_STATUS_RESPONSE_OUTPUT00": {
+        "error": "s3c",
+        "initiated_at": "s3d",
+        "latest_status_at": "s3e",
+        "progress": "s3f",
+        "status": 64,
+        "target_version": "s41",
+        "project_id": "PROJECT01",
+        "id": "DATABASE_UPGRADE_STATUS_RESPONSE_OUTPUT00"
+      },
+      "DATABASE_UPGRADE_STATUS_RESPONSE_OUTPUT01": {
+        "error": "s78",
+        "initiated_at": "s79",
+        "latest_status_at": "s7a",
+        "progress": "s7b",
+        "status": 124,
+        "target_version": "s7d",
+        "project_id": "PROJECT01",
+        "id": "DATABASE_UPGRADE_STATUS_RESPONSE_OUTPUT01"
+      },
+      "DATABASE_UPGRADE_STATUS_RESPONSE_OUTPUT02": {
+        "error": "sb4",
+        "initiated_at": "sb5",
+        "latest_status_at": "sb6",
+        "progress": "sb7",
+        "status": 184,
+        "target_version": "sb9",
+        "project_id": "PROJECT01",
+        "id": "DATABASE_UPGRADE_STATUS_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "database_upgrade_status_response_output": {
+      "database_upgrade_status_response_output_ref01": {
+        "error": "sf0",
+        "initiated_at": "sf1",
+        "latest_status_at": "sf2",
+        "progress": "sf3",
+        "status": 244,
+        "target_version": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/upgrade/status": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

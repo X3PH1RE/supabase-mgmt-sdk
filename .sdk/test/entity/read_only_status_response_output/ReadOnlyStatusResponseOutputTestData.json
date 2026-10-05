@@ -1,0 +1,43 @@
+{
+  "existing": {
+    "read_only_status_response_output": {
+      "READ_ONLY_STATUS_RESPONSE_OUTPUT00": {
+        "enabled": true,
+        "override_active_until": "s1f",
+        "override_enabled": true,
+        "ref": "REF01",
+        "id": "READ_ONLY_STATUS_RESPONSE_OUTPUT00"
+      },
+      "READ_ONLY_STATUS_RESPONSE_OUTPUT01": {
+        "enabled": true,
+        "override_active_until": "s3d",
+        "override_enabled": true,
+        "ref": "REF01",
+        "id": "READ_ONLY_STATUS_RESPONSE_OUTPUT01"
+      },
+      "READ_ONLY_STATUS_RESPONSE_OUTPUT02": {
+        "enabled": true,
+        "override_active_until": "s5b",
+        "override_enabled": true,
+        "ref": "REF01",
+        "id": "READ_ONLY_STATUS_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "read_only_status_response_output": {
+      "read_only_status_response_output_ref01": {
+        "enabled": true,
+        "override_active_until": "s79",
+        "override_enabled": true
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/readonly": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

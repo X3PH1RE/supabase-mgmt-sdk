@@ -1,0 +1,106 @@
+# Entity: postgrest
+
+main: kit: entity: postgrest: {
+
+  alias: field: {}
+
+  fields: {
+    db_extra_search_path: {
+      h: "Db Extra Search Path"
+      n: "db_extra_search_path"
+      r: true
+      t: "`$STRING`"
+    }
+    db_pool: {
+      h: "Db Pool"
+      n: "db_pool"
+      r: true
+      sh: "If `null`, the value is automatically configured based on compute size."
+      t: "`$INTEGER`"
+    }
+    db_pool_acquisition_timeout: {
+      h: "Db Pool Acquisition Timeout"
+      n: "db_pool_acquisition_timeout"
+      r: true
+      sh: "If `null`, the value is automatically configured to 10."
+      t: "`$INTEGER`"
+    }
+    db_schema: {
+      h: "Db Schema"
+      n: "db_schema"
+      r: true
+      t: "`$STRING`"
+    }
+    jwt_secret: {
+      h: "Jwt Secret"
+      n: "jwt_secret"
+      r: false
+      t: "`$STRING`"
+    }
+    max_rows: {
+      h: "Max Rows"
+      n: "max_rows"
+      r: true
+      t: "`$INTEGER`"
+    }
+  }
+
+  name: "postgrest"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/postgrest"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/postgrest"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "postgrest"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

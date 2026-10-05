@@ -1,5 +1,27 @@
 # API Information
 
 
-
+main: {
+  kit: {
+    info: {
+      description: "Supabase API generated from the OpenAPI specification.<br>Visit [https://supabase.com/docs](https://supabase.com/docs) for a complete documentation."
+      security: {
+        in: "header"
+        name: "Authorization"
+        prefix: "Bearer"
+        scheme: "bearer"
+        type: "http"
+      }
+      servers: [
+        {
+          url: "https://api.supabase.com"
+        }
+      ]
+      summary: "Supabase API generated from the OpenAPI specification.<br>Visit [https://supabase.com/docs](https://supabase.com/docs) for a complete documentation."
+      title: "Supabase API (v1)"
+      version: "1.0.0"
+      website: "https://supabase.com"
+    }
+  }
+}
 

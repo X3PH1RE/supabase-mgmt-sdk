@@ -1,0 +1,44 @@
+{
+  "existing": {
+    "v1_list_entitlements_response_output": {
+      "V1_LIST_ENTITLEMENTS_RESPONSE_OUTPUT00": {
+        "config": "s28",
+        "feature": {},
+        "hasAccess": true,
+        "type": "s2b",
+        "slug": "SLUG01"
+      },
+      "V1_LIST_ENTITLEMENTS_RESPONSE_OUTPUT01": {
+        "config": "s50",
+        "feature": {},
+        "hasAccess": true,
+        "type": "s53",
+        "slug": "SLUG01"
+      },
+      "V1_LIST_ENTITLEMENTS_RESPONSE_OUTPUT02": {
+        "config": "s78",
+        "feature": {},
+        "hasAccess": true,
+        "type": "s7b",
+        "slug": "SLUG01"
+      }
+    }
+  },
+  "new": {
+    "v1_list_entitlements_response_output": {
+      "v1_list_entitlements_response_output_ref01": {
+        "config": "sa0",
+        "feature": {},
+        "hasAccess": true,
+        "type": "sa3"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/organizations/{slug}/entitlements": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

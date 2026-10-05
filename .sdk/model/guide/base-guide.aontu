@@ -1,0 +1,912 @@
+# Generated from the API definition and overwritten on every build: do not
+# edit this file. Put customizations in the guide entry file, which includes
+# this one and overrides its defaults:
+#   guide.aontu
+
+guide: {
+  metrics: count: entity: 87
+  metrics: count: path: 115
+  metrics: count: method: 170
+
+  entity: action: {
+    path: "/v1/projects/{ref}/actions/{run_id}": {
+      rename: param: "ref": *"project_id"
+      rename: param: "run_id": *"id"
+      op: load: method: *GET
+    }
+    path: "/v1/projects/{ref}/actions/{run_id}/status": {
+      action: "status": {}
+      rename: param: "ref": *"project_id"
+      rename: param: "run_id": *"id"
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: activate: {
+    path: "/v1/projects/{ref}/vanity-subdomain/activate": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: analytics: {
+    path: "/v1/projects/{ref}/analytics/endpoints/logs.all": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+    }
+    path: "/v1/projects/{ref}/analytics/endpoints/metrics": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: api_key: {
+    path: "/v1/projects/{ref}/api-keys": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/v1/projects/{ref}/api-keys/{id}": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: auth: {
+    path: "/v1/projects/{ref}/config/auth": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: billing: {
+    path: "/v1/projects/{ref}/billing/addons": {
+      action: "addon": {}
+      rename: param: "ref": *"project_id"
+      op: patch: method: *PATCH
+    }
+    path: "/v1/projects/{ref}/billing/addons/{addon_variant}": {
+      rename: param: "ref": *"project_id"
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: branch: {
+    path: "/v1/branches/{branch_id_or_ref}": {
+      rename: param: "branch_id_or_ref": *"id"
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: remove: method: *DELETE
+    }
+    path: "/v1/branches/{branch_id_or_ref}/restore": {
+      action: "restore": {}
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/branches": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/v1/projects/{ref}/branches/{name}": {
+      rename: param: "name": *"id"
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: branch_update_response_output: {
+    path: "/v1/branches/{branch_id_or_ref}/merge": {
+      op: create: method: *POST
+    }
+    path: "/v1/branches/{branch_id_or_ref}/push": {
+      op: create: method: *POST
+    }
+    path: "/v1/branches/{branch_id_or_ref}/reset": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: bulk_update_function_response_output: {
+    path: "/v1/projects/{ref}/functions": {
+      op: update: method: *PUT
+    }
+  }
+
+  entity: create_provider_response_output: {
+    path: "/v1/projects/{ref}/config/auth/sso/providers": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: create_role_response_output: {
+    path: "/v1/projects/{ref}/cli/login-role": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: database: {
+    path: "/v1/projects/{ref}/database/backups/restore": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/database/backups/restore-pitr": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/database/backups/undo": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/database/context": {
+      action: "context": {}
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.databases`")|top
+    }
+    path: "/v1/projects/{ref}/database/jit/invite/{invite_id}": {
+      rename: param: "ref": *"project_id"
+      op: remove: method: *DELETE
+    }
+    path: "/v1/projects/{ref}/database/jit/{user_id}": {
+      rename: param: "ref": *"project_id"
+      op: remove: method: *DELETE
+    }
+    path: "/v1/projects/{ref}/database/migrations": {
+      action: "migration": {}
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+      op: remove: method: *DELETE
+      op: update: method: *PUT
+    }
+    path: "/v1/projects/{ref}/database/migrations/{version}": {
+      rename: param: "ref": *"project_id"
+      op: patch: method: *PATCH
+    }
+    path: "/v1/projects/{ref}/database/openapi": {
+      action: "openapi": {}
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+    }
+    path: "/v1/projects/{ref}/database/query": {
+      action: "query": {}
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/database/query/read-only": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/database/webhooks/enable": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/jit-access": {
+      op: load: method: *GET
+    }
+    path: "/v1/projects/{ref}/read-replicas/remove": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/read-replicas/setup": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/readonly/temporary-disable": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: database_upgrade_status_response_output: {
+    path: "/v1/projects/{ref}/upgrade/status": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.databaseUpgradeStatus`")|top
+    }
+  }
+
+  entity: deploy: {
+    path: "/v1/projects/{ref}/functions/deploy": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: disk: {
+    path: "/v1/projects/{ref}/config/disk": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: disk_autoscale_config_output: {
+    path: "/v1/projects/{ref}/config/disk/autoscale": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: disk_util_metrics_response_output: {
+    path: "/v1/projects/{ref}/config/disk/util": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: load: transform: res: *("`body.metrics`")|top
+    }
+  }
+
+  entity: domain: {
+    path: "/v1/projects/{ref}/custom-hostname": {
+      op: remove: method: *DELETE
+    }
+    path: "/v1/projects/{ref}/vanity-subdomain": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: edge_function: {
+    path: "/v1/projects/{ref}/functions/{function_slug}": {
+      rename: param: "function_slug": *"id"
+      rename: param: "ref": *"project_id"
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: environment: {
+    path: "/v1/branches/{branch_id_or_ref}/diff": {
+      op: load: method: *GET
+    }
+    path: "/v1/projects/{ref}/actions": {
+      op: head: method: *HEAD
+    }
+    path: "/v1/projects/{ref}/actions/{run_id}/logs": {
+      rename: param: "ref": *"project_id"
+      rename: param: "run_id": *"action_id"
+      op: load: method: *GET
+    }
+    path: "/v1/projects/{ref}/branches": {
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: function: {
+    path: "/v1/projects/{ref}/functions": {
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/v1/projects/{ref}/functions/{function_slug}": {
+      rename: param: "function_slug": *"id"
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: functionscombined_stat: {
+    path: "/v1/projects/{ref}/analytics/endpoints/functions.combined-stats": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: invite: {
+    path: "/v1/projects/{ref}/database/jit/invite": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: jit: {
+    path: "/v1/projects/{ref}/database/jit": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+      op: list: method: *GET
+      op: list: transform: res: *("`body.user_roles`")|top
+      op: update: method: *PUT
+    }
+  }
+
+  entity: jit_access_response_output: {
+    path: "/v1/projects/{ref}/database/jit/invite/accept": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: jit_list_access_response_output: {
+    path: "/v1/projects/{ref}/database/jit/list": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.items`")|top
+    }
+  }
+
+  entity: legacy: {
+    path: "/v1/projects/{ref}/api-keys/legacy": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+  entity: list_action_run_response_output: {
+    path: "/v1/projects/{ref}/actions": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: list_project_addons_response_output: {
+    path: "/v1/projects/{ref}/billing/addons": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: list_providers_response_output: {
+    path: "/v1/projects/{ref}/config/auth/sso/providers": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.items`")|top
+    }
+  }
+
+  entity: log: {
+    path: "/v1/projects/{ref}/analytics/endpoints/logs": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: network_ban_response_enriched_output: {
+    path: "/v1/projects/{ref}/network-bans/retrieve/enriched": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: network_ban_response_output: {
+    path: "/v1/projects/{ref}/network-bans/retrieve": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: network_restriction: {
+    path: "/v1/projects/{ref}/network-restrictions": {
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: network_restrictions_response_output: {
+    path: "/v1/projects/{ref}/network-restrictions/apply": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: o_auth: {
+    path: "/v1/oauth/authorize": {
+      op: load: method: *GET
+    }
+    path: "/v1/oauth/authorize/project-claim": {
+      op: load: method: *GET
+    }
+    path: "/v1/oauth/revoke": {
+      op: create: method: *POST
+      op: create: transform: req: "client_id": *("`reqdata.client_id`")|top
+      op: create: transform: req: "client_secret": *("`reqdata.client_secret`")|top
+      op: create: transform: req: "refresh_token": *("`reqdata.refresh_token`")|top
+    }
+  }
+
+  entity: o_auth_token_response_output: {
+    path: "/v1/oauth/token": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: organization: {
+    path: "/v1/organizations/{slug}/project-claim/{token}": {
+      rename: param: "slug": *"organization_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: organization_project_claim_response_output: {
+    path: "/v1/organizations/{slug}/project-claim/{token}": {
+      rename: param: "slug": *"organization_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: organization_projects_response_output: {
+    path: "/v1/organizations/{slug}/projects": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.projects`")|top
+    }
+  }
+
+  entity: performance: {
+    path: "/v1/projects/{ref}/advisors/performance": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.lints`")|top
+    }
+  }
+
+  entity: pgsodium: {
+    path: "/v1/projects/{ref}/pgsodium": {
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+  entity: postgre: {
+    path: "/v1/projects/{ref}/config/database/postgres": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: update: method: *PUT
+      op: update: transform: req: "checkpoint_timeout": *("`reqdata.checkpoint_timeout`")|top
+      op: update: transform: req: "cron.log_statement": *("`reqdata.cron_log_statement`")|top
+      op: update: transform: req: "effective_cache_size": *("`reqdata.effective_cache_size`")|top
+      op: update: transform: req: "hot_standby_feedback": *("`reqdata.hot_standby_feedback`")|top
+      op: update: transform: req: "log_autovacuum_min_duration": *("`reqdata.log_autovacuum_min_duration`")|top
+      op: update: transform: req: "log_checkpoints": *("`reqdata.log_checkpoint`")|top
+      op: update: transform: req: "log_connections": *("`reqdata.log_connection`")|top
+      op: update: transform: req: "log_disconnections": *("`reqdata.log_disconnection`")|top
+      op: update: transform: req: "log_duration": *("`reqdata.log_duration`")|top
+      op: update: transform: req: "log_lock_waits": *("`reqdata.log_lock_wait`")|top
+      op: update: transform: req: "log_recovery_conflict_waits": *("`reqdata.log_recovery_conflict_wait`")|top
+      op: update: transform: req: "log_replication_commands": *("`reqdata.log_replication_command`")|top
+      op: update: transform: req: "log_startup_progress_interval": *("`reqdata.log_startup_progress_interval`")|top
+      op: update: transform: req: "log_temp_files": *("`reqdata.log_temp_file`")|top
+      op: update: transform: req: "logical_decoding_work_mem": *("`reqdata.logical_decoding_work_mem`")|top
+      op: update: transform: req: "maintenance_work_mem": *("`reqdata.maintenance_work_mem`")|top
+      op: update: transform: req: "max_connections": *("`reqdata.max_connection`")|top
+      op: update: transform: req: "max_locks_per_transaction": *("`reqdata.max_locks_per_transaction`")|top
+      op: update: transform: req: "max_logical_replication_workers": *("`reqdata.max_logical_replication_worker`")|top
+      op: update: transform: req: "max_parallel_maintenance_workers": *("`reqdata.max_parallel_maintenance_worker`")|top
+      op: update: transform: req: "max_parallel_workers": *("`reqdata.max_parallel_worker`")|top
+      op: update: transform: req: "max_parallel_workers_per_gather": *("`reqdata.max_parallel_workers_per_gather`")|top
+      op: update: transform: req: "max_replication_slots": *("`reqdata.max_replication_slot`")|top
+      op: update: transform: req: "max_slot_wal_keep_size": *("`reqdata.max_slot_wal_keep_size`")|top
+      op: update: transform: req: "max_standby_archive_delay": *("`reqdata.max_standby_archive_delay`")|top
+      op: update: transform: req: "max_standby_streaming_delay": *("`reqdata.max_standby_streaming_delay`")|top
+      op: update: transform: req: "max_sync_workers_per_subscription": *("`reqdata.max_sync_workers_per_subscription`")|top
+      op: update: transform: req: "max_wal_senders": *("`reqdata.max_wal_sender`")|top
+      op: update: transform: req: "max_wal_size": *("`reqdata.max_wal_size`")|top
+      op: update: transform: req: "max_worker_processes": *("`reqdata.max_worker_process`")|top
+      op: update: transform: req: "restart_database": *("`reqdata.restart_database`")|top
+      op: update: transform: req: "session_replication_role": *("`reqdata.session_replication_role`")|top
+      op: update: transform: req: "shared_buffers": *("`reqdata.shared_buffer`")|top
+      op: update: transform: req: "statement_timeout": *("`reqdata.statement_timeout`")|top
+      op: update: transform: req: "track_activity_query_size": *("`reqdata.track_activity_query_size`")|top
+      op: update: transform: req: "track_commit_timestamp": *("`reqdata.track_commit_timestamp`")|top
+      op: update: transform: req: "wal_keep_size": *("`reqdata.wal_keep_size`")|top
+      op: update: transform: req: "wal_sender_timeout": *("`reqdata.wal_sender_timeout`")|top
+      op: update: transform: req: "work_mem": *("`reqdata.work_mem`")|top
+    }
+  }
+
+  entity: postgrest: {
+    path: "/v1/projects/{ref}/postgrest": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: project: {
+    path: "/v1/projects/{ref}/config/disk": {
+      action: "config_disk": {}
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/network-bans": {
+      action: "network_ban": {}
+      op: remove: method: *DELETE
+    }
+    path: "/v1/projects/{ref}/restore": {
+      action: "restore": {}
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/restore/cancel": {
+      action: "restore_cancel": {}
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: project_available_restore_versions_response_output: {
+    path: "/v1/projects/{ref}/restore": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.available_versions`")|top
+    }
+  }
+
+  entity: project_claim_token_response_output: {
+    path: "/v1/projects/{ref}/claim-token": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: project_upgrade_eligibility_response_output: {
+    path: "/v1/projects/{ref}/upgrade/eligibility": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: project_upgrade_initiate_response_output: {
+    path: "/v1/projects/{ref}/upgrade": {
+      op: create: method: *POST
+    }
+  }
+
+  entity: provider: {
+    path: "/v1/projects/{ref}/config/auth/sso/providers/{provider_id}": {
+      rename: param: "provider_id": *"id"
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: read_only_status_response_output: {
+    path: "/v1/projects/{ref}/readonly": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: realtime: {
+    path: "/v1/projects/{ref}/config/realtime": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: patch: transform: req: "connection_pool": *("`reqdata.connection_pool`")|top
+      op: patch: transform: req: "max_bytes_per_second": *("`reqdata.max_bytes_per_second`")|top
+      op: patch: transform: req: "max_channels_per_client": *("`reqdata.max_channels_per_client`")|top
+      op: patch: transform: req: "max_concurrent_users": *("`reqdata.max_concurrent_user`")|top
+      op: patch: transform: req: "max_events_per_second": *("`reqdata.max_events_per_second`")|top
+      op: patch: transform: req: "max_joins_per_second": *("`reqdata.max_joins_per_second`")|top
+      op: patch: transform: req: "max_payload_size_in_kb": *("`reqdata.max_payload_size_in_kb`")|top
+      op: patch: transform: req: "max_presence_events_per_second": *("`reqdata.max_presence_events_per_second`")|top
+      op: patch: transform: req: "postgres_changes_pool": *("`reqdata.postgres_changes_pool`")|top
+      op: patch: transform: req: "presence_enabled": *("`reqdata.presence_enabled`")|top
+      op: patch: transform: req: "private_only": *("`reqdata.private_only`")|top
+      op: patch: transform: req: "suspend": *("`reqdata.suspend`")|top
+    }
+    path: "/v1/projects/{ref}/config/realtime/shutdown": {
+      action: "shutdown": {}
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: regions_info_output: {
+    path: "/v1/projects/available-regions": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: roles_response_output: {
+    path: "/v1/projects/{ref}/cli/login-role": {
+      rename: param: "ref": *"project_id"
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: secret: {
+    path: "/v1/projects/{ref}/secrets": {
+      op: create: method: *POST
+      op: list: method: *GET
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: security: {
+    path: "/v1/projects/{ref}/advisors/security": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.lints`")|top
+    }
+  }
+
+  entity: signing_key: {
+    path: "/v1/projects/{ref}/config/auth/signing-keys": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+      op: create: transform: req: "algorithm": *("`reqdata.algorithm`")|top
+      op: create: transform: req: "private_jwk": *("`reqdata.private_jwk`")|top
+      op: create: transform: req: "status": *("`reqdata.status`")|top
+      op: list: method: *GET
+      op: list: transform: res: *("`body.keys`")|top
+    }
+    path: "/v1/projects/{ref}/config/auth/signing-keys/{id}": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: patch: transform: req: "status": *("`reqdata.status`")|top
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: signing_key_response_output: {
+    path: "/v1/projects/{ref}/config/auth/signing-keys/legacy": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+      op: load: method: *GET
+    }
+  }
+
+  entity: snippet: {
+    path: "/v1/snippets": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.data`")|top
+    }
+    path: "/v1/snippets/{id}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: ssl_enforcement: {
+    path: "/v1/projects/{ref}/ssl-enforcement": {
+      op: load: method: *GET
+      op: update: method: *PUT
+    }
+  }
+
+  entity: storage: {
+    path: "/v1/projects/{ref}/config/storage": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: patch: method: *PATCH
+      op: patch: transform: req: "external": *("`reqdata.external`")|top
+      op: patch: transform: req: "features": *("`reqdata.feature`")|top
+      op: patch: transform: req: "fileSizeLimit": *("`reqdata.file_size_limit`")|top
+    }
+  }
+
+  entity: streamable_file: {
+    path: "/v1/projects/{ref}/functions/{function_slug}/body": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: subdomain_availability_response_output: {
+    path: "/v1/projects/{ref}/vanity-subdomain/check-availability": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: supavisor_config_response_output: {
+    path: "/v1/projects/{ref}/config/database/pooler": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: third_party_auth: {
+    path: "/v1/projects/{ref}/config/auth/third-party-auth": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+      op: list: method: *GET
+    }
+    path: "/v1/projects/{ref}/config/auth/third-party-auth/{tpa_id}": {
+      rename: param: "ref": *"project_id"
+      rename: param: "tpa_id": *"id"
+      op: load: method: *GET
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: typescript: {
+    path: "/v1/projects/{ref}/types/typescript": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: update_custom_hostname_response_output: {
+    path: "/v1/projects/{ref}/custom-hostname": {
+      op: load: method: *GET
+    }
+    path: "/v1/projects/{ref}/custom-hostname/activate": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/custom-hostname/initialize": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/custom-hostname/reverify": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+    }
+  }
+
+  entity: update_provider_response_output: {
+    path: "/v1/projects/{ref}/config/auth/sso/providers/{provider_id}": {
+      rename: param: "ref": *"project_id"
+      op: update: method: *PUT
+    }
+  }
+
+  entity: update_supavisor_config_response_output: {
+    path: "/v1/projects/{ref}/config/database/pooler": {
+      rename: param: "ref": *"project_id"
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: v1_backup_schedule_response_output: {
+    path: "/v1/projects/{ref}/database/backups/schedule": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: v1_backups_response_output: {
+    path: "/v1/projects/{ref}/database/backups": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: v1_get_migration_response_output: {
+    path: "/v1/projects/{ref}/database/migrations/{version}": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: v1_get_usage_api_count_response_output: {
+    path: "/v1/projects/{ref}/analytics/endpoints/usage.api-counts": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.result`")|top
+    }
+  }
+
+  entity: v1_get_usage_api_requests_count_response_output: {
+    path: "/v1/projects/{ref}/analytics/endpoints/usage.api-requests-count": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+      op: list: transform: res: *("`body.result`")|top
+    }
+  }
+
+  entity: v1_list_entitlements_response_output: {
+    path: "/v1/organizations/{slug}/entitlements": {
+      op: list: method: *GET
+      op: list: transform: res: *("`body.entitlements`")|top
+    }
+  }
+
+  entity: v1_list_migrations_response_output: {
+    path: "/v1/projects/{ref}/database/migrations": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: v1_organization_member_response_output: {
+    path: "/v1/organizations/{slug}/members": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: v1_organization_slug_response_output: {
+    path: "/v1/organizations": {
+      op: create: method: *POST
+      op: create: transform: req: "name": *("`reqdata.name`")|top
+      op: list: method: *GET
+    }
+    path: "/v1/organizations/{slug}": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: v1_pgbouncer_config_response_output: {
+    path: "/v1/projects/{ref}/config/database/pgbouncer": {
+      rename: param: "ref": *"project_id"
+      op: load: method: *GET
+    }
+  }
+
+  entity: v1_profile_response_output: {
+    path: "/v1/profile": {
+      op: load: method: *GET
+    }
+  }
+
+  entity: v1_project_ref_response_output: {
+    path: "/v1/projects/{ref}": {
+      op: patch: method: *PATCH
+      op: remove: method: *DELETE
+    }
+  }
+
+  entity: v1_project_with_database_response_output: {
+    path: "/v1/projects": {
+      op: create: method: *POST
+      op: create: transform: req: "db_pass": *("`reqdata.db_pass`")|top
+      op: create: transform: req: "desired_instance_size": *("`reqdata.desired_instance_size`")|top
+      op: create: transform: req: "high_availability": *("`reqdata.high_availability`")|top
+      op: create: transform: req: "kps_enabled": *("`reqdata.kps_enabled`")|top
+      op: create: transform: req: "name": *("`reqdata.name`")|top
+      op: create: transform: req: "organization_id": *("`reqdata.organization_id`")|top
+      op: create: transform: req: "organization_slug": *("`reqdata.organization_slug`")|top
+      op: create: transform: req: "plan": *("`reqdata.plan`")|top
+      op: create: transform: req: "postgres_engine": *("`reqdata.postgres_engine`")|top
+      op: create: transform: req: "region": *("`reqdata.region`")|top
+      op: create: transform: req: "region_selection": *("`reqdata.region_selection`")|top
+      op: create: transform: req: "release_channel": *("`reqdata.release_channel`")|top
+      op: create: transform: req: "template_url": *("`reqdata.template_url`")|top
+      op: list: method: *GET
+    }
+    path: "/v1/projects/{ref}": {
+      op: load: method: *GET
+    }
+    path: "/v1/projects/{ref}/claim-token": {
+      action: "claim_token": {}
+      op: create: method: *POST
+      op: remove: method: *DELETE
+    }
+    path: "/v1/projects/{ref}/jit-access": {
+      action: "jit_access": {}
+      op: update: method: *PUT
+    }
+    path: "/v1/projects/{ref}/pause": {
+      action: "pause": {}
+      op: create: method: *POST
+    }
+    path: "/v1/projects/{ref}/postgrest": {
+      action: "postgrest": {}
+      op: patch: method: *PATCH
+    }
+    path: "/v1/projects/{ref}/restart": {
+      action: "restart": {}
+      op: create: method: *POST
+    }
+  }
+
+  entity: v1_restore_point: {
+    path: "/v1/projects/{ref}/database/backups/restore-point": {
+      rename: param: "ref": *"project_id"
+      op: create: method: *POST
+      op: load: method: *GET
+    }
+  }
+
+  entity: v1_service_health_response_output: {
+    path: "/v1/projects/{ref}/health": {
+      op: list: method: *GET
+    }
+  }
+
+  entity: v1_storage_bucket_response_output: {
+    path: "/v1/projects/{ref}/storage/buckets": {
+      rename: param: "ref": *"project_id"
+      op: list: method: *GET
+    }
+  }
+
+  entity: v1_update_password_response_output: {
+    path: "/v1/projects/{ref}/database/password": {
+      rename: param: "ref": *"project_id"
+      op: patch: method: *PATCH
+    }
+  }
+
+  entity: vanity_subdomain: {
+    path: "/v1/projects/{ref}/vanity-subdomain": {
+      op: load: method: *GET
+    }
+  }
+
+}

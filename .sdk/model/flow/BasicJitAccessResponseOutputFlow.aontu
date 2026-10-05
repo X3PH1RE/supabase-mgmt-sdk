@@ -1,0 +1,22 @@
+# BasicJitAccessResponseOutputFlow
+
+main: kit: flow: BasicJitAccessResponseOutputFlow:
+{
+  entity: "jit_access_response_output",
+  kind: "basic",
+  name: "BasicJitAccessResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "jit_access_response_output_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicJitAccessResponseOutputFlow"
+}

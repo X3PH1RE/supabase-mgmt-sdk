@@ -1,0 +1,47 @@
+{
+  "existing": {
+    "list_providers_response_output": {
+      "LIST_PROVIDERS_RESPONSE_OUTPUT00": {
+        "created_at": "s32",
+        "domains": [],
+        "id": "LIST_PROVIDERS_RESPONSE_OUTPUT00",
+        "saml": {},
+        "updated_at": "s36",
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROVIDERS_RESPONSE_OUTPUT01": {
+        "created_at": "s64",
+        "domains": [],
+        "id": "LIST_PROVIDERS_RESPONSE_OUTPUT01",
+        "saml": {},
+        "updated_at": "s68",
+        "project_id": "PROJECT01"
+      },
+      "LIST_PROVIDERS_RESPONSE_OUTPUT02": {
+        "created_at": "s96",
+        "domains": [],
+        "id": "LIST_PROVIDERS_RESPONSE_OUTPUT02",
+        "saml": {},
+        "updated_at": "s9a",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "list_providers_response_output": {
+      "list_providers_response_output_ref01": {
+        "created_at": "sc8",
+        "domains": [],
+        "saml": {},
+        "updated_at": "scc"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/config/auth/sso/providers": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

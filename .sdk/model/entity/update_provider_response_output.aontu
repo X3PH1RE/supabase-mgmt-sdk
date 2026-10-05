@@ -1,0 +1,163 @@
+# Entity: update_provider_response_output
+
+main: kit: entity: update_provider_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    attribute_mapping: {
+      h: "Attribute Mapping"
+      n: "attribute_mapping"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 4
+        count: 1
+        depth: 5
+      }
+    }
+    created_at: {
+      h: "Created At"
+      n: "created_at"
+      r: false
+      t: "`$STRING`"
+    }
+    domains: {
+      h: "Domains"
+      n: "domains"
+      r: false
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    metadata_url: {
+      h: "Metadata Url"
+      n: "metadata_url"
+      r: false
+      t: "`$STRING`"
+    }
+    metadata_xml: {
+      h: "Metadata Xml"
+      n: "metadata_xml"
+      r: false
+      t: "`$STRING`"
+    }
+    name_id_format: {
+      h: "Name Id Format"
+      n: "name_id_format"
+      r: false
+      t: "`$STRING`"
+    }
+    saml: {
+      h: "Saml"
+      n: "saml"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 4
+        count: 1
+        depth: 7
+      }
+    }
+    updated_at: {
+      h: "Updated At"
+      n: "updated_at"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "update_provider_response_output"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /v1/projects/{ref}/config/auth/sso/providers/{provider_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "77777777-7777-4777-8777-777777777777"
+                k: "param"
+                n: "provider_id"
+                or: "provider_id"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/v1/projects/{ref}/config/auth/sso/providers/{provider_id}"
+          q: {
+            exist: [
+              "project_id"
+              "provider_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "auth"
+            }
+            {
+              lit: "sso"
+            }
+            {
+              lit: "providers"
+            }
+            {
+              var: "provider_id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project") path("$.main.kit.entity.provider")]
+  ]
+
+}

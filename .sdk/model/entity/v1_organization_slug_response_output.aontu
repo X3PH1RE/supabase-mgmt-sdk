@@ -1,0 +1,163 @@
+# Entity: v1_organization_slug_response_output
+
+main: kit: entity: v1_organization_slug_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    allowed_release_channels: {
+      h: "Allowed Release Channels"
+      n: "allowed_release_channels"
+      r: true
+      t: "`$ARRAY`"
+    }
+    id: {
+      de: true
+      h: "Id"
+      n: "id"
+      r: true
+      sh: "Deprecated: Use `slug` instead."
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    opt_in_tags: {
+      h: "Opt In Tags"
+      n: "opt_in_tags"
+      r: true
+      t: "`$ARRAY`"
+    }
+    plan: {
+      h: "Plan"
+      n: "plan"
+      r: false
+      t: "`$STRING`"
+    }
+    slug: {
+      h: "Slug"
+      n: "slug"
+      r: true
+      sh: "Organization slug"
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "v1_organization_slug_response_output"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/organizations"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/organizations"
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "organizations"
+            }
+          ]
+          t: {
+            req: {
+              name: "`reqdata.name`"
+            }
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/organizations"
+            source: "openapi3"
+            version: 2
+          }
+          m: "GET"
+          o: "/v1/organizations"
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "organizations"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/organizations/{slug}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "tsrqponmlkjihgfedcba"
+                k: "param"
+                n: "slug"
+                or: "slug"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/organizations/{slug}"
+          q: {
+            exist: [
+              "slug"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "organizations"
+            }
+            {
+              var: "slug"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.organization")]
+  ]
+
+}

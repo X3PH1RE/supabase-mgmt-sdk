@@ -1,0 +1,77 @@
+{
+  "existing": {
+    "snippet": {
+      "SNIPPET00": {
+        "content": {},
+        "description": "s79",
+        "favorite": true,
+        "id": "SNIPPET00",
+        "inserted_at": "s7c",
+        "name": "s7d",
+        "owner": {},
+        "project": {},
+        "type": "s80",
+        "updated_at": "s81",
+        "updated_by": {},
+        "visibility": "s83"
+      },
+      "SNIPPET01": {
+        "content": {},
+        "description": "sf1",
+        "favorite": true,
+        "id": "SNIPPET01",
+        "inserted_at": "sf4",
+        "name": "sf5",
+        "owner": {},
+        "project": {},
+        "type": "sf8",
+        "updated_at": "sf9",
+        "updated_by": {},
+        "visibility": "sfb"
+      },
+      "SNIPPET02": {
+        "content": {},
+        "description": "s169",
+        "favorite": true,
+        "id": "SNIPPET02",
+        "inserted_at": "s16c",
+        "name": "s16d",
+        "owner": {},
+        "project": {},
+        "type": "s170",
+        "updated_at": "s171",
+        "updated_by": {},
+        "visibility": "s173"
+      }
+    }
+  },
+  "new": {
+    "snippet": {
+      "snippet_ref01": {
+        "content": {},
+        "description": "s1e1",
+        "favorite": true,
+        "inserted_at": "s1e4",
+        "name": "s1e5",
+        "owner": {},
+        "project": {},
+        "type": "s1e8",
+        "updated_at": "s1e9",
+        "updated_by": {},
+        "visibility": "s1eb"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/snippets": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/snippets/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

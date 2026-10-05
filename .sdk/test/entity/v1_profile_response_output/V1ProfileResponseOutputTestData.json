@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "v1_profile_response_output": {
+      "V1_PROFILE_RESPONSE_OUTPUT00": {
+        "gotrue_id": "GOTRUE01",
+        "primary_email": "s1f",
+        "username": "s20",
+        "id": "V1_PROFILE_RESPONSE_OUTPUT00"
+      },
+      "V1_PROFILE_RESPONSE_OUTPUT01": {
+        "gotrue_id": "GOTRUE01",
+        "primary_email": "s3d",
+        "username": "s3e",
+        "id": "V1_PROFILE_RESPONSE_OUTPUT01"
+      },
+      "V1_PROFILE_RESPONSE_OUTPUT02": {
+        "gotrue_id": "GOTRUE01",
+        "primary_email": "s5b",
+        "username": "s5c",
+        "id": "V1_PROFILE_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "v1_profile_response_output": {
+      "v1_profile_response_output_ref01": {
+        "gotrue_id": "GOTRUE01",
+        "primary_email": "s79",
+        "username": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/profile": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

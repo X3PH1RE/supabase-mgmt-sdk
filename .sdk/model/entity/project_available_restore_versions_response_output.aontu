@@ -1,0 +1,86 @@
+# Entity: project_available_restore_versions_response_output
+
+main: kit: entity: project_available_restore_versions_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    postgres_engine: {
+      h: "Postgres Engine"
+      n: "postgres_engine"
+      r: true
+      t: "`$STRING`"
+    }
+    release_channel: {
+      h: "Release Channel"
+      n: "release_channel"
+      r: true
+      t: "`$STRING`"
+    }
+    version: {
+      h: "Version"
+      n: "version"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "project_available_restore_versions_response_output"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/restore"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/restore"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "restore"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.available_versions`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

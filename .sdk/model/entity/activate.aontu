@@ -1,0 +1,82 @@
+# Entity: activate
+
+main: kit: entity: activate: {
+
+  alias: field: {}
+
+  fields: {
+    vanity_subdomain: {
+      h: "Vanity Subdomain"
+      n: "vanity_subdomain"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "activate"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/vanity-subdomain/activate"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/vanity-subdomain/activate"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "vanity-subdomain"
+            }
+            {
+              lit: "activate"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

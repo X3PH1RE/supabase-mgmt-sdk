@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "v1_service_health_response_output": {
+      "V1_SERVICE_HEALTH_RESPONSE_OUTPUT00": {
+        "error": "s32",
+        "healthy": false,
+        "info": "s34",
+        "name": "s35",
+        "status": "s36",
+        "ref": "REF01"
+      },
+      "V1_SERVICE_HEALTH_RESPONSE_OUTPUT01": {
+        "error": "s64",
+        "healthy": false,
+        "info": "s66",
+        "name": "s67",
+        "status": "s68",
+        "ref": "REF01"
+      },
+      "V1_SERVICE_HEALTH_RESPONSE_OUTPUT02": {
+        "error": "s96",
+        "healthy": false,
+        "info": "s98",
+        "name": "s99",
+        "status": "s9a",
+        "ref": "REF01"
+      }
+    }
+  },
+  "new": {
+    "v1_service_health_response_output": {
+      "v1_service_health_response_output_ref01": {
+        "error": "sc8",
+        "healthy": false,
+        "info": "sca",
+        "name": "scb",
+        "status": "scc"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/health": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

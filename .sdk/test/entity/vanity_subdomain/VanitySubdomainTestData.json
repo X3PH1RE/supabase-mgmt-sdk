@@ -1,0 +1,39 @@
+{
+  "existing": {
+    "vanity_subdomain": {
+      "VANITY_SUBDOMAIN00": {
+        "custom_domain": "s14",
+        "status": "s15",
+        "ref": "REF01",
+        "id": "VANITY_SUBDOMAIN00"
+      },
+      "VANITY_SUBDOMAIN01": {
+        "custom_domain": "s28",
+        "status": "s29",
+        "ref": "REF01",
+        "id": "VANITY_SUBDOMAIN01"
+      },
+      "VANITY_SUBDOMAIN02": {
+        "custom_domain": "s3c",
+        "status": "s3d",
+        "ref": "REF01",
+        "id": "VANITY_SUBDOMAIN02"
+      }
+    }
+  },
+  "new": {
+    "vanity_subdomain": {
+      "vanity_subdomain_ref01": {
+        "custom_domain": "s50",
+        "status": "s51"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/vanity-subdomain": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

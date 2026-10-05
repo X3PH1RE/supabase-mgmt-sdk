@@ -1,0 +1,26 @@
+# BasicFunctionscombinedStatFlow
+
+main: kit: flow: BasicFunctionscombinedStatFlow:
+{
+  entity: "functionscombined_stat",
+  kind: "basic",
+  name: "BasicFunctionscombinedStatFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "functionscombined_stat_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicFunctionscombinedStatFlow"
+}

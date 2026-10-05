@@ -1,0 +1,30 @@
+{
+  "existing": {
+    "deploy": {
+      "DEPLOY00": {
+        "project_id": "PROJECT01",
+        "id": "DEPLOY00"
+      },
+      "DEPLOY01": {
+        "project_id": "PROJECT01",
+        "id": "DEPLOY01"
+      },
+      "DEPLOY02": {
+        "project_id": "PROJECT01",
+        "id": "DEPLOY02"
+      }
+    }
+  },
+  "new": {
+    "deploy": {
+      "deploy_ref01": {}
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/functions/deploy": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

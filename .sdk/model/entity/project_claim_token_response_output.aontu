@@ -1,0 +1,93 @@
+# Entity: project_claim_token_response_output
+
+main: kit: entity: project_claim_token_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    created_at: {
+      h: "Created At"
+      n: "created_at"
+      r: true
+      t: "`$STRING`"
+    }
+    created_by: {
+      fo: "uuid"
+      h: "Created By"
+      n: "created_by"
+      r: true
+      t: "`$STRING`"
+    }
+    expires_at: {
+      h: "Expires At"
+      n: "expires_at"
+      r: true
+      t: "`$STRING`"
+    }
+    token_alias: {
+      h: "Token Alias"
+      n: "token_alias"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "project_claim_token_response_output"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/claim-token"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/claim-token"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "claim-token"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

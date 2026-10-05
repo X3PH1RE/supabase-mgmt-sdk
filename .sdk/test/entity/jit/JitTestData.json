@@ -1,0 +1,81 @@
+{
+  "existing": {
+    "jit": {
+      "JIT00": {
+        "act": "s64",
+        "allowed_networks": {},
+        "branches_only": true,
+        "expires_at": 103,
+        "rhost": "s68",
+        "role": "s69",
+        "roles": [],
+        "user_id": "USER01",
+        "user_role": {},
+        "user_roles": [],
+        "project_id": "PROJECT01",
+        "id": "JIT00"
+      },
+      "JIT01": {
+        "act": "sc8",
+        "allowed_networks": {},
+        "branches_only": true,
+        "expires_at": 203,
+        "rhost": "scc",
+        "role": "scd",
+        "roles": [],
+        "user_id": "USER01",
+        "user_role": {},
+        "user_roles": [],
+        "project_id": "PROJECT01",
+        "id": "JIT01"
+      },
+      "JIT02": {
+        "act": "s12c",
+        "allowed_networks": {},
+        "branches_only": true,
+        "expires_at": 303,
+        "rhost": "s130",
+        "role": "s131",
+        "roles": [],
+        "user_id": "USER01",
+        "user_role": {},
+        "user_roles": [],
+        "project_id": "PROJECT01",
+        "id": "JIT02"
+      }
+    }
+  },
+  "new": {
+    "jit": {
+      "jit_ref01": {
+        "act": "s190",
+        "allowed_networks": {},
+        "branches_only": true,
+        "expires_at": 403,
+        "rhost": "s194",
+        "role": "s195",
+        "roles": [],
+        "user_id": "USER01",
+        "user_role": {},
+        "user_roles": []
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/database/jit": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/database/jit": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /v1/projects/{ref}/database/jit": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

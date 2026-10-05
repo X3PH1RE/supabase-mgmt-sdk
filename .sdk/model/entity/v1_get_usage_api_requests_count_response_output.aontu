@@ -1,0 +1,85 @@
+# Entity: v1_get_usage_api_requests_count_response_output
+
+main: kit: entity: v1_get_usage_api_requests_count_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    count: {
+      h: "Count"
+      n: "count"
+      r: true
+      t: "`$NUMBER`"
+    }
+  }
+
+  name: "v1_get_usage_api_requests_count_response_output"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/analytics/endpoints/usage.api-requests-count"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/analytics/endpoints/usage.api-requests-count"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "analytics"
+            }
+            {
+              lit: "endpoints"
+            }
+            {
+              lit: "usage.api-requests-count"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.result`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

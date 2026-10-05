@@ -1,0 +1,63 @@
+# BasicRealtimeFlow
+
+main: kit: flow: BasicRealtimeFlow:
+{
+  entity: "realtime",
+  kind: "basic",
+  name: "BasicRealtimeFlow",
+  step: [
+    {
+      i: {
+        ref: "realtime_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "realtime_ref01",
+        srcdatavar: "realtime_ref01_data",
+        suffix: "_up0",
+        textfield: "admin_suspended_at"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-realtime_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "realtime_ref01",
+        srcdatavar: "realtime_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "realtime01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-realtime_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicRealtimeFlow"
+}

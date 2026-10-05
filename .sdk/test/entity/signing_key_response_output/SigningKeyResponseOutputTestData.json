@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "signing_key_response_output": {
+      "SIGNING_KEY_RESPONSE_OUTPUT00": {
+        "algorithm": "s3c",
+        "created_at": "s3d",
+        "id": "SIGNING_KEY_RESPONSE_OUTPUT00",
+        "public_jwk": "s3f",
+        "status": "s40",
+        "updated_at": "s41",
+        "project_id": "PROJECT01"
+      },
+      "SIGNING_KEY_RESPONSE_OUTPUT01": {
+        "algorithm": "s78",
+        "created_at": "s79",
+        "id": "SIGNING_KEY_RESPONSE_OUTPUT01",
+        "public_jwk": "s7b",
+        "status": "s7c",
+        "updated_at": "s7d",
+        "project_id": "PROJECT01"
+      },
+      "SIGNING_KEY_RESPONSE_OUTPUT02": {
+        "algorithm": "sb4",
+        "created_at": "sb5",
+        "id": "SIGNING_KEY_RESPONSE_OUTPUT02",
+        "public_jwk": "sb7",
+        "status": "sb8",
+        "updated_at": "sb9",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "signing_key_response_output": {
+      "signing_key_response_output_ref01": {
+        "algorithm": "sf0",
+        "created_at": "sf1",
+        "public_jwk": "sf3",
+        "status": "sf4",
+        "updated_at": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/config/auth/signing-keys/legacy": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/config/auth/signing-keys/legacy": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

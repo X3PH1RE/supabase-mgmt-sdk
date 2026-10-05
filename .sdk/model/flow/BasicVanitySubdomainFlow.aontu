@@ -1,0 +1,32 @@
+# BasicVanitySubdomainFlow
+
+main: kit: flow: BasicVanitySubdomainFlow:
+{
+  entity: "vanity_subdomain",
+  kind: "basic",
+  name: "BasicVanitySubdomainFlow",
+  step: [
+    {
+      i: {
+        ref: "vanity_subdomain_ref01",
+        srcdatavar: "vanity_subdomain_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "vanity_subdomain01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-vanity_subdomain_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicVanitySubdomainFlow"
+}

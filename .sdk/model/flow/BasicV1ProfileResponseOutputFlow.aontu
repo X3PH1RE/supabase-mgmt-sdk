@@ -1,0 +1,28 @@
+# BasicV1ProfileResponseOutputFlow
+
+main: kit: flow: BasicV1ProfileResponseOutputFlow:
+{
+  entity: "v1_profile_response_output",
+  kind: "basic",
+  name: "BasicV1ProfileResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "v1_profile_response_output_ref01",
+        srcdatavar: "v1_profile_response_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-v1_profile_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicV1ProfileResponseOutputFlow"
+}

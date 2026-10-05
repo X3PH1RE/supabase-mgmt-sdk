@@ -1,0 +1,26 @@
+# BasicListProjectAddonsResponseOutputFlow
+
+main: kit: flow: BasicListProjectAddonsResponseOutputFlow:
+{
+  entity: "list_project_addons_response_output",
+  kind: "basic",
+  name: "BasicListProjectAddonsResponseOutputFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "list_project_addons_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicListProjectAddonsResponseOutputFlow"
+}

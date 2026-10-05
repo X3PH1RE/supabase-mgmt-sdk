@@ -1,0 +1,211 @@
+# Entity: provider
+
+main: kit: entity: provider: {
+
+  alias: field: {}
+
+  fields: {
+    created_at: {
+      h: "Created At"
+      n: "created_at"
+      r: false
+      t: "`$STRING`"
+    }
+    domains: {
+      h: "Domains"
+      n: "domains"
+      r: false
+      t: "`$ARRAY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    saml: {
+      h: "Saml"
+      n: "saml"
+      r: true
+      t: "`$OBJECT`"
+      union: {
+        branches: 4
+        count: 1
+        depth: 7
+      }
+    }
+    updated_at: {
+      h: "Updated At"
+      n: "updated_at"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "provider"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/config/auth/sso/providers/{provider_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "77777777-7777-4777-8777-777777777777"
+                k: "param"
+                n: "id"
+                or: "provider_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/config/auth/sso/providers/{provider_id}"
+          q: {
+            exist: [
+              "id"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              provider_id: "id"
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "auth"
+            }
+            {
+              lit: "sso"
+            }
+            {
+              lit: "providers"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    remove: {
+      name: "remove"
+      points: [
+        {
+          co: {
+            id: "DELETE /v1/projects/{ref}/config/auth/sso/providers/{provider_id}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "77777777-7777-4777-8777-777777777777"
+                k: "param"
+                n: "id"
+                or: "provider_id"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "DELETE"
+          o: "/v1/projects/{ref}/config/auth/sso/providers/{provider_id}"
+          q: {
+            exist: [
+              "id"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              provider_id: "id"
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "auth"
+            }
+            {
+              lit: "sso"
+            }
+            {
+              lit: "providers"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

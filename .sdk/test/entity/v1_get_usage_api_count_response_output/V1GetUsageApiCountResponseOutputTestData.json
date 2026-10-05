@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "v1_get_usage_api_count_response_output": {
+      "V1_GET_USAGE_API_COUNT_RESPONSE_OUTPUT00": {
+        "timestamp": "s32",
+        "total_auth_requests": 51,
+        "total_realtime_requests": 52,
+        "total_rest_requests": 53,
+        "total_storage_requests": 54,
+        "project_id": "PROJECT01"
+      },
+      "V1_GET_USAGE_API_COUNT_RESPONSE_OUTPUT01": {
+        "timestamp": "s64",
+        "total_auth_requests": 101,
+        "total_realtime_requests": 102,
+        "total_rest_requests": 103,
+        "total_storage_requests": 104,
+        "project_id": "PROJECT01"
+      },
+      "V1_GET_USAGE_API_COUNT_RESPONSE_OUTPUT02": {
+        "timestamp": "s96",
+        "total_auth_requests": 151,
+        "total_realtime_requests": 152,
+        "total_rest_requests": 153,
+        "total_storage_requests": 154,
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "v1_get_usage_api_count_response_output": {
+      "v1_get_usage_api_count_response_output_ref01": {
+        "timestamp": "sc8",
+        "total_auth_requests": 201,
+        "total_realtime_requests": 202,
+        "total_rest_requests": 203,
+        "total_storage_requests": 204
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/analytics/endpoints/usage.api-counts": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

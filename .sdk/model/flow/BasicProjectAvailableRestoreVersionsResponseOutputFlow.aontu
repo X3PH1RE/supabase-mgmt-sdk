@@ -1,0 +1,26 @@
+# BasicProjectAvailableRestoreVersionsResponseOutputFlow
+
+main: kit: flow: BasicProjectAvailableRestoreVersionsResponseOutputFlow:
+{
+  entity: "project_available_restore_versions_response_output",
+  kind: "basic",
+  name: "BasicProjectAvailableRestoreVersionsResponseOutputFlow",
+  step: [
+    {
+      m: {
+        ref: "ref01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "project_available_restore_versions_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicProjectAvailableRestoreVersionsResponseOutputFlow"
+}

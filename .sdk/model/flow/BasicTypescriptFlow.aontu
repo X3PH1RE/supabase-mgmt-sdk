@@ -1,0 +1,32 @@
+# BasicTypescriptFlow
+
+main: kit: flow: BasicTypescriptFlow:
+{
+  entity: "typescript",
+  kind: "basic",
+  name: "BasicTypescriptFlow",
+  step: [
+    {
+      i: {
+        ref: "typescript_ref01",
+        srcdatavar: "typescript_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "typescript01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-typescript_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicTypescriptFlow"
+}

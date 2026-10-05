@@ -1,0 +1,123 @@
+# Entity: database_upgrade_status_response_output
+
+main: kit: entity: database_upgrade_status_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    error: {
+      h: "Error"
+      n: "error"
+      r: false
+      t: "`$STRING`"
+    }
+    initiated_at: {
+      h: "Initiated At"
+      n: "initiated_at"
+      r: true
+      t: "`$STRING`"
+    }
+    latest_status_at: {
+      h: "Latest Status At"
+      n: "latest_status_at"
+      r: true
+      t: "`$STRING`"
+    }
+    progress: {
+      h: "Progress"
+      n: "progress"
+      r: false
+      t: "`$STRING`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: true
+      t: "`$NUMBER`"
+    }
+    target_version: {
+      h: "Target Version"
+      n: "target_version"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "database_upgrade_status_response_output"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/upgrade/status"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "9f4d3a20-6b2e-4a7e-8c91-1d5f3e7a2b4c"
+                k: "query"
+                n: "tracking_id"
+                or: "tracking_id"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/upgrade/status"
+          q: {
+            exist: [
+              "project_id"
+              "tracking_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "upgrade"
+            }
+            {
+              lit: "status"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.databaseUpgradeStatus`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

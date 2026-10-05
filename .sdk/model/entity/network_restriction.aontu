@@ -1,0 +1,169 @@
+# Entity: network_restriction
+
+main: kit: entity: network_restriction: {
+
+  alias: field: {}
+
+  fields: {
+    add: {
+      h: "Add"
+      n: "add"
+      r: false
+      t: "`$OBJECT`"
+    }
+    applied_at: {
+      fo: "date-time"
+      h: "Applied At"
+      n: "applied_at"
+      r: false
+      t: "`$STRING`"
+    }
+    config: {
+      h: "Config"
+      n: "config"
+      r: true
+      sh: "At any given point in time, this is the config that the user has requested be applied to their project."
+      t: "`$OBJECT`"
+    }
+    entitlement: {
+      h: "Entitlement"
+      n: "entitlement"
+      r: true
+      t: "`$STRING`"
+    }
+    old_config: {
+      h: "Old Config"
+      n: "old_config"
+      r: false
+      sh: "Populated when a new config has been received, but not registered as successfully applied to a project."
+      t: "`$OBJECT`"
+    }
+    remove: {
+      h: "Remove"
+      n: "remove"
+      r: false
+      t: "`$OBJECT`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: true
+      t: "`$STRING`"
+    }
+    updated_at: {
+      fo: "date-time"
+      h: "Updated At"
+      n: "updated_at"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "network_restriction"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/network-restrictions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/network-restrictions"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "network-restrictions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /v1/projects/{ref}/network-restrictions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/v1/projects/{ref}/network-restrictions"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "network-restrictions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

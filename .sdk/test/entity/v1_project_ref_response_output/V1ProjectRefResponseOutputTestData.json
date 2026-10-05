@@ -1,0 +1,41 @@
+{
+  "existing": {
+    "v1_project_ref_response_output": {
+      "V1_PROJECT_REF_RESPONSE_OUTPUT00": {
+        "id": "V1_PROJECT_REF_RESPONSE_OUTPUT00",
+        "name": "s1f",
+        "ref": "s20"
+      },
+      "V1_PROJECT_REF_RESPONSE_OUTPUT01": {
+        "id": "V1_PROJECT_REF_RESPONSE_OUTPUT01",
+        "name": "s3d",
+        "ref": "s3e"
+      },
+      "V1_PROJECT_REF_RESPONSE_OUTPUT02": {
+        "id": "V1_PROJECT_REF_RESPONSE_OUTPUT02",
+        "name": "s5b",
+        "ref": "s5c"
+      }
+    }
+  },
+  "new": {
+    "v1_project_ref_response_output": {
+      "v1_project_ref_response_output_ref01": {
+        "name": "s79",
+        "ref": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "DELETE /v1/projects/{ref}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{ref}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+# Entity: o_auth_token_response_output
+
+main: kit: entity: o_auth_token_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    access_token: {
+      h: "Access Token"
+      n: "access_token"
+      r: true
+      t: "`$STRING`"
+    }
+    expires_in: {
+      h: "Expires In"
+      n: "expires_in"
+      r: true
+      t: "`$INTEGER`"
+    }
+    refresh_token: {
+      h: "Refresh Token"
+      n: "refresh_token"
+      r: false
+      sh: "The `urn:ietf:params:oauth:grant-type:jwt-bearer` grant type issues access tokens only, no refresh token is returned and the token cannot be revoked via `/v1/oauth/revoke`."
+      t: "`$STRING`"
+    }
+    token_type: {
+      h: "Token Type"
+      n: "token_type"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "o_auth_token_response_output"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/oauth/token"
+            source: "openapi3"
+            version: 2
+          }
+          m: "POST"
+          o: "/v1/oauth/token"
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "oauth"
+            }
+            {
+              lit: "token"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+
+}

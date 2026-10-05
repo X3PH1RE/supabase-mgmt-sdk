@@ -1,0 +1,371 @@
+# Entity: realtime
+
+main: kit: entity: realtime: {
+
+  alias: field: {}
+
+  fields: {
+    admin_suspended_at: {
+      fo: "date-time"
+      h: "Admin Suspended At"
+      n: "admin_suspended_at"
+      r: true
+      sh: "If set, the Realtime service has been suspended by an admin."
+      t: "`$STRING`"
+    }
+    connection_pool: {
+      h: "Connection Pool"
+      n: "connection_pool"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      sh: "Sets connection pool size for Realtime Authorization"
+      t: "`$INTEGER`"
+    }
+    max_bytes_per_second: {
+      h: "Max Bytes Per Second"
+      n: "max_bytes_per_second"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      sh: "Sets maximum number of bytes per second rate per channel limit"
+      t: "`$INTEGER`"
+    }
+    max_channels_per_client: {
+      h: "Max Channels Per Client"
+      n: "max_channels_per_client"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      sh: "Sets maximum number of channels per client rate limit"
+      t: "`$INTEGER`"
+    }
+    max_concurrent_users: {
+      h: "Max Concurrent Users"
+      n: "max_concurrent_users"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      sh: "Sets maximum number of concurrent users rate limit"
+      t: "`$INTEGER`"
+    }
+    max_events_per_second: {
+      h: "Max Events Per Second"
+      n: "max_events_per_second"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      sh: "Sets maximum number of events per second rate per channel limit"
+      t: "`$INTEGER`"
+    }
+    max_joins_per_second: {
+      h: "Max Joins Per Second"
+      n: "max_joins_per_second"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      sh: "Sets maximum number of joins per second rate limit"
+      t: "`$INTEGER`"
+    }
+    max_payload_size_in_kb: {
+      h: "Max Payload Size In Kb"
+      n: "max_payload_size_in_kb"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      sh: "Sets maximum number of payload size in KB rate limit"
+      t: "`$INTEGER`"
+    }
+    max_presence_events_per_second: {
+      h: "Max Presence Events Per Second"
+      n: "max_presence_events_per_second"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      sh: "Sets maximum number of presence events per second rate limit"
+      t: "`$INTEGER`"
+    }
+    postgres_changes_pool: {
+      h: "Postgres Changes Pool"
+      n: "postgres_changes_pool"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      sh: "Sets connection pool size used to create Postgres Changes subscriptions"
+      t: "`$INTEGER`"
+    }
+    presence_enabled: {
+      h: "Presence Enabled"
+      n: "presence_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      sh: "Whether to enable presence"
+      t: "`$BOOLEAN`"
+    }
+    private_only: {
+      h: "Private Only"
+      n: "private_only"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      sh: "Whether to only allow private channels"
+      t: "`$BOOLEAN`"
+    }
+    suspend: {
+      h: "Suspend"
+      n: "suspend"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      sh: "Disables the Realtime service for this project when true."
+      t: "`$BOOLEAN`"
+    }
+  }
+
+  name: "realtime"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/config/realtime/shutdown"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/config/realtime/shutdown"
+          q: {
+            "$action": "shutdown"
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "realtime"
+            }
+            {
+              lit: "shutdown"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/config/realtime"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/config/realtime"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "realtime"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /v1/projects/{ref}/config/realtime"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/v1/projects/{ref}/config/realtime"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "realtime"
+            }
+          ]
+          t: {
+            req: {
+              connection_pool: "`reqdata.connection_pool`"
+              max_bytes_per_second: "`reqdata.max_bytes_per_second`"
+              max_channels_per_client: "`reqdata.max_channels_per_client`"
+              max_concurrent_users: "`reqdata.max_concurrent_user`"
+              max_events_per_second: "`reqdata.max_events_per_second`"
+              max_joins_per_second: "`reqdata.max_joins_per_second`"
+              max_payload_size_in_kb: "`reqdata.max_payload_size_in_kb`"
+              max_presence_events_per_second: "`reqdata.max_presence_events_per_second`"
+              postgres_changes_pool: "`reqdata.postgres_changes_pool`"
+              presence_enabled: "`reqdata.presence_enabled`"
+              private_only: "`reqdata.private_only`"
+              suspend: "`reqdata.suspend`"
+            }
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

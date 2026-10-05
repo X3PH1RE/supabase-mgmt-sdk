@@ -1,0 +1,9 @@
+# BasicEdgeFunctionFlow
+
+main: kit: flow: BasicEdgeFunctionFlow:
+{
+  entity: "edge_function",
+  kind: "basic",
+  name: "BasicEdgeFunctionFlow",
+  "key$": "BasicEdgeFunctionFlow"
+}

@@ -1,0 +1,60 @@
+{
+  "existing": {
+    "organization_projects_response_output": {
+      "ORGANIZATION_PROJECTS_RESPONSE_OUTPUT00": {
+        "cloud_provider": "s50",
+        "databases": [],
+        "inserted_at": "s52",
+        "is_branch": false,
+        "name": "s54",
+        "ref": "s55",
+        "region": "s56",
+        "status": "s57",
+        "slug": "SLUG01"
+      },
+      "ORGANIZATION_PROJECTS_RESPONSE_OUTPUT01": {
+        "cloud_provider": "sa0",
+        "databases": [],
+        "inserted_at": "sa2",
+        "is_branch": false,
+        "name": "sa4",
+        "ref": "sa5",
+        "region": "sa6",
+        "status": "sa7",
+        "slug": "SLUG01"
+      },
+      "ORGANIZATION_PROJECTS_RESPONSE_OUTPUT02": {
+        "cloud_provider": "sf0",
+        "databases": [],
+        "inserted_at": "sf2",
+        "is_branch": false,
+        "name": "sf4",
+        "ref": "sf5",
+        "region": "sf6",
+        "status": "sf7",
+        "slug": "SLUG01"
+      }
+    }
+  },
+  "new": {
+    "organization_projects_response_output": {
+      "organization_projects_response_output_ref01": {
+        "cloud_provider": "s140",
+        "databases": [],
+        "inserted_at": "s142",
+        "is_branch": false,
+        "name": "s144",
+        "ref": "s145",
+        "region": "s146",
+        "status": "s147"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/organizations/{slug}/projects": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+# BasicCreateRoleResponseOutputFlow
+
+main: kit: flow: BasicCreateRoleResponseOutputFlow:
+{
+  entity: "create_role_response_output",
+  kind: "basic",
+  name: "BasicCreateRoleResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "create_role_response_output_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicCreateRoleResponseOutputFlow"
+}

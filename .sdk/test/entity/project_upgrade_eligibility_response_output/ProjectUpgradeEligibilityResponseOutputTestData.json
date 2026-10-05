@@ -1,0 +1,40 @@
+{
+  "existing": {
+    "project_upgrade_eligibility_response_output": {
+      "PROJECT_UPGRADE_ELIGIBILITY_RESPONSE_OUTPUT00": {
+        "app_version": "s1e",
+        "postgres_version": "s1f",
+        "release_channel": "s20",
+        "project_id": "PROJECT01"
+      },
+      "PROJECT_UPGRADE_ELIGIBILITY_RESPONSE_OUTPUT01": {
+        "app_version": "s3c",
+        "postgres_version": "s3d",
+        "release_channel": "s3e",
+        "project_id": "PROJECT01"
+      },
+      "PROJECT_UPGRADE_ELIGIBILITY_RESPONSE_OUTPUT02": {
+        "app_version": "s5a",
+        "postgres_version": "s5b",
+        "release_channel": "s5c",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "project_upgrade_eligibility_response_output": {
+      "project_upgrade_eligibility_response_output_ref01": {
+        "app_version": "s78",
+        "postgres_version": "s79",
+        "release_channel": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/upgrade/eligibility": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

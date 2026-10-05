@@ -1,0 +1,35 @@
+{
+  "existing": {
+    "typescript": {
+      "TYPESCRIPT00": {
+        "types": "sa",
+        "project_id": "PROJECT01",
+        "id": "TYPESCRIPT00"
+      },
+      "TYPESCRIPT01": {
+        "types": "s14",
+        "project_id": "PROJECT01",
+        "id": "TYPESCRIPT01"
+      },
+      "TYPESCRIPT02": {
+        "types": "s1e",
+        "project_id": "PROJECT01",
+        "id": "TYPESCRIPT02"
+      }
+    }
+  },
+  "new": {
+    "typescript": {
+      "typescript_ref01": {
+        "types": "s28"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/types/typescript": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

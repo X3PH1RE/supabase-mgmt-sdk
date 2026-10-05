@@ -1,0 +1,119 @@
+# BasicApiKeyFlow
+
+main: kit: flow: BasicApiKeyFlow:
+{
+  entity: "api_key",
+  kind: "basic",
+  name: "BasicApiKeyFlow",
+  step: [
+    {
+      i: {
+        ref: "api_key_ref01"
+      }
+
+      m: {
+        project_id: "project01",
+        ref: "api_key_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      m: {
+        ref: "ref01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "api_key_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      d: {
+        project_id: "project01"
+      }
+
+      i: {
+        ref: "api_key_ref01",
+        srcdatavar: "api_key_ref01_data",
+        suffix: "_up0",
+        textfield: "api_key"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-api_key_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "api_key_ref01",
+        srcdatavar: "api_key_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "api_key01",
+        project_id: "project01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-api_key_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "api_key_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "api_key01",
+        project_id: "project01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      m: {
+        ref: "ref01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "api_key_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicApiKeyFlow"
+}

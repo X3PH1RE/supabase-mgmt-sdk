@@ -1,0 +1,26 @@
+# BasicListActionRunResponseOutputFlow
+
+main: kit: flow: BasicListActionRunResponseOutputFlow:
+{
+  entity: "list_action_run_response_output",
+  kind: "basic",
+  name: "BasicListActionRunResponseOutputFlow",
+  step: [
+    {
+      m: {
+        ref: "ref01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "list_action_run_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicListActionRunResponseOutputFlow"
+}

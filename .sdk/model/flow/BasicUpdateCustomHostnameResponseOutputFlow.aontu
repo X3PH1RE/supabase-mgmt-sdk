@@ -1,0 +1,44 @@
+# BasicUpdateCustomHostnameResponseOutputFlow
+
+main: kit: flow: BasicUpdateCustomHostnameResponseOutputFlow:
+{
+  entity: "update_custom_hostname_response_output",
+  kind: "basic",
+  name: "BasicUpdateCustomHostnameResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "update_custom_hostname_response_output_ref01"
+      }
+
+      m: {
+        project_id: "project01"
+      }
+
+      o: "create"
+    }
+
+    {
+      i: {
+        ref: "update_custom_hostname_response_output_ref01",
+        srcdatavar: "update_custom_hostname_response_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "update_custom_hostname_response_output01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-update_custom_hostname_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicUpdateCustomHostnameResponseOutputFlow"
+}

@@ -1,0 +1,39 @@
+{
+  "existing": {
+    "network_restrictions_response_output": {
+      "NETWORK_RESTRICTIONS_RESPONSE_OUTPUT00": {
+        "dbAllowedCidrs": [],
+        "dbAllowedCidrsV6": [],
+        "project_id": "PROJECT01",
+        "id": "NETWORK_RESTRICTIONS_RESPONSE_OUTPUT00"
+      },
+      "NETWORK_RESTRICTIONS_RESPONSE_OUTPUT01": {
+        "dbAllowedCidrs": [],
+        "dbAllowedCidrsV6": [],
+        "project_id": "PROJECT01",
+        "id": "NETWORK_RESTRICTIONS_RESPONSE_OUTPUT01"
+      },
+      "NETWORK_RESTRICTIONS_RESPONSE_OUTPUT02": {
+        "dbAllowedCidrs": [],
+        "dbAllowedCidrsV6": [],
+        "project_id": "PROJECT01",
+        "id": "NETWORK_RESTRICTIONS_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "network_restrictions_response_output": {
+      "network_restrictions_response_output_ref01": {
+        "dbAllowedCidrs": [],
+        "dbAllowedCidrsV6": []
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/network-restrictions/apply": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

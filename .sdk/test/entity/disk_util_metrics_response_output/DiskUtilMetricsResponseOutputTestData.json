@@ -1,0 +1,43 @@
+{
+  "existing": {
+    "disk_util_metrics_response_output": {
+      "DISK_UTIL_METRICS_RESPONSE_OUTPUT00": {
+        "fs_avail_bytes": 30,
+        "fs_size_bytes": 31,
+        "fs_used_bytes": 32,
+        "project_id": "PROJECT01",
+        "id": "DISK_UTIL_METRICS_RESPONSE_OUTPUT00"
+      },
+      "DISK_UTIL_METRICS_RESPONSE_OUTPUT01": {
+        "fs_avail_bytes": 60,
+        "fs_size_bytes": 61,
+        "fs_used_bytes": 62,
+        "project_id": "PROJECT01",
+        "id": "DISK_UTIL_METRICS_RESPONSE_OUTPUT01"
+      },
+      "DISK_UTIL_METRICS_RESPONSE_OUTPUT02": {
+        "fs_avail_bytes": 90,
+        "fs_size_bytes": 91,
+        "fs_used_bytes": 92,
+        "project_id": "PROJECT01",
+        "id": "DISK_UTIL_METRICS_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "disk_util_metrics_response_output": {
+      "disk_util_metrics_response_output_ref01": {
+        "fs_avail_bytes": 120,
+        "fs_size_bytes": 121,
+        "fs_used_bytes": 122
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/config/disk/util": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

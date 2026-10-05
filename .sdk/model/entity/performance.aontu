@@ -1,0 +1,143 @@
+# Entity: performance
+
+main: kit: entity: performance: {
+
+  alias: field: {}
+
+  fields: {
+    cache_key: {
+      h: "Cache Key"
+      n: "cache_key"
+      r: true
+      t: "`$STRING`"
+    }
+    categories: {
+      h: "Categories"
+      n: "categories"
+      r: true
+      t: "`$ARRAY`"
+    }
+    description: {
+      h: "Description"
+      n: "description"
+      r: true
+      t: "`$STRING`"
+    }
+    detail: {
+      h: "Detail"
+      n: "detail"
+      r: true
+      t: "`$STRING`"
+    }
+    facing: {
+      h: "Facing"
+      n: "facing"
+      r: true
+      t: "`$STRING`"
+    }
+    level: {
+      h: "Level"
+      n: "level"
+      r: true
+      t: "`$STRING`"
+    }
+    metadata: {
+      h: "Metadata"
+      n: "metadata"
+      r: false
+      t: "`$OBJECT`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      r: true
+      t: "`$STRING`"
+    }
+    observed_at: {
+      fo: "date-time"
+      h: "Observed At"
+      n: "observed_at"
+      r: false
+      t: "`$STRING`"
+    }
+    remediation: {
+      h: "Remediation"
+      n: "remediation"
+      r: true
+      t: "`$STRING`"
+    }
+    title: {
+      h: "Title"
+      n: "title"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "performance"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/advisors/performance"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/advisors/performance"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "advisors"
+            }
+            {
+              lit: "performance"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.lints`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

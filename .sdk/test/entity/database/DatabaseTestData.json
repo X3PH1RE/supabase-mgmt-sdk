@@ -1,0 +1,156 @@
+{
+  "existing": {
+    "database": {
+      "DATABASE00": {
+        "database_identifier": "s50",
+        "id": "DATABASE00",
+        "name": "s52",
+        "parameters": [],
+        "query": "s54",
+        "read_replica_region": "s55",
+        "recovery_time_target_unix": 86,
+        "rollback": "s57",
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "invite_id": "INVITE01",
+        "user_id": "USER01",
+        "version": "VERSION01"
+      },
+      "DATABASE01": {
+        "database_identifier": "sa0",
+        "id": "DATABASE01",
+        "name": "sa2",
+        "parameters": [],
+        "query": "sa4",
+        "read_replica_region": "sa5",
+        "recovery_time_target_unix": 166,
+        "rollback": "sa7",
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "invite_id": "INVITE01",
+        "user_id": "USER01",
+        "version": "VERSION01"
+      },
+      "DATABASE02": {
+        "database_identifier": "sf0",
+        "id": "DATABASE02",
+        "name": "sf2",
+        "parameters": [],
+        "query": "sf4",
+        "read_replica_region": "sf5",
+        "recovery_time_target_unix": 246,
+        "rollback": "sf7",
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "invite_id": "INVITE01",
+        "user_id": "USER01",
+        "version": "VERSION01"
+      }
+    }
+  },
+  "new": {
+    "database": {
+      "database_ref01": {
+        "database_identifier": "s140",
+        "name": "s142",
+        "parameters": [],
+        "query": "s144",
+        "read_replica_region": "s145",
+        "recovery_time_target_unix": 326,
+        "rollback": "s147"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/database/migrations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/database/backups/restore": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/database/backups/restore-pitr": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/database/backups/undo": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/database/query": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/database/query/read-only": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/database/webhooks/enable": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/read-replicas/remove": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/read-replicas/setup": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/readonly/temporary-disable": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/database/context": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/database/openapi": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/jit-access": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{ref}/database/migrations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{ref}/database/jit/invite/{invite_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{ref}/database/jit/{user_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /v1/projects/{ref}/database/migrations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{ref}/database/migrations/{version}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

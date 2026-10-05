@@ -1,0 +1,32 @@
+# BasicDatabaseUpgradeStatusResponseOutputFlow
+
+main: kit: flow: BasicDatabaseUpgradeStatusResponseOutputFlow:
+{
+  entity: "database_upgrade_status_response_output",
+  kind: "basic",
+  name: "BasicDatabaseUpgradeStatusResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "database_upgrade_status_response_output_ref01",
+        srcdatavar: "database_upgrade_status_response_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "database_upgrade_status_response_output01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-database_upgrade_status_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicDatabaseUpgradeStatusResponseOutputFlow"
+}

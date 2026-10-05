@@ -1,0 +1,26 @@
+# BasicV1BackupsResponseOutputFlow
+
+main: kit: flow: BasicV1BackupsResponseOutputFlow:
+{
+  entity: "v1_backups_response_output",
+  kind: "basic",
+  name: "BasicV1BackupsResponseOutputFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "v1_backups_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicV1BackupsResponseOutputFlow"
+}

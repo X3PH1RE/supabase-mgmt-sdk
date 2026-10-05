@@ -1,0 +1,141 @@
+# Entity: list_action_run_response_output
+
+main: kit: entity: list_action_run_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    branch_id: {
+      h: "Branch Id"
+      n: "branch_id"
+      r: true
+      t: "`$STRING`"
+    }
+    check_run_id: {
+      h: "Check Run Id"
+      n: "check_run_id"
+      r: true
+      t: "`$NUMBER`"
+    }
+    created_at: {
+      h: "Created At"
+      n: "created_at"
+      r: true
+      t: "`$STRING`"
+    }
+    git_config: {
+      h: "Git Config"
+      n: "git_config"
+      r: false
+      t: "`$ANY`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    run_steps: {
+      h: "Run Steps"
+      n: "run_steps"
+      r: true
+      t: "`$ARRAY`"
+    }
+    updated_at: {
+      h: "Updated At"
+      n: "updated_at"
+      r: true
+      t: "`$STRING`"
+    }
+    workdir: {
+      h: "Workdir"
+      n: "workdir"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "list_action_run_response_output"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/actions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: 20
+                k: "query"
+                n: "limit"
+                or: "limit"
+                r: false
+                t: "`$NUMBER`"
+              }
+              {
+                ex: 0
+                k: "query"
+                n: "offset"
+                or: "offset"
+                r: false
+                t: "`$NUMBER`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/actions"
+          q: {
+            exist: [
+              "limit"
+              "offset"
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "actions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

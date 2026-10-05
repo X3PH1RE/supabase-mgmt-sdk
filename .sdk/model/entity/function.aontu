@@ -1,0 +1,478 @@
+# Entity: function
+
+main: kit: entity: function: {
+
+  alias: field: {}
+
+  fields: {
+    body: {
+      h: "Body"
+      n: "body"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    created_at: {
+      fo: "int64"
+      h: "Created At"
+      n: "created_at"
+      r: true
+      t: "`$INTEGER`"
+    }
+    entrypoint_path: {
+      h: "Entrypoint Path"
+      n: "entrypoint_path"
+      r: false
+      t: "`$STRING`"
+    }
+    ezbr_sha256: {
+      h: "Ezbr Sha256"
+      n: "ezbr_sha256"
+      r: false
+      t: "`$STRING`"
+    }
+    id: {
+      h: "Id"
+      n: "id"
+      r: true
+      t: "`$STRING`"
+    }
+    import_map: {
+      h: "Import Map"
+      n: "import_map"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    import_map_path: {
+      h: "Import Map Path"
+      n: "import_map_path"
+      r: false
+      t: "`$STRING`"
+    }
+    name: {
+      h: "Name"
+      n: "name"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    slug: {
+      h: "Slug"
+      n: "slug"
+      r: true
+      t: "`$STRING`"
+    }
+    status: {
+      h: "Status"
+      n: "status"
+      r: true
+      t: "`$STRING`"
+    }
+    updated_at: {
+      fo: "int64"
+      h: "Updated At"
+      n: "updated_at"
+      r: true
+      t: "`$INTEGER`"
+    }
+    verify_jwt: {
+      h: "Verify Jwt"
+      n: "verify_jwt"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    version: {
+      h: "Version"
+      n: "version"
+      r: true
+      t: "`$INTEGER`"
+    }
+  }
+
+  id: {
+    field: "id"
+    name: "id"
+  }
+
+  name: "function"
+  op: {
+    create: {
+      name: "create"
+      points: [
+        {
+          co: {
+            id: "POST /v1/projects/{ref}/functions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "index.ts"
+                k: "query"
+                n: "entrypoint_path"
+                or: "entrypoint_path"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "44c691990518d25498f0fd80cf6631ecf2b58eb9c5eb2a087dd1688f2904dac7"
+                k: "query"
+                n: "ezbr_sha256"
+                or: "ezbr_sha256"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "import_map"
+                or: "import_map"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "import_map.json"
+                k: "query"
+                n: "import_map_path"
+                or: "import_map_path"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "Hello World"
+                k: "query"
+                n: "name"
+                or: "name"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "hello-world"
+                k: "query"
+                n: "slug"
+                or: "slug"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: true
+                k: "query"
+                n: "verify_jwt"
+                or: "verify_jwt"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "POST"
+          o: "/v1/projects/{ref}/functions"
+          q: {
+            exist: [
+              "entrypoint_path"
+              "ezbr_sha256"
+              "import_map"
+              "import_map_path"
+              "name"
+              "ref"
+              "slug"
+              "verify_jwt"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "functions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/functions"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "ref"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/functions"
+          q: {
+            exist: [
+              "ref"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "ref"
+            }
+            {
+              lit: "functions"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/functions/{function_slug}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "hello-world"
+                k: "param"
+                n: "id"
+                or: "function_slug"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/functions/{function_slug}"
+          q: {
+            exist: [
+              "id"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              function_slug: "id"
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "functions"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /v1/projects/{ref}/functions/{function_slug}"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "hello-world"
+                k: "param"
+                n: "id"
+                or: "function_slug"
+                r: true
+                t: "`$STRING`"
+              }
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "index.ts"
+                k: "query"
+                n: "entrypoint_path"
+                or: "entrypoint_path"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "44c691990518d25498f0fd80cf6631ecf2b58eb9c5eb2a087dd1688f2904dac7"
+                k: "query"
+                n: "ezbr_sha256"
+                or: "ezbr_sha256"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: false
+                k: "query"
+                n: "import_map"
+                or: "import_map"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "import_map.json"
+                k: "query"
+                n: "import_map_path"
+                or: "import_map_path"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "Hello World"
+                k: "query"
+                n: "name"
+                or: "name"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: "hello-world"
+                k: "query"
+                n: "slug"
+                or: "slug"
+                r: false
+                t: "`$STRING`"
+              }
+              {
+                ex: true
+                k: "query"
+                n: "verify_jwt"
+                or: "verify_jwt"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/v1/projects/{ref}/functions/{function_slug}"
+          q: {
+            exist: [
+              "entrypoint_path"
+              "ezbr_sha256"
+              "id"
+              "import_map"
+              "import_map_path"
+              "name"
+              "project_id"
+              "slug"
+              "verify_jwt"
+            ]
+          }
+          r: {
+            param: {
+              function_slug: "id"
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "functions"
+            }
+            {
+              var: "id"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

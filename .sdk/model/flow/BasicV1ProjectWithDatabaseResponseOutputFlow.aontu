@@ -1,0 +1,100 @@
+# BasicV1ProjectWithDatabaseResponseOutputFlow
+
+main: kit: flow: BasicV1ProjectWithDatabaseResponseOutputFlow:
+{
+  entity: "v1_project_with_database_response_output",
+  kind: "basic",
+  name: "BasicV1ProjectWithDatabaseResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "v1_project_with_database_response_output_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "v1_project_with_database_response_output_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "v1_project_with_database_response_output_ref01",
+        srcdatavar: "v1_project_with_database_response_output_ref01_data",
+        suffix: "_up0",
+        textfield: "created_at"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-v1_project_with_database_response_output_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "v1_project_with_database_response_output_ref01",
+        srcdatavar: "v1_project_with_database_response_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "v1_project_with_database_response_output01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-v1_project_with_database_response_output_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "v1_project_with_database_response_output_ref01",
+        suffix: "_rm0"
+      }
+
+      m: {
+        id: "v1_project_with_database_response_output01"
+      }
+
+      o: "remove"
+    }
+
+    {
+      i: {
+        suffix: "_rt0"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemNotExists",
+          def: {
+            ref: "v1_project_with_database_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicV1ProjectWithDatabaseResponseOutputFlow"
+}

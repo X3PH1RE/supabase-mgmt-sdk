@@ -1,0 +1,104 @@
+# Entity: update_supavisor_config_response_output
+
+main: kit: entity: update_supavisor_config_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    default_pool_size: {
+      h: "Default Pool Size"
+      n: "default_pool_size"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    pool_mode: {
+      h: "Pool Mode"
+      n: "pool_mode"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      sh: "Dedicated pooler mode for the project"
+      t: "`$STRING`"
+    }
+  }
+
+  name: "update_supavisor_config_response_output"
+  op: {
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /v1/projects/{ref}/config/database/pooler"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/v1/projects/{ref}/config/database/pooler"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "database"
+            }
+            {
+              lit: "pooler"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

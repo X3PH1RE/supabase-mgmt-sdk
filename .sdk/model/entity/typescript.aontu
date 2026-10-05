@@ -1,0 +1,93 @@
+# Entity: typescript
+
+main: kit: entity: typescript: {
+
+  alias: field: {}
+
+  fields: {
+    types: {
+      h: "Types"
+      n: "types"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "typescript"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/types/typescript"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+            query: [
+              {
+                ex: "public,auth"
+                k: "query"
+                n: "included_schema"
+                or: "included_schemas"
+                r: false
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/types/typescript"
+          q: {
+            exist: [
+              "included_schema"
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "types"
+            }
+            {
+              lit: "typescript"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

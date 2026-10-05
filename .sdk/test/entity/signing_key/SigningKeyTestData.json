@@ -1,0 +1,75 @@
+{
+  "existing": {
+    "signing_key": {
+      "SIGNING_KEY00": {
+        "algorithm": "s46",
+        "created_at": "s47",
+        "id": "SIGNING_KEY00",
+        "private_jwk": "s49",
+        "public_jwk": "s4a",
+        "status": "s4b",
+        "updated_at": "s4c",
+        "project_id": "PROJECT01"
+      },
+      "SIGNING_KEY01": {
+        "algorithm": "s8c",
+        "created_at": "s8d",
+        "id": "SIGNING_KEY01",
+        "private_jwk": "s8f",
+        "public_jwk": "s90",
+        "status": "s91",
+        "updated_at": "s92",
+        "project_id": "PROJECT01"
+      },
+      "SIGNING_KEY02": {
+        "algorithm": "sd2",
+        "created_at": "sd3",
+        "id": "SIGNING_KEY02",
+        "private_jwk": "sd5",
+        "public_jwk": "sd6",
+        "status": "sd7",
+        "updated_at": "sd8",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "signing_key": {
+      "signing_key_ref01": {
+        "algorithm": "s118",
+        "created_at": "s119",
+        "private_jwk": "s11b",
+        "public_jwk": "s11c",
+        "status": "s11d",
+        "updated_at": "s11e"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/config/auth/signing-keys": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/config/auth/signing-keys": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/config/auth/signing-keys/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{ref}/config/auth/signing-keys/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{ref}/config/auth/signing-keys/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

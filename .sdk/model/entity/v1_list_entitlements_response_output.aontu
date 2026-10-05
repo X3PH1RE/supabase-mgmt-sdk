@@ -1,0 +1,97 @@
+# Entity: v1_list_entitlements_response_output
+
+main: kit: entity: v1_list_entitlements_response_output: {
+
+  alias: field: {}
+
+  fields: {
+    config: {
+      h: "Config"
+      n: "config"
+      r: true
+      t: "`$ANY`"
+      union: {
+        branches: 3
+        count: 1
+        depth: 0
+      }
+    }
+    feature: {
+      h: "Feature"
+      n: "feature"
+      r: true
+      t: "`$OBJECT`"
+    }
+    hasAccess: {
+      h: "Has Access"
+      n: "hasAccess"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    type: {
+      h: "Type"
+      n: "type"
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "v1_list_entitlements_response_output"
+  op: {
+    list: {
+      name: "list"
+      points: [
+        {
+          co: {
+            id: "GET /v1/organizations/{slug}/entitlements"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "tsrqponmlkjihgfedcba"
+                k: "param"
+                n: "slug"
+                or: "slug"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/organizations/{slug}/entitlements"
+          q: {
+            exist: [
+              "slug"
+            ]
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "organizations"
+            }
+            {
+              var: "slug"
+            }
+            {
+              lit: "entitlements"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body.entitlements`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.organization")]
+  ]
+
+}

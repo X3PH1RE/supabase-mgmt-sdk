@@ -1,0 +1,22 @@
+# BasicProjectUpgradeInitiateResponseOutputFlow
+
+main: kit: flow: BasicProjectUpgradeInitiateResponseOutputFlow:
+{
+  entity: "project_upgrade_initiate_response_output",
+  kind: "basic",
+  name: "BasicProjectUpgradeInitiateResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "project_upgrade_initiate_response_output_ref01"
+      }
+
+      m: {
+        ref: "project_upgrade_initiate_response_output_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicProjectUpgradeInitiateResponseOutputFlow"
+}

@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "project": {
+      "PROJECT00": {
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "id": "PROJECT00"
+      },
+      "PROJECT01": {
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "id": "PROJECT01"
+      },
+      "PROJECT02": {
+        "project_id": "PROJECT01",
+        "ref": "REF01",
+        "id": "PROJECT02"
+      }
+    }
+  },
+  "new": {
+    "project": {
+      "project_ref01": {}
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/config/disk": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/restore": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/restore/cancel": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{ref}/network-bans": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

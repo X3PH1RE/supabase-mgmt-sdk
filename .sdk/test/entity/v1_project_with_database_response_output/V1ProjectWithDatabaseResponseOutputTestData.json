@@ -1,0 +1,136 @@
+{
+  "existing": {
+    "v1_project_with_database_response_output": {
+      "V1_PROJECT_WITH_DATABASE_RESPONSE_OUTPUT00": {
+        "created_at": "sb4",
+        "database": {},
+        "db_pass": "sb6",
+        "desired_instance_size": "sb7",
+        "high_availability": true,
+        "id": "V1_PROJECT_WITH_DATABASE_RESPONSE_OUTPUT00",
+        "kps_enabled": true,
+        "name": "sbb",
+        "organization_id": "ORGANIZATION01",
+        "organization_slug": "sbd",
+        "plan": "sbe",
+        "postgres_engine": "sbf",
+        "ref": "sc0",
+        "region": "sc1",
+        "region_selection": "sc2",
+        "release_channel": "sc3",
+        "status": "sc4",
+        "template_url": "sc5"
+      },
+      "V1_PROJECT_WITH_DATABASE_RESPONSE_OUTPUT01": {
+        "created_at": "s168",
+        "database": {},
+        "db_pass": "s16a",
+        "desired_instance_size": "s16b",
+        "high_availability": true,
+        "id": "V1_PROJECT_WITH_DATABASE_RESPONSE_OUTPUT01",
+        "kps_enabled": true,
+        "name": "s16f",
+        "organization_id": "ORGANIZATION01",
+        "organization_slug": "s171",
+        "plan": "s172",
+        "postgres_engine": "s173",
+        "ref": "s174",
+        "region": "s175",
+        "region_selection": "s176",
+        "release_channel": "s177",
+        "status": "s178",
+        "template_url": "s179"
+      },
+      "V1_PROJECT_WITH_DATABASE_RESPONSE_OUTPUT02": {
+        "created_at": "s21c",
+        "database": {},
+        "db_pass": "s21e",
+        "desired_instance_size": "s21f",
+        "high_availability": true,
+        "id": "V1_PROJECT_WITH_DATABASE_RESPONSE_OUTPUT02",
+        "kps_enabled": true,
+        "name": "s223",
+        "organization_id": "ORGANIZATION01",
+        "organization_slug": "s225",
+        "plan": "s226",
+        "postgres_engine": "s227",
+        "ref": "s228",
+        "region": "s229",
+        "region_selection": "s22a",
+        "release_channel": "s22b",
+        "status": "s22c",
+        "template_url": "s22d"
+      }
+    }
+  },
+  "new": {
+    "v1_project_with_database_response_output": {
+      "v1_project_with_database_response_output_ref01": {
+        "created_at": "s2d0",
+        "database": {},
+        "db_pass": "s2d2",
+        "desired_instance_size": "s2d3",
+        "high_availability": true,
+        "kps_enabled": true,
+        "name": "s2d7",
+        "organization_id": "ORGANIZATION01",
+        "organization_slug": "s2d9",
+        "plan": "s2da",
+        "postgres_engine": "s2db",
+        "ref": "s2dc",
+        "region": "s2dd",
+        "region_selection": "s2de",
+        "release_channel": "s2df",
+        "status": "s2e0",
+        "template_url": "s2e1"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/claim-token": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/pause": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects/{ref}/restart": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "POST /v1/projects": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{ref}/claim-token": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PUT /v1/projects/{ref}/jit-access": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{ref}/postgrest": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

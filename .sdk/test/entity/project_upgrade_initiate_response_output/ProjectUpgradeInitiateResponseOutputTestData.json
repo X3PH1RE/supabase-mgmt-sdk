@@ -1,0 +1,39 @@
+{
+  "existing": {
+    "project_upgrade_initiate_response_output": {
+      "PROJECT_UPGRADE_INITIATE_RESPONSE_OUTPUT00": {
+        "release_channel": "s14",
+        "target_version": "s15",
+        "ref": "REF01",
+        "id": "PROJECT_UPGRADE_INITIATE_RESPONSE_OUTPUT00"
+      },
+      "PROJECT_UPGRADE_INITIATE_RESPONSE_OUTPUT01": {
+        "release_channel": "s28",
+        "target_version": "s29",
+        "ref": "REF01",
+        "id": "PROJECT_UPGRADE_INITIATE_RESPONSE_OUTPUT01"
+      },
+      "PROJECT_UPGRADE_INITIATE_RESPONSE_OUTPUT02": {
+        "release_channel": "s3c",
+        "target_version": "s3d",
+        "ref": "REF01",
+        "id": "PROJECT_UPGRADE_INITIATE_RESPONSE_OUTPUT02"
+      }
+    }
+  },
+  "new": {
+    "project_upgrade_initiate_response_output": {
+      "project_upgrade_initiate_response_output_ref01": {
+        "release_channel": "s50",
+        "target_version": "s51"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/upgrade": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

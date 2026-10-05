@@ -1,0 +1,26 @@
+# BasicSecurityFlow
+
+main: kit: flow: BasicSecurityFlow:
+{
+  entity: "security",
+  kind: "basic",
+  name: "BasicSecurityFlow",
+  step: [
+    {
+      m: {
+        project_id: "project01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "security_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicSecurityFlow"
+}

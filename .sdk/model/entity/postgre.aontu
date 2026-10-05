@@ -1,0 +1,418 @@
+# Entity: postgre
+
+main: kit: entity: postgre: {
+
+  alias: field: {}
+
+  fields: {
+    checkpoint_timeout: {
+      h: "Checkpoint Timeout"
+      n: "checkpoint_timeout"
+      r: false
+      sh: "Default unit: s"
+      t: "`$STRING`"
+    }
+    cron_log_statement: {
+      h: "Cron Log Statement"
+      n: "cron_log_statement"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    effective_cache_size: {
+      h: "Effective Cache Size"
+      n: "effective_cache_size"
+      r: false
+      t: "`$STRING`"
+    }
+    hot_standby_feedback: {
+      h: "Hot Standby Feedback"
+      n: "hot_standby_feedback"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    log_autovacuum_min_duration: {
+      h: "Log Autovacuum Min Duration"
+      n: "log_autovacuum_min_duration"
+      r: false
+      sh: "Default unit: ms"
+      t: "`$STRING`"
+    }
+    log_checkpoints: {
+      h: "Log Checkpoints"
+      n: "log_checkpoints"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    log_connections: {
+      h: "Log Connections"
+      n: "log_connections"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    log_disconnections: {
+      h: "Log Disconnections"
+      n: "log_disconnections"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    log_duration: {
+      h: "Log Duration"
+      n: "log_duration"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    log_lock_waits: {
+      h: "Log Lock Waits"
+      n: "log_lock_waits"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    log_recovery_conflict_waits: {
+      h: "Log Recovery Conflict Waits"
+      n: "log_recovery_conflict_waits"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    log_replication_commands: {
+      h: "Log Replication Commands"
+      n: "log_replication_commands"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    log_startup_progress_interval: {
+      h: "Log Startup Progress Interval"
+      n: "log_startup_progress_interval"
+      r: false
+      sh: "Default unit: ms"
+      t: "`$STRING`"
+    }
+    log_temp_files: {
+      h: "Log Temp Files"
+      n: "log_temp_files"
+      r: false
+      t: "`$STRING`"
+    }
+    logical_decoding_work_mem: {
+      h: "Logical Decoding Work Mem"
+      n: "logical_decoding_work_mem"
+      r: false
+      t: "`$STRING`"
+    }
+    maintenance_work_mem: {
+      h: "Maintenance Work Mem"
+      n: "maintenance_work_mem"
+      r: false
+      t: "`$STRING`"
+    }
+    max_connections: {
+      h: "Max Connections"
+      n: "max_connections"
+      r: false
+      t: "`$INTEGER`"
+    }
+    max_locks_per_transaction: {
+      h: "Max Locks Per Transaction"
+      n: "max_locks_per_transaction"
+      r: false
+      t: "`$INTEGER`"
+    }
+    max_logical_replication_workers: {
+      h: "Max Logical Replication Workers"
+      n: "max_logical_replication_workers"
+      r: false
+      t: "`$INTEGER`"
+    }
+    max_parallel_maintenance_workers: {
+      h: "Max Parallel Maintenance Workers"
+      n: "max_parallel_maintenance_workers"
+      r: false
+      t: "`$INTEGER`"
+    }
+    max_parallel_workers: {
+      h: "Max Parallel Workers"
+      n: "max_parallel_workers"
+      r: false
+      t: "`$INTEGER`"
+    }
+    max_parallel_workers_per_gather: {
+      h: "Max Parallel Workers Per Gather"
+      n: "max_parallel_workers_per_gather"
+      r: false
+      t: "`$INTEGER`"
+    }
+    max_replication_slots: {
+      h: "Max Replication Slots"
+      n: "max_replication_slots"
+      r: false
+      t: "`$INTEGER`"
+    }
+    max_slot_wal_keep_size: {
+      h: "Max Slot Wal Keep Size"
+      n: "max_slot_wal_keep_size"
+      r: false
+      t: "`$STRING`"
+    }
+    max_standby_archive_delay: {
+      h: "Max Standby Archive Delay"
+      n: "max_standby_archive_delay"
+      r: false
+      t: "`$STRING`"
+    }
+    max_standby_streaming_delay: {
+      h: "Max Standby Streaming Delay"
+      n: "max_standby_streaming_delay"
+      r: false
+      t: "`$STRING`"
+    }
+    max_sync_workers_per_subscription: {
+      h: "Max Sync Workers Per Subscription"
+      n: "max_sync_workers_per_subscription"
+      r: false
+      t: "`$INTEGER`"
+    }
+    max_wal_senders: {
+      h: "Max Wal Senders"
+      n: "max_wal_senders"
+      r: false
+      t: "`$INTEGER`"
+    }
+    max_wal_size: {
+      h: "Max Wal Size"
+      n: "max_wal_size"
+      r: false
+      t: "`$STRING`"
+    }
+    max_worker_processes: {
+      h: "Max Worker Processes"
+      n: "max_worker_processes"
+      r: false
+      t: "`$INTEGER`"
+    }
+    restart_database: {
+      h: "Restart Database"
+      n: "restart_database"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    session_replication_role: {
+      h: "Session Replication Role"
+      n: "session_replication_role"
+      r: false
+      t: "`$STRING`"
+    }
+    shared_buffers: {
+      h: "Shared Buffers"
+      n: "shared_buffers"
+      r: false
+      t: "`$STRING`"
+    }
+    statement_timeout: {
+      h: "Statement Timeout"
+      n: "statement_timeout"
+      r: false
+      sh: "Default unit: ms"
+      t: "`$STRING`"
+    }
+    track_activity_query_size: {
+      h: "Track Activity Query Size"
+      n: "track_activity_query_size"
+      r: false
+      t: "`$STRING`"
+    }
+    track_commit_timestamp: {
+      h: "Track Commit Timestamp"
+      n: "track_commit_timestamp"
+      r: false
+      t: "`$BOOLEAN`"
+    }
+    wal_keep_size: {
+      h: "Wal Keep Size"
+      n: "wal_keep_size"
+      r: false
+      t: "`$STRING`"
+    }
+    wal_sender_timeout: {
+      h: "Wal Sender Timeout"
+      n: "wal_sender_timeout"
+      r: false
+      sh: "Default unit: ms"
+      t: "`$STRING`"
+    }
+    work_mem: {
+      h: "Work Mem"
+      n: "work_mem"
+      r: false
+      t: "`$STRING`"
+    }
+  }
+
+  name: "postgre"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/config/database/postgres"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/config/database/postgres"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "database"
+            }
+            {
+              lit: "postgres"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PUT /v1/projects/{ref}/config/database/postgres"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PUT"
+          o: "/v1/projects/{ref}/config/database/postgres"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "database"
+            }
+            {
+              lit: "postgres"
+            }
+          ]
+          t: {
+            req: {
+              checkpoint_timeout: "`reqdata.checkpoint_timeout`"
+              "cron.log_statement": "`reqdata.cron_log_statement`"
+              effective_cache_size: "`reqdata.effective_cache_size`"
+              hot_standby_feedback: "`reqdata.hot_standby_feedback`"
+              log_autovacuum_min_duration: "`reqdata.log_autovacuum_min_duration`"
+              log_checkpoints: "`reqdata.log_checkpoint`"
+              log_connections: "`reqdata.log_connection`"
+              log_disconnections: "`reqdata.log_disconnection`"
+              log_duration: "`reqdata.log_duration`"
+              log_lock_waits: "`reqdata.log_lock_wait`"
+              log_recovery_conflict_waits: "`reqdata.log_recovery_conflict_wait`"
+              log_replication_commands: "`reqdata.log_replication_command`"
+              log_startup_progress_interval: "`reqdata.log_startup_progress_interval`"
+              log_temp_files: "`reqdata.log_temp_file`"
+              logical_decoding_work_mem: "`reqdata.logical_decoding_work_mem`"
+              maintenance_work_mem: "`reqdata.maintenance_work_mem`"
+              max_connections: "`reqdata.max_connection`"
+              max_locks_per_transaction: "`reqdata.max_locks_per_transaction`"
+              max_logical_replication_workers: "`reqdata.max_logical_replication_worker`"
+              max_parallel_maintenance_workers: "`reqdata.max_parallel_maintenance_worker`"
+              max_parallel_workers: "`reqdata.max_parallel_worker`"
+              max_parallel_workers_per_gather: "`reqdata.max_parallel_workers_per_gather`"
+              max_replication_slots: "`reqdata.max_replication_slot`"
+              max_slot_wal_keep_size: "`reqdata.max_slot_wal_keep_size`"
+              max_standby_archive_delay: "`reqdata.max_standby_archive_delay`"
+              max_standby_streaming_delay: "`reqdata.max_standby_streaming_delay`"
+              max_sync_workers_per_subscription: "`reqdata.max_sync_workers_per_subscription`"
+              max_wal_senders: "`reqdata.max_wal_sender`"
+              max_wal_size: "`reqdata.max_wal_size`"
+              max_worker_processes: "`reqdata.max_worker_process`"
+              restart_database: "`reqdata.restart_database`"
+              session_replication_role: "`reqdata.session_replication_role`"
+              shared_buffers: "`reqdata.shared_buffer`"
+              statement_timeout: "`reqdata.statement_timeout`"
+              track_activity_query_size: "`reqdata.track_activity_query_size`"
+              track_commit_timestamp: "`reqdata.track_commit_timestamp`"
+              wal_keep_size: "`reqdata.wal_keep_size`"
+              wal_sender_timeout: "`reqdata.wal_sender_timeout`"
+              work_mem: "`reqdata.work_mem`"
+            }
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

@@ -1,0 +1,48 @@
+{
+  "existing": {
+    "v1_restore_point": {
+      "V1_RESTORE_POINT00": {
+        "completed_on": "s1e",
+        "name": "s1f",
+        "status": "s20",
+        "project_id": "PROJECT01",
+        "id": "V1_RESTORE_POINT00"
+      },
+      "V1_RESTORE_POINT01": {
+        "completed_on": "s3c",
+        "name": "s3d",
+        "status": "s3e",
+        "project_id": "PROJECT01",
+        "id": "V1_RESTORE_POINT01"
+      },
+      "V1_RESTORE_POINT02": {
+        "completed_on": "s5a",
+        "name": "s5b",
+        "status": "s5c",
+        "project_id": "PROJECT01",
+        "id": "V1_RESTORE_POINT02"
+      }
+    }
+  },
+  "new": {
+    "v1_restore_point": {
+      "v1_restore_point_ref01": {
+        "completed_on": "s78",
+        "name": "s79",
+        "status": "s7a"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/database/backups/restore-point": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/database/backups/restore-point": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

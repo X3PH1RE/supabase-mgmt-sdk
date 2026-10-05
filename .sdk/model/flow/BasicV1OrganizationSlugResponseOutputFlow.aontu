@@ -1,0 +1,52 @@
+# BasicV1OrganizationSlugResponseOutputFlow
+
+main: kit: flow: BasicV1OrganizationSlugResponseOutputFlow:
+{
+  entity: "v1_organization_slug_response_output",
+  kind: "basic",
+  name: "BasicV1OrganizationSlugResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "v1_organization_slug_response_output_ref01"
+      }
+
+      o: "create"
+    }
+
+    {
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "v1_organization_slug_response_output_ref01"
+          }
+        }
+      ]
+    }
+
+    {
+      i: {
+        ref: "v1_organization_slug_response_output_ref01",
+        srcdatavar: "v1_organization_slug_response_output_ref01_data",
+        suffix: "_dt0"
+      }
+
+      m: {
+        id: "v1_organization_slug_response_output01"
+      }
+
+      o: "load",
+      v: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-v1_organization_slug_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicV1OrganizationSlugResponseOutputFlow"
+}

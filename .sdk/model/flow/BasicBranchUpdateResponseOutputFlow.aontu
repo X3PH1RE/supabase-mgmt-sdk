@@ -1,0 +1,22 @@
+# BasicBranchUpdateResponseOutputFlow
+
+main: kit: flow: BasicBranchUpdateResponseOutputFlow:
+{
+  entity: "branch_update_response_output",
+  kind: "basic",
+  name: "BasicBranchUpdateResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "branch_update_response_output_ref01"
+      }
+
+      m: {
+        branch_id_or_ref: "branch_or_ref01"
+      }
+
+      o: "create"
+    }
+  ],
+  "key$": "BasicBranchUpdateResponseOutputFlow"
+}

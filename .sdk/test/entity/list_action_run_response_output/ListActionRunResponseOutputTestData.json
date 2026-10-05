@@ -1,0 +1,59 @@
+{
+  "existing": {
+    "list_action_run_response_output": {
+      "LIST_ACTION_RUN_RESPONSE_OUTPUT00": {
+        "branch_id": "BRANCH01",
+        "check_run_id": "CHECK_RUN01",
+        "created_at": "s52",
+        "git_config": "s53",
+        "id": "LIST_ACTION_RUN_RESPONSE_OUTPUT00",
+        "run_steps": [],
+        "updated_at": "s56",
+        "workdir": "s57",
+        "ref": "REF01"
+      },
+      "LIST_ACTION_RUN_RESPONSE_OUTPUT01": {
+        "branch_id": "BRANCH01",
+        "check_run_id": "CHECK_RUN01",
+        "created_at": "sa2",
+        "git_config": "sa3",
+        "id": "LIST_ACTION_RUN_RESPONSE_OUTPUT01",
+        "run_steps": [],
+        "updated_at": "sa6",
+        "workdir": "sa7",
+        "ref": "REF01"
+      },
+      "LIST_ACTION_RUN_RESPONSE_OUTPUT02": {
+        "branch_id": "BRANCH01",
+        "check_run_id": "CHECK_RUN01",
+        "created_at": "sf2",
+        "git_config": "sf3",
+        "id": "LIST_ACTION_RUN_RESPONSE_OUTPUT02",
+        "run_steps": [],
+        "updated_at": "sf6",
+        "workdir": "sf7",
+        "ref": "REF01"
+      }
+    }
+  },
+  "new": {
+    "list_action_run_response_output": {
+      "list_action_run_response_output_ref01": {
+        "branch_id": "BRANCH01",
+        "check_run_id": "CHECK_RUN01",
+        "created_at": "s142",
+        "git_config": "s143",
+        "run_steps": [],
+        "updated_at": "s146",
+        "workdir": "s147"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/actions": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

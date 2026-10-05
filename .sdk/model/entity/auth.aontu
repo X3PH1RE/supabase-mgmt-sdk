@@ -1,0 +1,2977 @@
+# Entity: auth
+
+main: kit: entity: auth: {
+
+  alias: field: {}
+
+  fields: {
+    api_max_request_duration: {
+      h: "Api Max Request Duration"
+      n: "api_max_request_duration"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    custom_oauth_enabled: {
+      h: "Custom Oauth Enabled"
+      n: "custom_oauth_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    custom_oauth_max_providers: {
+      h: "Custom Oauth Max Providers"
+      n: "custom_oauth_max_providers"
+      r: true
+      t: "`$INTEGER`"
+    }
+    db_max_pool_size: {
+      h: "Db Max Pool Size"
+      n: "db_max_pool_size"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    db_max_pool_size_unit: {
+      h: "Db Max Pool Size Unit"
+      n: "db_max_pool_size_unit"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    disable_signup: {
+      h: "Disable Signup"
+      n: "disable_signup"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_anonymous_users_enabled: {
+      h: "External Anonymous Users Enabled"
+      n: "external_anonymous_users_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_apple_additional_client_ids: {
+      h: "External Apple Additional Client Ids"
+      n: "external_apple_additional_client_ids"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_apple_client_id: {
+      h: "External Apple Client Id"
+      n: "external_apple_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_apple_email_optional: {
+      h: "External Apple Email Optional"
+      n: "external_apple_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_apple_enabled: {
+      h: "External Apple Enabled"
+      n: "external_apple_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_apple_secret: {
+      h: "External Apple Secret"
+      n: "external_apple_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_azure_client_id: {
+      h: "External Azure Client Id"
+      n: "external_azure_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_azure_email_optional: {
+      h: "External Azure Email Optional"
+      n: "external_azure_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_azure_enabled: {
+      h: "External Azure Enabled"
+      n: "external_azure_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_azure_secret: {
+      h: "External Azure Secret"
+      n: "external_azure_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_azure_url: {
+      h: "External Azure Url"
+      n: "external_azure_url"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_bitbucket_client_id: {
+      h: "External Bitbucket Client Id"
+      n: "external_bitbucket_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_bitbucket_email_optional: {
+      h: "External Bitbucket Email Optional"
+      n: "external_bitbucket_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_bitbucket_enabled: {
+      h: "External Bitbucket Enabled"
+      n: "external_bitbucket_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_bitbucket_secret: {
+      h: "External Bitbucket Secret"
+      n: "external_bitbucket_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_discord_client_id: {
+      h: "External Discord Client Id"
+      n: "external_discord_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_discord_email_optional: {
+      h: "External Discord Email Optional"
+      n: "external_discord_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_discord_enabled: {
+      h: "External Discord Enabled"
+      n: "external_discord_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_discord_secret: {
+      h: "External Discord Secret"
+      n: "external_discord_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_email_enabled: {
+      h: "External Email Enabled"
+      n: "external_email_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_facebook_client_id: {
+      h: "External Facebook Client Id"
+      n: "external_facebook_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_facebook_email_optional: {
+      h: "External Facebook Email Optional"
+      n: "external_facebook_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_facebook_enabled: {
+      h: "External Facebook Enabled"
+      n: "external_facebook_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_facebook_secret: {
+      h: "External Facebook Secret"
+      n: "external_facebook_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_figma_client_id: {
+      h: "External Figma Client Id"
+      n: "external_figma_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_figma_email_optional: {
+      h: "External Figma Email Optional"
+      n: "external_figma_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_figma_enabled: {
+      h: "External Figma Enabled"
+      n: "external_figma_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_figma_secret: {
+      h: "External Figma Secret"
+      n: "external_figma_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_github_client_id: {
+      h: "External Github Client Id"
+      n: "external_github_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_github_email_optional: {
+      h: "External Github Email Optional"
+      n: "external_github_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_github_enabled: {
+      h: "External Github Enabled"
+      n: "external_github_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_github_secret: {
+      h: "External Github Secret"
+      n: "external_github_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_gitlab_client_id: {
+      h: "External Gitlab Client Id"
+      n: "external_gitlab_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_gitlab_email_optional: {
+      h: "External Gitlab Email Optional"
+      n: "external_gitlab_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_gitlab_enabled: {
+      h: "External Gitlab Enabled"
+      n: "external_gitlab_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_gitlab_secret: {
+      h: "External Gitlab Secret"
+      n: "external_gitlab_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_gitlab_url: {
+      h: "External Gitlab Url"
+      n: "external_gitlab_url"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_google_additional_client_ids: {
+      h: "External Google Additional Client Ids"
+      n: "external_google_additional_client_ids"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_google_client_id: {
+      h: "External Google Client Id"
+      n: "external_google_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_google_email_optional: {
+      h: "External Google Email Optional"
+      n: "external_google_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_google_enabled: {
+      h: "External Google Enabled"
+      n: "external_google_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_google_secret: {
+      h: "External Google Secret"
+      n: "external_google_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_google_skip_nonce_check: {
+      h: "External Google Skip Nonce Check"
+      n: "external_google_skip_nonce_check"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_kakao_client_id: {
+      h: "External Kakao Client Id"
+      n: "external_kakao_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_kakao_email_optional: {
+      h: "External Kakao Email Optional"
+      n: "external_kakao_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_kakao_enabled: {
+      h: "External Kakao Enabled"
+      n: "external_kakao_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_kakao_secret: {
+      h: "External Kakao Secret"
+      n: "external_kakao_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_keycloak_client_id: {
+      h: "External Keycloak Client Id"
+      n: "external_keycloak_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_keycloak_email_optional: {
+      h: "External Keycloak Email Optional"
+      n: "external_keycloak_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_keycloak_enabled: {
+      h: "External Keycloak Enabled"
+      n: "external_keycloak_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_keycloak_secret: {
+      h: "External Keycloak Secret"
+      n: "external_keycloak_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_keycloak_url: {
+      h: "External Keycloak Url"
+      n: "external_keycloak_url"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_linkedin_oidc_client_id: {
+      h: "External Linkedin Oidc Client Id"
+      n: "external_linkedin_oidc_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_linkedin_oidc_email_optional: {
+      h: "External Linkedin Oidc Email Optional"
+      n: "external_linkedin_oidc_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_linkedin_oidc_enabled: {
+      h: "External Linkedin Oidc Enabled"
+      n: "external_linkedin_oidc_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_linkedin_oidc_secret: {
+      h: "External Linkedin Oidc Secret"
+      n: "external_linkedin_oidc_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_notion_client_id: {
+      h: "External Notion Client Id"
+      n: "external_notion_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_notion_email_optional: {
+      h: "External Notion Email Optional"
+      n: "external_notion_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_notion_enabled: {
+      h: "External Notion Enabled"
+      n: "external_notion_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_notion_secret: {
+      h: "External Notion Secret"
+      n: "external_notion_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_phone_enabled: {
+      h: "External Phone Enabled"
+      n: "external_phone_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_slack_client_id: {
+      h: "External Slack Client Id"
+      n: "external_slack_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_slack_email_optional: {
+      h: "External Slack Email Optional"
+      n: "external_slack_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_slack_enabled: {
+      h: "External Slack Enabled"
+      n: "external_slack_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_slack_oidc_client_id: {
+      h: "External Slack Oidc Client Id"
+      n: "external_slack_oidc_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_slack_oidc_email_optional: {
+      h: "External Slack Oidc Email Optional"
+      n: "external_slack_oidc_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_slack_oidc_enabled: {
+      h: "External Slack Oidc Enabled"
+      n: "external_slack_oidc_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_slack_oidc_secret: {
+      h: "External Slack Oidc Secret"
+      n: "external_slack_oidc_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_slack_secret: {
+      h: "External Slack Secret"
+      n: "external_slack_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_spotify_client_id: {
+      h: "External Spotify Client Id"
+      n: "external_spotify_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_spotify_email_optional: {
+      h: "External Spotify Email Optional"
+      n: "external_spotify_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_spotify_enabled: {
+      h: "External Spotify Enabled"
+      n: "external_spotify_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_spotify_secret: {
+      h: "External Spotify Secret"
+      n: "external_spotify_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_twitch_client_id: {
+      h: "External Twitch Client Id"
+      n: "external_twitch_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_twitch_email_optional: {
+      h: "External Twitch Email Optional"
+      n: "external_twitch_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_twitch_enabled: {
+      h: "External Twitch Enabled"
+      n: "external_twitch_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_twitch_secret: {
+      h: "External Twitch Secret"
+      n: "external_twitch_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_twitter_client_id: {
+      h: "External Twitter Client Id"
+      n: "external_twitter_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_twitter_email_optional: {
+      h: "External Twitter Email Optional"
+      n: "external_twitter_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_twitter_enabled: {
+      h: "External Twitter Enabled"
+      n: "external_twitter_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_twitter_secret: {
+      h: "External Twitter Secret"
+      n: "external_twitter_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_web3_ethereum_enabled: {
+      h: "External Web3 Ethereum Enabled"
+      n: "external_web3_ethereum_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_web3_solana_enabled: {
+      h: "External Web3 Solana Enabled"
+      n: "external_web3_solana_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_workos_client_id: {
+      h: "External Workos Client Id"
+      n: "external_workos_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_workos_enabled: {
+      h: "External Workos Enabled"
+      n: "external_workos_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_workos_secret: {
+      h: "External Workos Secret"
+      n: "external_workos_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_workos_url: {
+      h: "External Workos Url"
+      n: "external_workos_url"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_x_client_id: {
+      h: "External X Client Id"
+      n: "external_x_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_x_email_optional: {
+      h: "External X Email Optional"
+      n: "external_x_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_x_enabled: {
+      h: "External X Enabled"
+      n: "external_x_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_x_secret: {
+      h: "External X Secret"
+      n: "external_x_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_zoom_client_id: {
+      h: "External Zoom Client Id"
+      n: "external_zoom_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    external_zoom_email_optional: {
+      h: "External Zoom Email Optional"
+      n: "external_zoom_email_optional"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_zoom_enabled: {
+      h: "External Zoom Enabled"
+      n: "external_zoom_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    external_zoom_secret: {
+      h: "External Zoom Secret"
+      n: "external_zoom_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_after_user_created_enabled: {
+      h: "Hook After User Created Enabled"
+      n: "hook_after_user_created_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    hook_after_user_created_secrets: {
+      h: "Hook After User Created Secrets"
+      n: "hook_after_user_created_secrets"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_after_user_created_uri: {
+      h: "Hook After User Created Uri"
+      n: "hook_after_user_created_uri"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_before_user_created_enabled: {
+      h: "Hook Before User Created Enabled"
+      n: "hook_before_user_created_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    hook_before_user_created_secrets: {
+      h: "Hook Before User Created Secrets"
+      n: "hook_before_user_created_secrets"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_before_user_created_uri: {
+      h: "Hook Before User Created Uri"
+      n: "hook_before_user_created_uri"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_custom_access_token_enabled: {
+      h: "Hook Custom Access Token Enabled"
+      n: "hook_custom_access_token_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    hook_custom_access_token_secrets: {
+      h: "Hook Custom Access Token Secrets"
+      n: "hook_custom_access_token_secrets"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_custom_access_token_uri: {
+      h: "Hook Custom Access Token Uri"
+      n: "hook_custom_access_token_uri"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_mfa_verification_attempt_enabled: {
+      h: "Hook Mfa Verification Attempt Enabled"
+      n: "hook_mfa_verification_attempt_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    hook_mfa_verification_attempt_secrets: {
+      h: "Hook Mfa Verification Attempt Secrets"
+      n: "hook_mfa_verification_attempt_secrets"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_mfa_verification_attempt_uri: {
+      h: "Hook Mfa Verification Attempt Uri"
+      n: "hook_mfa_verification_attempt_uri"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_password_verification_attempt_enabled: {
+      h: "Hook Password Verification Attempt Enabled"
+      n: "hook_password_verification_attempt_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    hook_password_verification_attempt_secrets: {
+      h: "Hook Password Verification Attempt Secrets"
+      n: "hook_password_verification_attempt_secrets"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_password_verification_attempt_uri: {
+      h: "Hook Password Verification Attempt Uri"
+      n: "hook_password_verification_attempt_uri"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_send_email_enabled: {
+      h: "Hook Send Email Enabled"
+      n: "hook_send_email_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    hook_send_email_secrets: {
+      h: "Hook Send Email Secrets"
+      n: "hook_send_email_secrets"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_send_email_uri: {
+      h: "Hook Send Email Uri"
+      n: "hook_send_email_uri"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_send_sms_enabled: {
+      h: "Hook Send Sms Enabled"
+      n: "hook_send_sms_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    hook_send_sms_secrets: {
+      h: "Hook Send Sms Secrets"
+      n: "hook_send_sms_secrets"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    hook_send_sms_uri: {
+      h: "Hook Send Sms Uri"
+      n: "hook_send_sms_uri"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    jwt_exp: {
+      h: "Jwt Exp"
+      n: "jwt_exp"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    mailer_allow_unverified_email_sign_ins: {
+      h: "Mailer Allow Unverified Email Sign Ins"
+      n: "mailer_allow_unverified_email_sign_ins"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mailer_autoconfirm: {
+      h: "Mailer Autoconfirm"
+      n: "mailer_autoconfirm"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mailer_notifications_email_changed_enabled: {
+      h: "Mailer Notifications Email Changed Enabled"
+      n: "mailer_notifications_email_changed_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mailer_notifications_identity_linked_enabled: {
+      h: "Mailer Notifications Identity Linked Enabled"
+      n: "mailer_notifications_identity_linked_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mailer_notifications_identity_unlinked_enabled: {
+      h: "Mailer Notifications Identity Unlinked Enabled"
+      n: "mailer_notifications_identity_unlinked_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mailer_notifications_mfa_factor_enrolled_enabled: {
+      h: "Mailer Notifications Mfa Factor Enrolled Enabled"
+      n: "mailer_notifications_mfa_factor_enrolled_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mailer_notifications_mfa_factor_unenrolled_enabled: {
+      h: "Mailer Notifications Mfa Factor Unenrolled Enabled"
+      n: "mailer_notifications_mfa_factor_unenrolled_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mailer_notifications_password_changed_enabled: {
+      h: "Mailer Notifications Password Changed Enabled"
+      n: "mailer_notifications_password_changed_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mailer_notifications_phone_changed_enabled: {
+      h: "Mailer Notifications Phone Changed Enabled"
+      n: "mailer_notifications_phone_changed_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mailer_otp_exp: {
+      h: "Mailer Otp Exp"
+      n: "mailer_otp_exp"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    mailer_otp_length: {
+      h: "Mailer Otp Length"
+      n: "mailer_otp_length"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    mailer_secure_email_change_enabled: {
+      h: "Mailer Secure Email Change Enabled"
+      n: "mailer_secure_email_change_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mailer_subjects_confirmation: {
+      h: "Mailer Subjects Confirmation"
+      n: "mailer_subjects_confirmation"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_email_change: {
+      h: "Mailer Subjects Email Change"
+      n: "mailer_subjects_email_change"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_email_changed_notification: {
+      h: "Mailer Subjects Email Changed Notification"
+      n: "mailer_subjects_email_changed_notification"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_identity_linked_notification: {
+      h: "Mailer Subjects Identity Linked Notification"
+      n: "mailer_subjects_identity_linked_notification"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_identity_unlinked_notification: {
+      h: "Mailer Subjects Identity Unlinked Notification"
+      n: "mailer_subjects_identity_unlinked_notification"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_invite: {
+      h: "Mailer Subjects Invite"
+      n: "mailer_subjects_invite"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_magic_link: {
+      h: "Mailer Subjects Magic Link"
+      n: "mailer_subjects_magic_link"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_mfa_factor_enrolled_notification: {
+      h: "Mailer Subjects Mfa Factor Enrolled Notification"
+      n: "mailer_subjects_mfa_factor_enrolled_notification"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_mfa_factor_unenrolled_notification: {
+      h: "Mailer Subjects Mfa Factor Unenrolled Notification"
+      n: "mailer_subjects_mfa_factor_unenrolled_notification"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_password_changed_notification: {
+      h: "Mailer Subjects Password Changed Notification"
+      n: "mailer_subjects_password_changed_notification"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_phone_changed_notification: {
+      h: "Mailer Subjects Phone Changed Notification"
+      n: "mailer_subjects_phone_changed_notification"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_reauthentication: {
+      h: "Mailer Subjects Reauthentication"
+      n: "mailer_subjects_reauthentication"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_subjects_recovery: {
+      h: "Mailer Subjects Recovery"
+      n: "mailer_subjects_recovery"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_confirmation_content: {
+      h: "Mailer Templates Confirmation Content"
+      n: "mailer_templates_confirmation_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_email_change_content: {
+      h: "Mailer Templates Email Change Content"
+      n: "mailer_templates_email_change_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_email_changed_notification_content: {
+      h: "Mailer Templates Email Changed Notification Content"
+      n: "mailer_templates_email_changed_notification_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_identity_linked_notification_content: {
+      h: "Mailer Templates Identity Linked Notification Content"
+      n: "mailer_templates_identity_linked_notification_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_identity_unlinked_notification_content: {
+      h: "Mailer Templates Identity Unlinked Notification Content"
+      n: "mailer_templates_identity_unlinked_notification_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_invite_content: {
+      h: "Mailer Templates Invite Content"
+      n: "mailer_templates_invite_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_magic_link_content: {
+      h: "Mailer Templates Magic Link Content"
+      n: "mailer_templates_magic_link_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_mfa_factor_enrolled_notification_content: {
+      h: "Mailer Templates Mfa Factor Enrolled Notification Content"
+      n: "mailer_templates_mfa_factor_enrolled_notification_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_mfa_factor_unenrolled_notification_content: {
+      h: "Mailer Templates Mfa Factor Unenrolled Notification Content"
+      n: "mailer_templates_mfa_factor_unenrolled_notification_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_password_changed_notification_content: {
+      h: "Mailer Templates Password Changed Notification Content"
+      n: "mailer_templates_password_changed_notification_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_phone_changed_notification_content: {
+      h: "Mailer Templates Phone Changed Notification Content"
+      n: "mailer_templates_phone_changed_notification_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_reauthentication_content: {
+      h: "Mailer Templates Reauthentication Content"
+      n: "mailer_templates_reauthentication_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mailer_templates_recovery_content: {
+      h: "Mailer Templates Recovery Content"
+      n: "mailer_templates_recovery_content"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mfa_max_enrolled_factors: {
+      h: "Mfa Max Enrolled Factors"
+      n: "mfa_max_enrolled_factors"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    mfa_phone_enroll_enabled: {
+      h: "Mfa Phone Enroll Enabled"
+      n: "mfa_phone_enroll_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mfa_phone_max_frequency: {
+      h: "Mfa Phone Max Frequency"
+      n: "mfa_phone_max_frequency"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    mfa_phone_otp_length: {
+      h: "Mfa Phone Otp Length"
+      n: "mfa_phone_otp_length"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    mfa_phone_template: {
+      h: "Mfa Phone Template"
+      n: "mfa_phone_template"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    mfa_phone_verify_enabled: {
+      h: "Mfa Phone Verify Enabled"
+      n: "mfa_phone_verify_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mfa_totp_enroll_enabled: {
+      h: "Mfa Totp Enroll Enabled"
+      n: "mfa_totp_enroll_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mfa_totp_verify_enabled: {
+      h: "Mfa Totp Verify Enabled"
+      n: "mfa_totp_verify_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mfa_web_authn_enroll_enabled: {
+      h: "Mfa Web Authn Enroll Enabled"
+      n: "mfa_web_authn_enroll_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    mfa_web_authn_verify_enabled: {
+      h: "Mfa Web Authn Verify Enabled"
+      n: "mfa_web_authn_verify_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    nimbus_oauth_client_id: {
+      h: "Nimbus Oauth Client Id"
+      n: "nimbus_oauth_client_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    nimbus_oauth_client_secret: {
+      h: "Nimbus Oauth Client Secret"
+      n: "nimbus_oauth_client_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    nimbus_oauth_email_optional: {
+      h: "Nimbus Oauth Email Optional"
+      n: "nimbus_oauth_email_optional"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    oauth_server_allow_dynamic_registration: {
+      h: "Oauth Server Allow Dynamic Registration"
+      n: "oauth_server_allow_dynamic_registration"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    oauth_server_authorization_path: {
+      h: "Oauth Server Authorization Path"
+      n: "oauth_server_authorization_path"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    oauth_server_enabled: {
+      h: "Oauth Server Enabled"
+      n: "oauth_server_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    passkey_enabled: {
+      h: "Passkey Enabled"
+      n: "passkey_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    password_hibp_enabled: {
+      h: "Password Hibp Enabled"
+      n: "password_hibp_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    password_min_length: {
+      h: "Password Min Length"
+      n: "password_min_length"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    password_required_characters: {
+      h: "Password Required Characters"
+      n: "password_required_characters"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    rate_limit_anonymous_users: {
+      h: "Rate Limit Anonymous Users"
+      n: "rate_limit_anonymous_users"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    rate_limit_email_sent: {
+      h: "Rate Limit Email Sent"
+      n: "rate_limit_email_sent"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    rate_limit_otp: {
+      h: "Rate Limit Otp"
+      n: "rate_limit_otp"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    rate_limit_sms_sent: {
+      h: "Rate Limit Sms Sent"
+      n: "rate_limit_sms_sent"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    rate_limit_token_refresh: {
+      h: "Rate Limit Token Refresh"
+      n: "rate_limit_token_refresh"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    rate_limit_verify: {
+      h: "Rate Limit Verify"
+      n: "rate_limit_verify"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    rate_limit_web3: {
+      h: "Rate Limit Web3"
+      n: "rate_limit_web3"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    refresh_token_rotation_enabled: {
+      h: "Refresh Token Rotation Enabled"
+      n: "refresh_token_rotation_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    saml_allow_encrypted_assertions: {
+      h: "Saml Allow Encrypted Assertions"
+      n: "saml_allow_encrypted_assertions"
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    saml_enabled: {
+      h: "Saml Enabled"
+      n: "saml_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    saml_external_url: {
+      h: "Saml External Url"
+      n: "saml_external_url"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    security_captcha_enabled: {
+      h: "Security Captcha Enabled"
+      n: "security_captcha_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    security_captcha_provider: {
+      h: "Security Captcha Provider"
+      n: "security_captcha_provider"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    security_captcha_secret: {
+      h: "Security Captcha Secret"
+      n: "security_captcha_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    security_manual_linking_enabled: {
+      h: "Security Manual Linking Enabled"
+      n: "security_manual_linking_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    security_refresh_token_reuse_interval: {
+      h: "Security Refresh Token Reuse Interval"
+      n: "security_refresh_token_reuse_interval"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      sh: "Refresh token reuse interval in seconds."
+      t: "`$INTEGER`"
+    }
+    security_sb_forwarded_for_enabled: {
+      h: "Security Sb Forwarded For Enabled"
+      n: "security_sb_forwarded_for_enabled"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    security_update_password_require_current_password: {
+      h: "Security Update Password Require Current Password"
+      n: "security_update_password_require_current_password"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      sh: "Require the user's current password when updating their password."
+      t: "`$BOOLEAN`"
+    }
+    security_update_password_require_reauthentication: {
+      h: "Security Update Password Require Reauthentication"
+      n: "security_update_password_require_reauthentication"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    sessions_inactivity_timeout: {
+      h: "Sessions Inactivity Timeout"
+      n: "sessions_inactivity_timeout"
+      op: {
+        update: {
+          req: false
+          type: "`$NUMBER`"
+        }
+      }
+      r: true
+      sh: "Session inactivity timeout in hours."
+      t: "`$NUMBER`"
+    }
+    sessions_single_per_user: {
+      h: "Sessions Single Per User"
+      n: "sessions_single_per_user"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    sessions_tags: {
+      h: "Sessions Tags"
+      n: "sessions_tags"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sessions_timebox: {
+      h: "Sessions Timebox"
+      n: "sessions_timebox"
+      op: {
+        update: {
+          req: false
+          type: "`$NUMBER`"
+        }
+      }
+      r: true
+      sh: "Session timebox in hours."
+      t: "`$NUMBER`"
+    }
+    site_url: {
+      h: "Site Url"
+      n: "site_url"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_autoconfirm: {
+      h: "Sms Autoconfirm"
+      n: "sms_autoconfirm"
+      op: {
+        update: {
+          req: false
+          type: "`$BOOLEAN`"
+        }
+      }
+      r: true
+      t: "`$BOOLEAN`"
+    }
+    sms_max_frequency: {
+      h: "Sms Max Frequency"
+      n: "sms_max_frequency"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    sms_messagebird_access_key: {
+      h: "Sms Messagebird Access Key"
+      n: "sms_messagebird_access_key"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_messagebird_originator: {
+      h: "Sms Messagebird Originator"
+      n: "sms_messagebird_originator"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_otp_exp: {
+      h: "Sms Otp Exp"
+      n: "sms_otp_exp"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    sms_otp_length: {
+      h: "Sms Otp Length"
+      n: "sms_otp_length"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    sms_provider: {
+      h: "Sms Provider"
+      n: "sms_provider"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_template: {
+      h: "Sms Template"
+      n: "sms_template"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_test_otp: {
+      h: "Sms Test Otp"
+      n: "sms_test_otp"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_test_otp_valid_until: {
+      fo: "date-time"
+      h: "Sms Test Otp Valid Until"
+      n: "sms_test_otp_valid_until"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_textlocal_api_key: {
+      h: "Sms Textlocal Api Key"
+      n: "sms_textlocal_api_key"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_textlocal_sender: {
+      h: "Sms Textlocal Sender"
+      n: "sms_textlocal_sender"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_twilio_account_sid: {
+      h: "Sms Twilio Account Sid"
+      n: "sms_twilio_account_sid"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_twilio_auth_token: {
+      h: "Sms Twilio Auth Token"
+      n: "sms_twilio_auth_token"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_twilio_content_sid: {
+      h: "Sms Twilio Content Sid"
+      n: "sms_twilio_content_sid"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_twilio_message_service_sid: {
+      h: "Sms Twilio Message Service Sid"
+      n: "sms_twilio_message_service_sid"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_twilio_verify_account_sid: {
+      h: "Sms Twilio Verify Account Sid"
+      n: "sms_twilio_verify_account_sid"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_twilio_verify_auth_token: {
+      h: "Sms Twilio Verify Auth Token"
+      n: "sms_twilio_verify_auth_token"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_twilio_verify_message_service_sid: {
+      h: "Sms Twilio Verify Message Service Sid"
+      n: "sms_twilio_verify_message_service_sid"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_vonage_api_key: {
+      h: "Sms Vonage Api Key"
+      n: "sms_vonage_api_key"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_vonage_api_secret: {
+      h: "Sms Vonage Api Secret"
+      n: "sms_vonage_api_secret"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    sms_vonage_from: {
+      h: "Sms Vonage From"
+      n: "sms_vonage_from"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    smtp_admin_email: {
+      fo: "email"
+      h: "Smtp Admin Email"
+      n: "smtp_admin_email"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    smtp_host: {
+      h: "Smtp Host"
+      n: "smtp_host"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    smtp_max_frequency: {
+      h: "Smtp Max Frequency"
+      n: "smtp_max_frequency"
+      op: {
+        update: {
+          req: false
+          type: "`$INTEGER`"
+        }
+      }
+      r: true
+      t: "`$INTEGER`"
+    }
+    smtp_pass: {
+      h: "Smtp Pass"
+      n: "smtp_pass"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    smtp_port: {
+      h: "Smtp Port"
+      n: "smtp_port"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    smtp_sender_name: {
+      h: "Smtp Sender Name"
+      n: "smtp_sender_name"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    smtp_user: {
+      h: "Smtp User"
+      n: "smtp_user"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    uri_allow_list: {
+      h: "Uri Allow List"
+      n: "uri_allow_list"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    webauthn_rp_display_name: {
+      h: "Webauthn Rp Display Name"
+      n: "webauthn_rp_display_name"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    webauthn_rp_id: {
+      h: "Webauthn Rp Id"
+      n: "webauthn_rp_id"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+    webauthn_rp_origins: {
+      h: "Webauthn Rp Origins"
+      n: "webauthn_rp_origins"
+      op: {
+        update: {
+          req: false
+          type: "`$STRING`"
+        }
+      }
+      r: true
+      t: "`$STRING`"
+    }
+  }
+
+  name: "auth"
+  op: {
+    load: {
+      name: "load"
+      points: [
+        {
+          co: {
+            id: "GET /v1/projects/{ref}/config/auth"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "GET"
+          o: "/v1/projects/{ref}/config/auth"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "auth"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+    update: {
+      name: "update"
+      points: [
+        {
+          co: {
+            id: "PATCH /v1/projects/{ref}/config/auth"
+            source: "openapi3"
+            version: 2
+          }
+          g: {
+            params: [
+              {
+                ex: "abcdefghijklmnopqrst"
+                k: "param"
+                n: "project_id"
+                or: "ref"
+                r: true
+                t: "`$STRING`"
+              }
+            ]
+          }
+          m: "PATCH"
+          o: "/v1/projects/{ref}/config/auth"
+          q: {
+            exist: [
+              "project_id"
+            ]
+          }
+          r: {
+            param: {
+              ref: "project_id"
+            }
+          }
+          s: [
+            {
+              lit: "v1"
+            }
+            {
+              lit: "projects"
+            }
+            {
+              var: "project_id"
+            }
+            {
+              lit: "config"
+            }
+            {
+              lit: "auth"
+            }
+          ]
+          t: {
+            req: "`reqdata`"
+            res: "`body`"
+          }
+        }
+      ]
+    }
+  }
+
+
+  relations: ancestors: [
+    [path("$.main.kit.entity.project")]
+  ]
+
+}

@@ -1,0 +1,29 @@
+# BasicV1ProjectRefResponseOutputFlow
+
+main: kit: flow: BasicV1ProjectRefResponseOutputFlow:
+{
+  entity: "v1_project_ref_response_output",
+  kind: "basic",
+  name: "BasicV1ProjectRefResponseOutputFlow",
+  step: [
+    {
+      i: {
+        ref: "v1_project_ref_response_output_ref01",
+        srcdatavar: "v1_project_ref_response_output_ref01_data",
+        suffix: "_up0",
+        textfield: "name"
+      }
+
+      o: "update",
+      s: [
+        {
+          apply: "TextFieldMark",
+          def: {
+            mark: "Mark01-v1_project_ref_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicV1ProjectRefResponseOutputFlow"
+}

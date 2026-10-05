@@ -1,0 +1,56 @@
+{
+  "existing": {
+    "storage": {
+      "STORAGE00": {
+        "capabilities": {},
+        "external": {},
+        "features": {},
+        "fileSizeLimit": 53,
+        "migrationVersion": "s36",
+        "project_id": "PROJECT01",
+        "id": "STORAGE00"
+      },
+      "STORAGE01": {
+        "capabilities": {},
+        "external": {},
+        "features": {},
+        "fileSizeLimit": 103,
+        "migrationVersion": "s68",
+        "project_id": "PROJECT01",
+        "id": "STORAGE01"
+      },
+      "STORAGE02": {
+        "capabilities": {},
+        "external": {},
+        "features": {},
+        "fileSizeLimit": 153,
+        "migrationVersion": "s9a",
+        "project_id": "PROJECT01",
+        "id": "STORAGE02"
+      }
+    }
+  },
+  "new": {
+    "storage": {
+      "storage_ref01": {
+        "capabilities": {},
+        "external": {},
+        "features": {},
+        "fileSizeLimit": 203,
+        "migrationVersion": "scc"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/config/storage": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{ref}/config/storage": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

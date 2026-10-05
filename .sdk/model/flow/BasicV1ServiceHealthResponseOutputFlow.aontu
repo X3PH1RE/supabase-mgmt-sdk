@@ -1,0 +1,26 @@
+# BasicV1ServiceHealthResponseOutputFlow
+
+main: kit: flow: BasicV1ServiceHealthResponseOutputFlow:
+{
+  entity: "v1_service_health_response_output",
+  kind: "basic",
+  name: "BasicV1ServiceHealthResponseOutputFlow",
+  step: [
+    {
+      m: {
+        ref: "ref01"
+      }
+
+      o: "list",
+      v: [
+        {
+          apply: "ItemExists",
+          def: {
+            ref: "v1_service_health_response_output_ref01"
+          }
+        }
+      ]
+    }
+  ],
+  "key$": "BasicV1ServiceHealthResponseOutputFlow"
+}

@@ -1,0 +1,72 @@
+{
+  "existing": {
+    "security": {
+      "SECURITY00": {
+        "cache_key": "s6e",
+        "categories": [],
+        "description": "s70",
+        "detail": "s71",
+        "facing": "s72",
+        "level": "s73",
+        "metadata": {},
+        "name": "s75",
+        "observed_at": "s76",
+        "remediation": "s77",
+        "title": "s78",
+        "project_id": "PROJECT01"
+      },
+      "SECURITY01": {
+        "cache_key": "sdc",
+        "categories": [],
+        "description": "sde",
+        "detail": "sdf",
+        "facing": "se0",
+        "level": "se1",
+        "metadata": {},
+        "name": "se3",
+        "observed_at": "se4",
+        "remediation": "se5",
+        "title": "se6",
+        "project_id": "PROJECT01"
+      },
+      "SECURITY02": {
+        "cache_key": "s14a",
+        "categories": [],
+        "description": "s14c",
+        "detail": "s14d",
+        "facing": "s14e",
+        "level": "s14f",
+        "metadata": {},
+        "name": "s151",
+        "observed_at": "s152",
+        "remediation": "s153",
+        "title": "s154",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "security": {
+      "security_ref01": {
+        "cache_key": "s1b8",
+        "categories": [],
+        "description": "s1ba",
+        "detail": "s1bb",
+        "facing": "s1bc",
+        "level": "s1bd",
+        "metadata": {},
+        "name": "s1bf",
+        "observed_at": "s1c0",
+        "remediation": "s1c1",
+        "title": "s1c2"
+      }
+    }
+  },
+  "requests": {
+    "GET /v1/projects/{ref}/advisors/security": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

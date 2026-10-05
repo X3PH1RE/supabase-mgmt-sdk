@@ -1,0 +1,90 @@
+{
+  "existing": {
+    "api_key": {
+      "API_KEY00": {
+        "api_key": "s64",
+        "description": "s65",
+        "hash": "s66",
+        "id": "API_KEY00",
+        "inserted_at": "s68",
+        "name": "s69",
+        "prefix": "s6a",
+        "secret_jwt_template": {},
+        "type": "s6c",
+        "updated_at": "s6d",
+        "ref": "REF01",
+        "project_id": "PROJECT01"
+      },
+      "API_KEY01": {
+        "api_key": "sc8",
+        "description": "sc9",
+        "hash": "sca",
+        "id": "API_KEY01",
+        "inserted_at": "scc",
+        "name": "scd",
+        "prefix": "sce",
+        "secret_jwt_template": {},
+        "type": "sd0",
+        "updated_at": "sd1",
+        "ref": "REF01",
+        "project_id": "PROJECT01"
+      },
+      "API_KEY02": {
+        "api_key": "s12c",
+        "description": "s12d",
+        "hash": "s12e",
+        "id": "API_KEY02",
+        "inserted_at": "s130",
+        "name": "s131",
+        "prefix": "s132",
+        "secret_jwt_template": {},
+        "type": "s134",
+        "updated_at": "s135",
+        "ref": "REF01",
+        "project_id": "PROJECT01"
+      }
+    }
+  },
+  "new": {
+    "api_key": {
+      "api_key_ref01": {
+        "api_key": "s190",
+        "description": "s191",
+        "hash": "s192",
+        "inserted_at": "s194",
+        "name": "s195",
+        "prefix": "s196",
+        "secret_jwt_template": {},
+        "type": "s198",
+        "updated_at": "s199"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/projects/{ref}/api-keys": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/api-keys": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/projects/{ref}/api-keys/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "DELETE /v1/projects/{ref}/api-keys/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "PATCH /v1/projects/{ref}/api-keys/{id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

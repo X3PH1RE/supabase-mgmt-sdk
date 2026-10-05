@@ -1,0 +1,58 @@
+{
+  "existing": {
+    "v1_organization_slug_response_output": {
+      "V1_ORGANIZATION_SLUG_RESPONSE_OUTPUT00": {
+        "allowed_release_channels": [],
+        "id": "V1_ORGANIZATION_SLUG_RESPONSE_OUTPUT00",
+        "name": "s3e",
+        "opt_in_tags": [],
+        "plan": "s40",
+        "slug": "s41"
+      },
+      "V1_ORGANIZATION_SLUG_RESPONSE_OUTPUT01": {
+        "allowed_release_channels": [],
+        "id": "V1_ORGANIZATION_SLUG_RESPONSE_OUTPUT01",
+        "name": "s7a",
+        "opt_in_tags": [],
+        "plan": "s7c",
+        "slug": "s7d"
+      },
+      "V1_ORGANIZATION_SLUG_RESPONSE_OUTPUT02": {
+        "allowed_release_channels": [],
+        "id": "V1_ORGANIZATION_SLUG_RESPONSE_OUTPUT02",
+        "name": "sb6",
+        "opt_in_tags": [],
+        "plan": "sb8",
+        "slug": "sb9"
+      }
+    }
+  },
+  "new": {
+    "v1_organization_slug_response_output": {
+      "v1_organization_slug_response_output_ref01": {
+        "allowed_release_channels": [],
+        "name": "sf2",
+        "opt_in_tags": [],
+        "plan": "sf4",
+        "slug": "sf5"
+      }
+    }
+  },
+  "requests": {
+    "POST /v1/organizations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/organizations": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    },
+    "GET /v1/organizations/{slug}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}

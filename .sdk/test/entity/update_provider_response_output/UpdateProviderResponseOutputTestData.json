@@ -1,0 +1,66 @@
+{
+  "existing": {
+    "update_provider_response_output": {
+      "UPDATE_PROVIDER_RESPONSE_OUTPUT00": {
+        "attribute_mapping": {},
+        "created_at": "s5b",
+        "domains": [],
+        "id": "UPDATE_PROVIDER_RESPONSE_OUTPUT00",
+        "metadata_url": "s5e",
+        "metadata_xml": "s5f",
+        "name_id_format": "s60",
+        "saml": {},
+        "updated_at": "s62",
+        "project_id": "PROJECT01",
+        "provider_id": "PROVIDER01"
+      },
+      "UPDATE_PROVIDER_RESPONSE_OUTPUT01": {
+        "attribute_mapping": {},
+        "created_at": "sb5",
+        "domains": [],
+        "id": "UPDATE_PROVIDER_RESPONSE_OUTPUT01",
+        "metadata_url": "sb8",
+        "metadata_xml": "sb9",
+        "name_id_format": "sba",
+        "saml": {},
+        "updated_at": "sbc",
+        "project_id": "PROJECT01",
+        "provider_id": "PROVIDER01"
+      },
+      "UPDATE_PROVIDER_RESPONSE_OUTPUT02": {
+        "attribute_mapping": {},
+        "created_at": "s10f",
+        "domains": [],
+        "id": "UPDATE_PROVIDER_RESPONSE_OUTPUT02",
+        "metadata_url": "s112",
+        "metadata_xml": "s113",
+        "name_id_format": "s114",
+        "saml": {},
+        "updated_at": "s116",
+        "project_id": "PROJECT01",
+        "provider_id": "PROVIDER01"
+      }
+    }
+  },
+  "new": {
+    "update_provider_response_output": {
+      "update_provider_response_output_ref01": {
+        "attribute_mapping": {},
+        "created_at": "s169",
+        "domains": [],
+        "metadata_url": "s16c",
+        "metadata_xml": "s16d",
+        "name_id_format": "s16e",
+        "saml": {},
+        "updated_at": "s170"
+      }
+    }
+  },
+  "requests": {
+    "PUT /v1/projects/{ref}/config/auth/sso/providers/{provider_id}": {
+      "provenance": "operation-contract",
+      "version": 2,
+      "source": "openapi3"
+    }
+  }
+}
