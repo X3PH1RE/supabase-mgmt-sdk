@@ -39,6 +39,8 @@ All times IST, 5 Oct 2026, from the git log. The first generator command I ran w
 
 From the first scaffold commit to the working, tested SDK was about 42 minutes (11:00 to 11:42), about 50 minutes if you count from the first failed create run at 10:52. That is over the 30 minute box, and much of the extra time went on the Windows npm error and the include path errors above. The live API call was done after the 11:42 commit. Where I stopped: the SDK builds, tests mostly pass and one live read-only call works. I did not try other languages, did not fix the 3 failing tests, and did not rename the odd entity names.
 
+Because I went past the 30 minute mark, I stopped there and am deferring the 3 failing tests for now. I plan to keep working on them after submitting and will update the repo once they are fixed. Fixes will go in `.sdk/model/` or a generator template, not by hand-editing the generated tests, and I will commit before each regenerate.
+
 ## Generator DX suggestions
 
 1. **Fix `spawn npm ENOENT` on Windows** (use `shell: true` or resolve `npm.cmd`), and if the install step fails, print the exact command to run next.

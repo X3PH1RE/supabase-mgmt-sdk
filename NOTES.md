@@ -192,3 +192,5 @@ Open items:
 - Clock start time not given.
 - LICENSE copyright line still says Voxgig. Ashwin to decide.
 - Not pushed. Repo creation and push need Ashwin's confirmation.
+
+- Decision by Ashwin: the work went past the 30 minute mark, so the 3 failing tests are deferred for now and noted as such in REPORT.md. He intends to keep working on them after submitting and update the repo when they are fixed (fix in `.sdk/model/` or a template, commit before each regenerate).
