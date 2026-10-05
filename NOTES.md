@@ -7,7 +7,7 @@ Running log. Commands are run by Ashwin in his own terminal. Claude documents an
 - Auth: bearer token from env var SUPABASE_ACCESS_TOKEN (never committed)
 - Checked before starting: no Supabase SDK in the voxgig-sdk org (803 repos checked via `gh api --paginate`)
 - Env: Windows 11, PowerShell, Node 24, npm 11, gh CLI as X3PH1RE
-- 30-minute clock start: **TBD (Ashwin has not given it)**. Git times: scaffold commit 11:00:39, last SDK commit 11:42:27 (IST, 5 Oct 2026). First generator command logged at 10:52.
+- 30-minute clock start: not recorded. Times below come from git: scaffold commit 11:00:39, last SDK commit 11:42:27 (IST, 5 Oct 2026). First generator command logged at 10:52.
 
 ## Final state (summary, as of the last commit; details in the log below)
 
@@ -187,7 +187,7 @@ Report-worthy: the call works, but only after the user finds the entity `V1Proje
 - Commit list (IST): `ec6e063` 11:00:39 scaffold, `ffea78b` 11:12:36 model, `ed56f2a` 11:19:57 target and feature, `d360019` 11:23:58 generated TS SDK, `d86988b` 11:42:27 SDK and tests, `dba6012` 11:45:50 notes and ignore, `47ead7e` 11:46:53 report draft, `c2c0673` report time section.
 
 Open items:
-- Ashwin to review REPORT.md for correctness and fill its [TBD] markers (live call time, repo link, what he checked himself).
+- Ashwin to review REPORT.md for correctness (it is a Claude draft and says so in its first lines).
 - Ashwin to fill the "Checked:" lines in AI_USAGE.md for checks he actually did.
 - Clock start time not given.
 - LICENSE copyright line still says Voxgig. Ashwin to decide.
@@ -210,3 +210,5 @@ Open items:
 - Result after the fix (commit `64e4c10`, pushed): CI now shows 658 tests, 654 pass, 3 fail. The `LogEntity` failure is gone. The 3 remaining failures are the known mock tests (ApiKey, Branch, Function), same as the local run. CI is still red because of those 3 until they are fixed.
 
 - Added the gitignore/CI failure to REPORT.md as item 6 under "What broke" and folded it into DX suggestion 2 (kept the list at 5).
+
+- LICENSE: changed the copyright line from "Voxgig" to "Ashwin Menon" in `LICENSE` and `ts/LICENSE`, plus the templates `.sdk/tm/LICENSE` (said "SupabaseMgmt") and `.sdk/tm/ts/LICENSE` so a regenerate should keep it (not verified). Noted the inconsistent LICENSE templates in REPORT.md under DX suggestion 2.
