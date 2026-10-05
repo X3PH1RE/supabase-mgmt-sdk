@@ -56,7 +56,7 @@ Timeline (git author time, IST, 05-10-2026):
 - `npm run generate` again, `git diff --stat`, commit, `npm run generate` once more, `ls ..`.
 - 11:23:58 commit `d360019` "Generated TypeScript SDK". 339 files, 98,988 lines added. The `ts/` folder now exists with src, test, package.json, README.md, REFERENCE.md.
 
-Current state at the time of this reading:
+Current state at the time of this reading (snapshot from about 11:25 IST. ALL FOUR ITEMS BELOW WERE RESOLVED LATER: build and tests ran in Phase 3, the live call in Phase 4, the repo files and safety greps in Phase 5):
 - `ts/node_modules` and `ts/dist` do not exist, so `cd ts; npm install; npm run build; npm test` has NOT been run yet.
 - No live call to the API has been made yet.
 - No GitHub repo yet. No NOTES.md / AI_USAGE.md / REPORT.md in the repo (they are still in the parent folder `voxgig-test1`).
