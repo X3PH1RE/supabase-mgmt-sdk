@@ -7,7 +7,7 @@ Running log. Commands are run by Ashwin in his own terminal. Claude documents an
 - Auth: bearer token from env var SUPABASE_ACCESS_TOKEN (never committed)
 - Checked before starting: no Supabase SDK in the voxgig-sdk org (803 repos checked via `gh api --paginate`)
 - Env: Windows 11, PowerShell, Node 24, npm 11, gh CLI as X3PH1RE
-- 30-minute clock started: **TBD (Ashwin to give the time)**
+- 30-minute clock start: **TBD (Ashwin has not given it)**. Git times: scaffold commit 11:00:39, last SDK commit 11:42:27 (IST, 5 Oct 2026). First generator command logged at 10:52.
 
 ## Log
 
@@ -157,9 +157,7 @@ Worked first try. `GET /v1/projects` against the real Supabase Management API re
 
 Report-worthy: the call works, but only after the user finds the entity `V1ProjectWithDatabaseResponseOutput` (no `Project().list()`), and has to map their own env var to `SUPABASE_MGMT_APIKEY`.
 
-Missing info (Ashwin, please paste or say): the exact error text from (a) the repeated create runs, (b) the first `npm run generate`, (c) the three `voxgig-model` runs, (d) whatever made you add `./` to the includes.
-
-Next: `cd ..` then `git init`, `git add -A`, `git commit -m "Scaffold from create-sdkgen"`, then `cd .sdk` and `npm run generate`.
+(Resolved: the exact errors from Ashwin are in "Phase 2 corrections and exact errors" above. Still unknown: the output of `npm install` and `npm run build` beyond "0 errors", and the time of the live call.)
 
 ### Phase 5: repo tidy (Claude ran these file and git commands at Ashwin's request; nothing pushed)
 
@@ -169,3 +167,16 @@ Next: `cd ..` then `git init`, `git add -A`, `git commit -m "Scaffold from creat
 - Added `.env` and `.env.*` to the root `.gitignore` (it only covered `*.local*` before).
 - Safety greps on the staged tree: `git grep` for the Supabase token prefix returned no real matches, and no `.env` file is tracked. (The first grep initially matched only a line in this file that quoted the pattern itself, which was reworded.) Token was never written to any file.
 - LICENSE left unchanged for now: MIT, `Copyright (c) 2026 Voxgig`. Ashwin to decide.
+
+### Phase 6: report (Claude drafted at Ashwin's request; Ashwin has not reviewed it yet)
+
+- Claude wrote REPORT.md from this log (commit `47ead7e`, 11:46:53) and filled in its Time section from the git log on Ashwin's instruction (commit `c2c0673`). The report says it was drafted by Claude.
+- Time section says: about 42 minutes from scaffold commit to tested SDK (11:00 to 11:42), about 50 from the first failed create run (10:52), over the 30 minute box.
+- Commit list (IST): `ec6e063` 11:00:39 scaffold, `ffea78b` 11:12:36 model, `ed56f2a` 11:19:57 target and feature, `d360019` 11:23:58 generated TS SDK, `d86988b` 11:42:27 SDK and tests, `dba6012` 11:45:50 notes and ignore, `47ead7e` 11:46:53 report draft, `c2c0673` report time section.
+
+Open items:
+- Ashwin to review REPORT.md for correctness and fill its [TBD] markers (live call time, repo link, what he checked himself).
+- Ashwin to fill the "Checked:" lines in AI_USAGE.md for checks he actually did.
+- Clock start time not given.
+- LICENSE copyright line still says Voxgig. Ashwin to decide.
+- Not pushed. Repo creation and push need Ashwin's confirmation.
