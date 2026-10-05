@@ -194,3 +194,9 @@ Open items:
 - Not pushed. Repo creation and push need Ashwin's confirmation.
 
 - Decision by Ashwin: the work went past the 30 minute mark, so the 3 failing tests are deferred for now and noted as such in REPORT.md. He intends to keep working on them after submitting and update the repo when they are fixed (fix in `.sdk/model/` or a template, commit before each regenerate).
+
+### Phase 7: published (Claude ran the push at Ashwin's explicit "yes, publish")
+
+- Before pushing: no token prefix in the tracked tree or git history, no `.env` file tracked, no remote existed, repo name was free, `gh` logged in as X3PH1RE.
+- Ran: `gh repo create X3PH1RE/supabase-mgmt-sdk --public --source . --remote origin --push`. Result: https://github.com/X3PH1RE/supabase-mgmt-sdk (public, branch `main`, tracking `origin/main`).
+- Repo link then added to REPORT.md.

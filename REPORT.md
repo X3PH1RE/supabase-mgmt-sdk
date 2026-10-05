@@ -1,6 +1,6 @@
 # Report: Supabase Management API SDK (Voxgig mini task 1)
 
-Repo: https://github.com/X3PH1RE/supabase-mgmt-sdk (MIT) [link to confirm once pushed]
+Repo: https://github.com/X3PH1RE/supabase-mgmt-sdk (MIT)
 
 > Drafted by Claude (Claude Code) from my NOTES.md log at my request. I am reviewing it for correctness before sending. See AI_USAGE.md for who did what.
 
