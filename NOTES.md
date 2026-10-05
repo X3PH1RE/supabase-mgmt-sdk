@@ -9,6 +9,18 @@ Running log. Commands are run by Ashwin in his own terminal. Claude documents an
 - Env: Windows 11, PowerShell, Node 24, npm 11, gh CLI as X3PH1RE
 - 30-minute clock start: **TBD (Ashwin has not given it)**. Git times: scaffold commit 11:00:39, last SDK commit 11:42:27 (IST, 5 Oct 2026). First generator command logged at 10:52.
 
+## Final state (summary, as of the last commit; details in the log below)
+
+- Spec: Supabase Management API, 115 paths. Model built with 87 entities, 170 methods.
+- Generated a TypeScript SDK (`ts/`). `npm install` and `npm run build` ran with 0 errors (as reported by Ashwin).
+- Tests: 658 total, 654 pass, 3 fail, 1 skipped. The 3 failures are generated mock tests (api_key, branch, function, line 79). Not fixed. Cause is an unverified inference.
+- Live check: one read-only `GET /v1/projects` through the SDK returned 1 project. No write calls were made.
+- Errors hit: `spawn npm ENOENT` in create-sdkgen on Windows, `aontu/multisource_not_found` for include paths without `./`, `struct/test.aontu` not found, `-t ts -f test` not registering the target and feature.
+- Not done: other languages, fixing the 3 tests, renaming entities, LICENSE copyright decision, push to GitHub.
+- Time (git log, IST): scaffold 11:00, tested SDK 11:42, about 42 minutes (about 50 from the first failed create at 10:52). Clock start time not given by Ashwin.
+- Who did what: Ashwin ran every generator and git command for the SDK and set the token himself. Claude read history and git, documented, wrote the live-call command, did the repo tidy commits, and drafted REPORT.md. See AI_USAGE.md.
+- Early log sections (Phase 1 and 2) include snapshots that were later resolved. Phases 3 to 6 have the outcomes.
+
 ## Log
 
 ### Phase 1: spec download and scaffold (run by Ashwin; log times are as printed by the tool, 10:52 IST)
