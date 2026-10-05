@@ -2,7 +2,7 @@
 
 Repo: https://github.com/X3PH1RE/supabase-mgmt-sdk (MIT) [link to confirm once pushed]
 
-> Drafted by Claude (Claude Code) from my NOTES.md log at my request. Items marked [TBD] are for me to fill in. I am reviewing it for correctness before sending. See AI_USAGE.md for who did what.
+> Drafted by Claude (Claude Code) from my NOTES.md log at my request. I am reviewing it for correctness before sending. See AI_USAGE.md for who did what.
 
 ## What I built and why Supabase
 
@@ -37,7 +37,7 @@ All times IST, 5 Oct 2026, from the git log. The first generator command I ran w
 | 11:45 | Notes and AI usage log |
 | 11:46 | This report (draft) |
 
-From the first scaffold commit to the working, tested SDK was about 42 minutes (11:00 to 11:42), about 50 minutes if you count from the first failed create run at 10:52. That is over the 30 minute box, and much of the extra time went on the Windows npm error and the include path errors above. The live API call was done after the 11:42 commit [TBD: time]. Where I stopped: the SDK builds, tests mostly pass and one live read-only call works. I did not try other languages, did not fix the 3 failing tests, and did not rename the odd entity names.
+From the first scaffold commit to the working, tested SDK was about 42 minutes (11:00 to 11:42), about 50 minutes if you count from the first failed create run at 10:52. That is over the 30 minute box, and much of the extra time went on the Windows npm error and the include path errors above. The live API call was done after the 11:42 commit. Where I stopped: the SDK builds, tests mostly pass and one live read-only call works. I did not try other languages, did not fix the 3 failing tests, and did not rename the odd entity names.
 
 ## Generator DX suggestions
 
@@ -49,4 +49,4 @@ From the first scaffold commit to the working, tested SDK was about 42 minutes (
 
 ## How I used AI and how it was checked
 
-I chose the API, ran every generator and git command myself in my own terminal, set the token in my own shell, and decided what to commit. Claude Code did not run the generator. It documented my pasted output in NOTES.md, explained errors, read the generated README to find a safe first live call, wrote the one-line live test command, did the final repo tidy (copied notes, added `.env` to `.gitignore`, ran the token and `.env` greps, made the commit), and drafted this report. Where Claude guessed at causes (the npm error, the `./` fix, the 3 test failures), NOTES.md marks them "inferred". What I checked myself is listed in AI_USAGE.md [TBD: I fill this in with only the checks I actually did].
+I chose the API, ran every generator and git command myself in my own terminal, set the token in my own shell, and decided what to commit. Claude Code did not run the generator. It documented my pasted output in NOTES.md, explained errors, read the generated README to find a safe first live call, wrote the one-line live test command, did the final repo tidy (copied notes, added `.env` to `.gitignore`, ran the token and `.env` greps, made the commit), and drafted this report. Where Claude guessed at causes (the npm error, the `./` fix, the 3 test failures), NOTES.md marks them "inferred". What I checked myself is listed per step in AI_USAGE.md. Claude's guesses about causes (the npm error, the `./` fix, the 3 test failures) were not verified.
