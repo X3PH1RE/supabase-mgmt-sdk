@@ -25,7 +25,19 @@ A TypeScript SDK for the Supabase Management API, generated with the Voxgig SDK 
 
 ## Time
 
-[TBD: 30 minute clock start and stop times]. Git history shows the work from 11:00 (scaffold commit) to 11:42 (last SDK commit) on 5 Oct 2026, plus the live call and the notes after that. [TBD: where I stopped and what was left]. I did not try other languages and did not fix the 3 failing tests.
+All times IST, 5 Oct 2026, from the git log. The first generator command I ran was at 10:52 (the create step that failed with `spawn npm ENOENT`). Commits:
+
+| Time | Commit |
+| --- | --- |
+| 11:00 | Scaffold from create-sdkgen |
+| 11:12 | Generated model, `./` include fix |
+| 11:19 | Registered ts target and test feature |
+| 11:23 | Generated TypeScript SDK |
+| 11:42 | SDK plus test run, 654/658 pass |
+| 11:45 | Notes and AI usage log |
+| 11:46 | This report (draft) |
+
+From the first scaffold commit to the working, tested SDK was about 42 minutes (11:00 to 11:42), about 50 minutes if you count from the first failed create run at 10:52. That is over the 30 minute box, and much of the extra time went on the Windows npm error and the include path errors above. The live API call was done after the 11:42 commit [TBD: time]. Where I stopped: the SDK builds, tests mostly pass and one live read-only call works. I did not try other languages, did not fix the 3 failing tests, and did not rename the odd entity names.
 
 ## Generator DX suggestions
 
