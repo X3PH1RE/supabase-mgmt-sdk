@@ -1,0 +1,61 @@
+{
+  point: "warning"
+  err: {
+    shape: true
+    name: "ShapeError"
+    code: "shape"
+    gname: "Model: "
+    desc: null
+    props: [
+      {
+        path: "name"
+        what: "required"
+        type: "string"
+        value: null
+      }
+    ]
+    err: [
+      {
+        key: "name"
+        type: "string"
+        node: {
+          t: "string"
+          v: ""
+          f: ""
+          n: 0
+          c: null
+          r: true
+          p: false
+          d: 1
+          k: [
+          ]
+          e: true
+          u: {
+          }
+          a: [
+          ]
+          b: [
+          ]
+          m: {
+          }
+        }
+        value: null
+        path: "name"
+        pathArr: [
+          "name"
+        ]
+        why: "required"
+        check: "none"
+        args: {
+        }
+        mark: 1060
+        text: "Validation failed for property \"name\" because the property is missing."
+        use: {
+        }
+      }
+    ]
+    message: "Model: Validation failed for property \"name\" because the property is missing."
+  }
+
+  note: "!! BUILD FAILED !! Model: Validation failed for property \"name\" because the property is missing."
+}

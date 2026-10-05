@@ -4,6 +4,7 @@
 @"@voxgig/sdkgen/model/sdkgen.aontu"
 
 
+name: 'supabase-mgmt'
 origin: 'voxgig-sdk'
 def: 'openapi.json'
 

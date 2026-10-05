@@ -12,6 +12,18 @@ There are companion guides deeper in the tree: one per language
 
 ## Project map
 
+**Targets** (1):
+
+| Target | Directory | Build guide |
+| --- | --- | --- |
+| `ts` | `ts/` | [`ts/AGENTS.md`](./ts/AGENTS.md) |
+
+**Features** (1): `test`.
+
+Each feature is generated into every SDK target — as a directory
+`<lang>/src/feature/<name>/` (ts/js) or a flat file in the `<lang>/feature/`
+package (other languages). Each target's guide documents its features.
+
 **Entities** (87): `Action`, `Activate`, `Analytics`, `ApiKey`, `Auth`, `Billing`, `Branch`, `BranchUpdateResponseOutput`, `BulkUpdateFunctionResponseOutput`, `CreateProviderResponseOutput`, `CreateRoleResponseOutput`, `Database`, `DatabaseUpgradeStatusResponseOutput`, `Deploy`, `Disk`, `DiskAutoscaleConfigOutput`, `DiskUtilMetricsResponseOutput`, `Domain`, `EdgeFunction`, `Environment`, `Function`, `FunctionscombinedStat`, `Invite`, `Jit`, `JitAccessResponseOutput`, `JitListAccessResponseOutput`, `Legacy`, `ListActionRunResponseOutput`, `ListProjectAddonsResponseOutput`, `ListProvidersResponseOutput`, `Log`, `NetworkBanResponseEnrichedOutput`, `NetworkBanResponseOutput`, `NetworkRestriction`, `NetworkRestrictionsResponseOutput`, `OAuth`, `OAuthTokenResponseOutput`, `Organization`, `OrganizationProjectClaimResponseOutput`, `OrganizationProjectsResponseOutput`, `Performance`, `Pgsodium`, `Postgre`, `Postgrest`, `Project`, `ProjectAvailableRestoreVersionsResponseOutput`, `ProjectClaimTokenResponseOutput`, `ProjectUpgradeEligibilityResponseOutput`, `ProjectUpgradeInitiateResponseOutput`, `Provider`, `ReadOnlyStatusResponseOutput`, `Realtime`, `RegionsInfoOutput`, `RolesResponseOutput`, `Secret`, `Security`, `SigningKey`, `SigningKeyResponseOutput`, `Snippet`, `SslEnforcement`, `Storage`, `StreamableFile`, `SubdomainAvailabilityResponseOutput`, `SupavisorConfigResponseOutput`, `ThirdPartyAuth`, `Typescript`, `UpdateCustomHostnameResponseOutput`, `UpdateProviderResponseOutput`, `UpdateSupavisorConfigResponseOutput`, `V1BackupScheduleResponseOutput`, `V1BackupsResponseOutput`, `V1GetMigrationResponseOutput`, `V1GetUsageApiCountResponseOutput`, `V1GetUsageApiRequestsCountResponseOutput`, `V1ListEntitlementsResponseOutput`, `V1ListMigrationsResponseOutput`, `V1OrganizationMemberResponseOutput`, `V1OrganizationSlugResponseOutput`, `V1PgbouncerConfigResponseOutput`, `V1ProfileResponseOutput`, `V1ProjectRefResponseOutput`, `V1ProjectWithDatabaseResponseOutput`, `V1RestorePoint`, `V1ServiceHealthResponseOutput`, `V1StorageBucketResponseOutput`, `V1UpdatePasswordResponseOutput`, `VanitySubdomain`.
 
 ## Generating and updating the SDK
